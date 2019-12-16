@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layout"
+        lang="en">
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Menu ouvrage</title>
+</head>
+
+<body>
+
+<div th:fragment="menuOuvrage" class="col col-md-2 stylLigneVerticaleDroite" style="height: 1000px">
+
+    <div class="dropdown dropright">
+        <button class="btn btn-light navMenuCompte dropdown-toggle dropdown-toggle-split " type="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GENRES</button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 100%">
+            <th:block th:each="genre : ${session.genreList}">
+            <a class="dropdown-item" href="#" th:href="@{/ouvragesByGenre(motCle=${genre})}" th:text="${genre}"></a>
+            </th:block>
+        </div>
+    </div>
+    <hr/>
+    <div class="dropdown dropright">
+        <button class="btn btn-light navMenuCompte dropdown-toggle dropdown-toggle-split " type="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AUTEURS</button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 100%">
+            <th:block th:each="auteur : ${session.auteurList}">
+                <a class="dropdown-item" href="#" th:href="@{/ouvragesByGenre(motCle=${auteur})}" th:text="${auteur}"></a>
+            </th:block>
+        </div>
+    </div>
+    <hr/>
+
+</div>
+
+</body>
+</html>

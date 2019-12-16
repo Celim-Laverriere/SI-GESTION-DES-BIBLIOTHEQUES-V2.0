@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="oc_bibliotheque_webservice:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>oc_bibliotheque_webservice</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="bibliotheque-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="oc_bibliotheque_webservice:war exploded" />
+    </root>
+  </artifact>
+</component>

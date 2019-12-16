@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bibliotheque-repository" />
+        <module name="bibliotheque-batch" />
+        <module name="bibliotheque-webapp" />
+        <module name="bibliotheque-service" />
+        <module name="bibliotheque-entity" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bibliotheque-batch" target="1.8" />
+      <module name="bibliotheque-entity" target="1.8" />
+      <module name="bibliotheque-repository" target="1.8" />
+      <module name="bibliotheque-service" target="1.8" />
+      <module name="bibliotheque-webapp" target="1.8" />
+      <module name="oc-bibliotheque-webapplication" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bibliotheque-batch" options="-parameters" />
+      <module name="bibliotheque-entity" options="-parameters" />
+      <module name="bibliotheque-repository" options="-parameters" />
+      <module name="bibliotheque-service" options="-parameters" />
+      <module name="bibliotheque-webapp" options="-parameters" />
+      <module name="oc-bibliotheque-webapplication" options="-parameters" />
+    </option>
+  </component>
+</project>

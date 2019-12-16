@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="layout"
+        lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>ouvrage</title>
+</head>
+
+<body>
+
+<div layout:fragment = "content">
+
+    <div id="contenaireOuvrageDetail" class="container-fluid">
+
+        <div class="row">
+            <div th:replace="/fragments/menuOuvrage :: menuOuvrage"></div>
+
+            <div class="cok col-md-10">
+                <h3 th:text="${ouvrageDetail.getTitre()}"></h3>
+                <h4 th:text="${ouvrageDetail.getAuteur()}"></h4>
+                <hr/>
+
+                <div class="row">
+                    <div class="col col-md-5">
+                        <th:block th:each="photo : ${ouvrageDetail.getPhotos()}">
+                            <p><img id="imageDetail" th:src="@{'/image/' + ${photo.getUrlPhoto()}}"></p>
+                        </th:block>
+                    </div>
+
+                    <div id="resumer" class="col col-md-5 ligneVerticaleGauche">
+                        <h6>Résumer : </h6>
+                        <p th:text="${ouvrageDetail.getResumer()}"></p>
+                        <hr/>
+                        <p th:text="'Editeur : ' + ${ouvrageDetail.getEditeur()}"></p>
+                        <p th:text="'Genre : ' + ${ouvrageDetail.getGenre()}"></p>
+                        <p th:text="'EAN : ' + ${ouvrageDetail.getRef()}"></p>
+                        <hr/>
+                        <p>Pour cette ouvrage <span th:text="${#arrays.length(livreTypeListDispo)}"></span> livre(s) sont/est disponible(s)</p>
+                        <th:block th:each="livre : ${livreTypeListDispo}">
+                            <p th:text="'Référence du livre : ' + ${livre.getRefBibliotheque()}"></p>
+                        </th:block>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

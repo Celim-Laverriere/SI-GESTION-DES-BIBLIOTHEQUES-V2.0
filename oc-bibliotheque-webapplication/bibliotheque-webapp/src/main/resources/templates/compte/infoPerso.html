@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layout"
+        lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>Info perso</title>
+</head>
+
+<body>
+
+<div layout:fragment = "content">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div th:replace="/fragments/menuCompte :: menuCompte"></div>
+
+            <div class="col col-md-10">
+                <div class="card text-center">
+                    <div class="card">
+                        <div class="card-header text-white bg-success">
+                            <h4 class="styleTitre">MES INFORMATIONS PERSONNELLES</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row justify-content-center">
+
+                                <div class="col col-md-11">
+                                    <form action="#"  th:action="@{/upCompte}" th:object="${compteType}" method="post">
+                                        <div class="row">
+
+                                            <input type="hidden" th:field="*{id}" th:placeholder="*{id}"/>
+
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationPrenom">Prènom</label>
+                                                <input type="text" class="form-control is-valid" id="validationPrenom"
+                                                       th:field="*{prenom}" th:placeholder="*{prenom}" required/>
+                                                <div class="valid-feedback">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationNom">Nom</label>
+                                                <input type="text" class="form-control is-valid" id="validationNom"
+                                                       th:field="*{nom}" th:placeholder="*{nom}" required/>
+                                                <div class="valid-feedback">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 mb-3">
+                                                <label for="E-Mail">E-Mail</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                                    </div>
+                                                    <input type="text" class="form-control is-valid" id="E-Mail"
+                                                           th:field="*{mail}" th:placeholder="*{mail}"
+                                                           aria-describedby="inputGroupPrepend3" required/>
+                                                    <div class="valid-feedback">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6 mb-3">
+                                                <label for="validationAdresse">Adresse</label>
+                                                <input type="text" class="form-control is-valid" id="validationAdresse"
+                                                       th:field="*{adresse}" th:placeholder="*{adresse}" required>
+                                                <div class="valid-feedback">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <label for="validationVille">Ville</label>
+                                                <input id="validationVille" type="text" class="form-control is-valid"
+                                                       th:field="*{ville}" th:placeholder="*{ville}" required/>
+                                                <div class="valid-feedback">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <label for="validationCodePostal">Code postal</label>
+                                                <input type="number" class="form-control is-valid" id="validationCodePostal"
+                                                       th:field="*{codePostal}"  th:placeholder="*{codePostal}" required/>
+                                                <div class="valid-feedback">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <label for="validationPortable">Portable</label>
+                                                <input type="number" class="form-control is-valid" id="validationPortable"
+                                                       th:field="*{numPortable}" th:placeholder="*{numPortable}"/>
+                                                <div class="valid-feedback">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <label for="telDomicile">Domicile</label>
+                                                <input type="number" class="form-control is-valid" id="telDomicile"
+                                                       th:field="*{numDomicile}" th:placeholder="*{numDomicile}"/>
+                                                <div class="valid-feedback">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="validationIDCarte">ID Carte</label>
+                                                <input type="number" class="form-control is-valid" id="validationIDCarte"
+                                                       th:field="*{numCarteBibliotheque}"
+                                                       th:placeholder="*{numCarteBibliotheque}" required/>
+                                                <div class="valid-feedback">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 mb-3">
+                                                <label for="validationPassword">Password</label>
+                                                <input type="text" class="form-control is-valid" id="validationPassword"
+                                                       th:field="*{motDePasse}" th:placeholder="*{motDePasse}" required/>
+                                                <div class="valid-feedback">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr/>
+                                        <button class="btn btn-success" type="submit">VALIDEZ</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+  <!--
+
+Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.0 
+Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
+Généré le : 2019.06.20 à 12:07:28 PM CEST 
+
+  -->
+  <bindings xmlns:tns="http://www.webservice.org/bibliotheque-ws" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="org.bibliotheque.wsdl"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="tns:getLivreByIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetLivreByIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getLivreByIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetLivreByIdResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:livreType">
+      <class ref="org.bibliotheque.wsdl.LivreType"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllLivresRequest">
+      <class ref="org.bibliotheque.wsdl.GetAllLivresRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllLivresResponse">
+      <class ref="org.bibliotheque.wsdl.GetAllLivresResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addLivreRequest">
+      <class ref="org.bibliotheque.wsdl.AddLivreRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addLivreResponse">
+      <class ref="org.bibliotheque.wsdl.AddLivreResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:serviceStatus">
+      <class ref="org.bibliotheque.wsdl.ServiceStatus"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateLivreRequest">
+      <class ref="org.bibliotheque.wsdl.UpdateLivreRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateLivreResponse">
+      <class ref="org.bibliotheque.wsdl.UpdateLivreResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteLivreRequest">
+      <class ref="org.bibliotheque.wsdl.DeleteLivreRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteLivreResponse">
+      <class ref="org.bibliotheque.wsdl.DeleteLivreResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getCompteByIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetCompteByIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getCompteByIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetCompteByIdResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:compteType">
+      <class ref="org.bibliotheque.wsdl.CompteType"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllComptesRequest">
+      <class ref="org.bibliotheque.wsdl.GetAllComptesRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllComptesResponse">
+      <class ref="org.bibliotheque.wsdl.GetAllComptesResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addCompteRequest">
+      <class ref="org.bibliotheque.wsdl.AddCompteRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addCompteResponse">
+      <class ref="org.bibliotheque.wsdl.AddCompteResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateCompteRequest">
+      <class ref="org.bibliotheque.wsdl.UpdateCompteRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateCompteResponse">
+      <class ref="org.bibliotheque.wsdl.UpdateCompteResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteCompteRequest">
+      <class ref="org.bibliotheque.wsdl.DeleteCompteRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteCompteResponse">
+      <class ref="org.bibliotheque.wsdl.DeleteCompteResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getOuvrageByIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetOuvrageByIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getOuvrageByIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetOuvrageByIdResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ouvrageType">
+      <class ref="org.bibliotheque.wsdl.OuvrageType"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllOuvragesRequest">
+      <class ref="org.bibliotheque.wsdl.GetAllOuvragesRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllOuvragesResponse">
+      <class ref="org.bibliotheque.wsdl.GetAllOuvragesResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addOuvrageRequest">
+      <class ref="org.bibliotheque.wsdl.AddOuvrageRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addOuvrageResponse">
+      <class ref="org.bibliotheque.wsdl.AddOuvrageResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateOuvrageRequest">
+      <class ref="org.bibliotheque.wsdl.UpdateOuvrageRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateOuvrageResponse">
+      <class ref="org.bibliotheque.wsdl.UpdateOuvrageResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteOuvrageRequest">
+      <class ref="org.bibliotheque.wsdl.DeleteOuvrageRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteOuvrageResponse">
+      <class ref="org.bibliotheque.wsdl.DeleteOuvrageResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getPhotoByIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetPhotoByIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getPhotoByIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetPhotoByIdResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:photoType">
+      <class ref="org.bibliotheque.wsdl.PhotoType"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllPhotosRequest">
+      <class ref="org.bibliotheque.wsdl.GetAllPhotosRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllPhotosResponse">
+      <class ref="org.bibliotheque.wsdl.GetAllPhotosResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addPhotoRequest">
+      <class ref="org.bibliotheque.wsdl.AddPhotoRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addPhotoResponse">
+      <class ref="org.bibliotheque.wsdl.AddPhotoResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updatePhotoRequest">
+      <class ref="org.bibliotheque.wsdl.UpdatePhotoRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updatePhotoResponse">
+      <class ref="org.bibliotheque.wsdl.UpdatePhotoResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deletePhotoRequest">
+      <class ref="org.bibliotheque.wsdl.DeletePhotoRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deletePhotoResponse">
+      <class ref="org.bibliotheque.wsdl.DeletePhotoResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getEmpruntByIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetEmpruntByIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getEmpruntByIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetEmpruntByIdResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:empruntType">
+      <class ref="org.bibliotheque.wsdl.EmpruntType"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllEmpruntRequest">
+      <class ref="org.bibliotheque.wsdl.GetAllEmpruntRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllEmpruntResponse">
+      <class ref="org.bibliotheque.wsdl.GetAllEmpruntResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllEmpruntByCompteIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetAllEmpruntByCompteIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllEmpruntByCompteIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetAllEmpruntByCompteIdResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addEmpruntRequest">
+      <class ref="org.bibliotheque.wsdl.AddEmpruntRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addEmpruntResponse">
+      <class ref="org.bibliotheque.wsdl.AddEmpruntResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateEmpruntRequest">
+      <class ref="org.bibliotheque.wsdl.UpdateEmpruntRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateEmpruntResponse">
+      <class ref="org.bibliotheque.wsdl.UpdateEmpruntResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteEmpruntRequest">
+      <class ref="org.bibliotheque.wsdl.DeleteEmpruntRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteEmpruntResponse">
+      <class ref="org.bibliotheque.wsdl.DeleteEmpruntResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:loginRequest">
+      <class ref="org.bibliotheque.wsdl.LoginRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:loginResponse">
+      <class ref="org.bibliotheque.wsdl.LoginResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getCompteAfterLoginSuccessRequest">
+      <class ref="org.bibliotheque.wsdl.GetCompteAfterLoginSuccessRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getCompteAfterLoginSuccessResponse">
+      <class ref="org.bibliotheque.wsdl.GetCompteAfterLoginSuccessResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getSearchByKeywordRequest">
+      <class ref="org.bibliotheque.wsdl.GetSearchByKeywordRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getSearchByKeywordResponse">
+      <class ref="org.bibliotheque.wsdl.GetSearchByKeywordResponse"/>
+    </bindings>
+  </bindings>
+</bindings>

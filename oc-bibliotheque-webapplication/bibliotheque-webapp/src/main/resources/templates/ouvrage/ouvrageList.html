@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="layout"
+        lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>Ouvrages</title>
+</head>
+
+<body>
+
+<div layout:fragment = "content">
+
+    <div class="container-fluid" >
+        <div class="row">
+
+            <div th:replace="/fragments/menuOuvrage :: menuOuvrage"></div>
+
+            <div class="col col-md-10 ouvrageList">
+
+                <h2 class="rouge">Livres</h2>
+                <hr/>
+                <div class="row justify-content-start" style="margin-left: 15%">
+                    <th:block th:each="ouvrage : ${ouvrageList}">
+                        <div id="vignette" class="col col-md-3">
+                            <div class="thumbnail">
+                                <div class="caption">
+                                    <p th:text="${ouvrage.getTitre()}"></p>
+                                    <p th:text="${ouvrage.getAuteur()}"></p>
+                                    <th:block th:each="photo : ${ouvrage.getPhotos()}">
+                                        <p>
+                                            <a class="nav-link" href="#" th:href="@{ouvrage(ouvrageId=${ouvrage.getId()})}">
+                                                <img id="imageVignette" th:alt="${photo.getNomPhoto()}" th:src="@{'/image/' + ${photo.getUrlPhoto()}}"/>
+                                            </a>
+                                        </p>
+                                    </th:block>
+
+                                    <p style="text-align: center" th:text="'Nombre de livre(s) disponible(s) : ' + ${ouvrage.getLivres().size()}"></p>
+
+                                    <p style="text-align: center">
+                                        <a class="btn btn-light" href="#" th:href="@{/ouvrage(ouvrageId=${ouvrage.getId()})}">Afficher détail</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </th:block>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

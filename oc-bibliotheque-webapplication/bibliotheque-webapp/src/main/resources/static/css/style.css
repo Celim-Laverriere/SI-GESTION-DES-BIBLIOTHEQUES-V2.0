@@ -1,0 +1,103 @@
+#imageVignette{
+    display: block;
+    height: 300px;
+    width: 200px;
+    margin: auto;
+}
+
+#imageDetail{
+    display: block;
+    margin: auto;
+    padding-top: 5px;
+
+}
+
+#vignette {
+    padding-top: 1%;
+    margin-left: 10px;
+    margin-top: 5px;
+    border-style: solid;
+    border-color: #DCDCDC;
+    border-width: 1px;
+}
+
+.ligneVerticaleGauche{
+
+    border-style: solid;
+    border-bottom: white;
+    border-top: white;
+    border-right: white;
+    border-color: #DCDCDC;
+    border-width: 1px;
+}
+
+div hr {
+    width: 100%;
+    color: #DCDCDC;
+}
+
+#contenaireOuvrageDetail {
+
+    border-style: solid;
+    border-bottom: white;
+    border-top: white;
+    border-color: #DCDCDC;
+    border-width: 1px;
+}
+
+.red {
+    color: red;
+}
+.navMenuCompte{
+    display: block;
+    width: 100%;
+    height: 5%;
+    text-align: start;
+}
+
+.stylLigneVerticaleDroite{
+    border-style: solid;
+    border-bottom: white;
+    border-top: white;
+    border-left: white;
+    border-color: #DCDCDC;
+    border-width: 1px;
+    opacity: 100%;
+
+}
+
+.styleNavLayout{
+    width: 100px;
+    text-align: center;
+}
+
+.styleTitreDiv{
+    margin: auto;
+}
+
+.styleTitre{
+    text-align: center;
+}
+
+.styleAfficheNomUser{
+    text-align: center;
+    color: #28a745;
+}
+
+.styleGradientLayout{
+    background-image: radial-gradient(circle at top left, white, #DCDCDC);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

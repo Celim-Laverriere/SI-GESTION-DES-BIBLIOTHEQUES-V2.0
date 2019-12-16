@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"image
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout"
+      lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>403</title>
+</head>
+
+<body>
+
+<div layout:fragment = "content">
+
+    <div class="container" >
+        <div class="row justify-content-center" style="width: 100%; height: 100%">
+            <div class="col-md-12" style="margin-top: 5%; margin-bottom: 15%">
+                <div class="error-template" style="text-align: center">
+                    <p><img th:src="@{image/403.jpg}"></p>
+                    <div class="error-details">
+                        <p>Attention vous devez être connecté pour accéder à cette page!</p>
+                    </div>
+                    <div class="error-actions">
+                        <a class="btn btn-outline-danger" th:href="@{/login(actionUser='loginUser')}" style="width: 30%">LOGIN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>

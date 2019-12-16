@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="layout"
+        lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>Emprunt</title>
+</head>
+
+<body>
+
+<div layout:fragment = "content">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div th:replace="/fragments/menuCompte :: menuCompte"></div>
+
+            <div class="col col-md-10">
+
+                <div>
+                    <h3 class="styleTitre" style="color: #28a745">MES EMPRUNTS</h3>
+                </div>
+
+                <div class="row justify-content-center" style="margin-top: 2%">
+                    <div class="col col-md-10">
+                        <div th:each="emprunt : ${empruntTypeList}">
+                            <table class="table">
+                                <tbody>
+
+                                <div th:each="livre : ${livreTypeList}">
+                                    <div th:each="ouvrage : ${ouvrageTypeList}">
+                                        <div th:each="photo : ${ouvrage.getPhotos()}">
+                                            <th:block th:if="${photo.getOuvrageId() == ouvrage.getId()
+                                                    && livre.getOuvrageId() == ouvrage.getId() && emprunt.getLivreId() == livre.getId()}">
+                                                <td style="width: 10%">
+                                                    <img th:src="@{'/image/' + ${photo.getUrlPhoto()}}" style="width: 150px; height: 200px" class="rounded float-left" alt="...">
+                                                </td>
+                                            </th:block>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div th:each="livre : ${livreTypeList}">
+                                    <div th:each="ouvrage : ${ouvrageTypeList}">
+                                        <th:block th:if="${livre.getOuvrageId() == ouvrage.getId() && emprunt.getLivreId() == livre.getId()}">
+                                            <td style="width: 30%">
+                                                <h6>OUVRAGE</h6>
+                                                <p th:text="'Titre : ' + ${ouvrage.getTitre()}"></p>
+                                                <p th:text="'Auteur : ' + ${ouvrage.getAuteur()}"></p>
+                                            </td>
+                                        </th:block>
+                                    </div>
+                                </div>
+                                <div th:each="livre : ${livreTypeList}">
+                                    <th:block th:if="${emprunt.getLivreId() == livre.getId()}">
+                                        <td style="width: 30%">
+                                            <h6>REFERENCE BILIOTHEQUE</h6>
+                                            <p th:text="'Référence du livre : ' + ${livre.getRefBibliotheque()}"></p>
+
+                                            <h6>DATES D'EMPRUNT</h6>
+                                            <p th:text="'Date de début : ' + ${dateFormat.format(dateFormat.parse(emprunt.getDateDebut().toString()))}"></p>
+                                            <p th:text="'Date de fin : ' + ${dateFormat.format((dateFormat.parse(emprunt.getDateFin().toString())))}"></p>
+                                        </td>
+                                    </th:block>
+                                </div>
+
+                                <th:block th:if="${!emprunt.isProlongation()}">
+                                    <td style="width: 30%">
+                                        <p><a class="btn btn-outline-primary" href="#" th:href="@{/prolongation(empruntId=${emprunt.getId()})}">PROLONGER</a></p>
+                                        <p>Attention vous pouvez polonger votre emprunt pour 4 semaines suplémentaire une seul fois !</p>
+                                    </td>
+                                </th:block>
+
+                                <th:block th:if="${statutCode == 'CONFLICT'}">
+                                    <td style="width: 30%">
+                                        <p><a class="btn btn-outline-primary" href="#" th:href="@{/prolongation(empruntId=${emprunt.getId()})}">PROLONGER</a></p>
+                                        <p class="red">une erreur inattendue s'est produite. veuillez réessayer ultérieurement !</p>
+                                    </td>
+                                </th:block>
+
+                                <th:block th:if="${emprunt.isProlongation()}">
+                                    <td style="width: 30%">
+                                        <p>Votre demande de prolongation a bien été prise en compte !</p>
+                                    </td>
+                                </th:block>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.w3.org/1999/xhtml"
+      lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>Layout bibliotheque</title>
+</head>
+
+<body>
+
+<header>
+    <hr/>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col col-md-2 stylLigneVerticaleDroite styleTitreDiv">
+                <h4 class="styleTitre">TILLY BIBLIOTHEQUE</h4>
+                <th:block th:if="${session.user != null}">
+                    <hr style="width: 70%"/>
+                    <h6 class="styleAfficheNomUser" th:text="'Bonjour : ' + ${session.user.getUserPrenom()}"></h6>
+                </th:block>
+            </div>
+
+            <div class="col col-md-10">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active stylLigneVerticaleDroite styleNavLayout">
+                                <a class="btn btn-light" th:href="@{/}">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item stylLigneVerticaleDroite styleNavLayout">
+                                <a class="btn btn-light" th:href="@{ouvrages}">Livres</a>
+                            </li>
+                        </ul>
+
+                        <form th:action="@{/search}" class="form-inline my-2 my-lg-0">
+                            <input name="keyword" id="searchBarre" class="form-control mr-md-2"
+                                   style="width: 500px" type="search" placeholder="Search" aria-label="Search">
+                            <button  class="btn btn-outline-success my-2 my-sm-12 mr-md-2" type="submit">Search</button>
+                        </form>
+                        <ul class="navbar-nav my-2 my-lg-0">
+                            <th:block th:if="${#httpServletRequest.remoteUser == null}">
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-primary" th:href="@{/login(actionUser='loginUser')}">Login</a>
+                                </li>
+                            </th:block>
+                            <th:block th:if="${#httpServletRequest.remoteUser}">
+                                <li class="nav-item">
+                                    <form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="post">
+                                        <input class="btn btn-outline-danger" type="submit" value="Logout" />
+                                    </form>
+                                </li>
+                                <li class="nav-item" style="margin-left: 7px">
+                                    <a class="btn btn-outline-primary styleNavLayout" th:href="@{/compte}">Compte</a>
+                                </li>
+                            </th:block>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <hr/>
+</header>
+
+<section layout:fragment = "content">
+
+</section>
+
+<footer class="navbar-fixed-bottom">
+    <hr/>
+    <div class="container-fluid">
+        <div class="footer-copyright text-center py-3">Copyright @2019</div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"
+            integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+            crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+            integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+
+</footer>
+
+</body>
+
+</html>

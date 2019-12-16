@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- =============================================================== -->
+    <!-- ================== Informations du projet ===================== -->
+    <!-- =============================================================== -->
+
+    <!-- ===== Informations Maven ===== -->
+
+    <groupId>org.webservice</groupId>
+    <artifactId>bibliotheque</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.4.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!-- =============================================================== -->
+    <!-- =========================== Modules =========================== -->
+    <!-- =============================================================== -->
+    <modules>
+        <module>bibliotheque-service</module>
+        <module>bibliotheque-repository</module>
+        <module>bibliotheque-entity</module>
+        <module>bibliotheque-webservice</module>
+    </modules>
+
+    <!-- ===== Informations générales ===== -->
+    <name>bibliotheque</name>
+    <description>Web-service d'une bibliotheque</description>
+
+    <!-- =============================================================== -->
+    <!-- ========================= Properties ========================== -->
+    <!-- =============================================================== -->
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <!-- =============================================================== -->
+    <!-- ==================== Gestion des dépendances ================== -->
+    <!-- =============================================================== -->
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- ===== Modules ===== -->
+            <dependency>
+                <groupId>org.webservice</groupId>
+                <artifactId>bibliotheque-webservice</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.webservice</groupId>
+                <artifactId>bibliotheque-service</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.webservice</groupId>
+                <artifactId>bibliotheque-repository</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.webservice</groupId>
+                <artifactId>bibliotheque-entity</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- =============================================================== -->
+    <!-- ============================= Build  ========================== -->
+    <!-- =============================================================== -->
+    <build>
+        <directory>${project.basedir}/target</directory>
+    </build>
+
+</project>

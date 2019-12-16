@@ -28,4 +28,7 @@ public class OuvrageEntity implements Serializable {
     @OneToMany(mappedBy = "ouvrageLivre", fetch = FetchType.LAZY)
     private List<LivreEntity> livres;
 
+    @OneToMany(mappedBy = "ouvrageReservation", fetch = FetchType.LAZY)
+    private List<ReservationEntity> reservations;
+
 }

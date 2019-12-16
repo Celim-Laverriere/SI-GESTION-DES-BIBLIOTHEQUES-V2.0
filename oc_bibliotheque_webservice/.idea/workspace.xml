@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2c7fac0-6381-4e83-8550-d1be6347a45d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/ReservationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/ReservationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/ReservationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/ReservationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/ReservationEndpoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/OuvrageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/OuvrageEntity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +52,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -174,7 +182,7 @@
       <workItem from="1560926606558" duration="6972000" />
       <workItem from="1560951995904" duration="5000" />
       <workItem from="1561012748944" duration="5366000" />
-      <workItem from="1576492635130" duration="1250000" />
+      <workItem from="1576492635130" duration="6819000" />
     </task>
     <servers />
   </component>

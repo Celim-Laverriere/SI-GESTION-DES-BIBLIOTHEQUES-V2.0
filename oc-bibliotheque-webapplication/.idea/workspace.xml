@@ -6,12 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="401b9004-2ed0-4147-9f57-ec6c94108e23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+    <list default="true" id="83f2a905-29f6-4738-802e-d22a0b46daf1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/bibliotheque-webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/bibliotheque-webapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/EmpruntController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/EmpruntController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/compte/emprunt.html" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/compte/emprunt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/EmpruntEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/EmpruntEndpoint.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -221,12 +222,32 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c0edf5fe" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c0edf5fe" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8de9e5f3" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="401b9004-2ed0-4147-9f57-ec6c94108e23" name="Default Changelist" comment="" />
+      <changelist id="83f2a905-29f6-4738-802e-d22a0b46daf1" name="Default Changelist" comment="" />
       <created>1556698415423</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -302,6 +323,7 @@
       <workItem from="1560926597496" duration="2975000" />
       <workItem from="1561012757212" duration="9657000" />
       <workItem from="1576505331635" duration="302000" />
+      <workItem from="1576511880500" duration="76000" />
     </task>
     <servers />
   </component>
@@ -327,7 +349,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -185,26 +185,36 @@ public class EmpruntEndpoint  {
             serviceStatus.setMessage("Emprunt : " + request.getEmpruntType().getId() + " not found");
         } else {
 
-            // 2. Obtenir les informations de l'emprunt à mettre à jour à partir de la requête
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            Date toDay = new Date();
+            boolean flag;
 
-            Date dateDebut = dateFormat.parse(request.getEmpruntType().getDateDebut().toString());
-            upEmprunt.setDateDebut(dateDebut);
+            // Vérifie si la date de fin d'emprunt n'est pas passée
+            if (upEmprunt.getDateFin().after(toDay)) {
 
-            Date dateFin = dateFormat.parse(request.getEmpruntType().getDateFin().toString());
-            upEmprunt.setDateFin(dateFin);
+                // 2. Obtenir les informations de l'emprunt à mettre à jour à partir de la requête
+                Date dateDebut = dateFormat.parse(request.getEmpruntType().getDateDebut().toString());
+                upEmprunt.setDateDebut(dateDebut);
 
-            BeanUtils.copyProperties(request.getEmpruntType(), upEmprunt);
+                Date dateFin = dateFormat.parse(request.getEmpruntType().getDateFin().toString());
+                upEmprunt.setDateFin(dateFin);
 
-            // 3. Mettre à jour l'emprunt dans la base de données
-            boolean flag = service.updateEmprunt(upEmprunt);
+                BeanUtils.copyProperties(request.getEmpruntType(), upEmprunt);
 
-            if(flag == false){
-                serviceStatus.setStatusCode("CONFLICT");
-                serviceStatus.setMessage("Exception while updating Entity : " + request.getEmpruntType().getId());
+                // 3. Mettre à jour l'emprunt dans la base de données
+                flag = service.updateEmprunt(upEmprunt);
+
+                if (flag == false) {
+                    serviceStatus.setStatusCode("CONFLICT");
+                    serviceStatus.setMessage("Exception while updating Entity : " + request.getEmpruntType().getId());
+                } else {
+                    serviceStatus.setStatusCode("SUCCESS");
+                    serviceStatus.setMessage("Content updated Successfully");
+                }
+
             } else {
-                serviceStatus.setStatusCode("SUCCESS");
-                serviceStatus.setMessage("Content updated Successfully");
+                serviceStatus.setStatusCode("DATE-EXPIRED");
+                serviceStatus.setMessage("La date de fin d'emprunt est dépassée, vous ne pouvez pas prolonger l'emprunt");
             }
         }
 

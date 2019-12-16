@@ -27,8 +27,8 @@ INSERT INTO public.livre
     (ref_bibliotheque, ouvrage_id, statut)
 VALUES
     ('TISFFPHDT1N001', 1, 'indisponible'),
-    ('TISFFPHDT1N002', 1, 'disponible'),
-    ('TISFFPHDT1N003', 1, 'disponible'),
+    ('TISFFPHDT1N002', 1, 'indisponible'),
+    ('TISFFPHDT1N003', 1, 'indisponible'),
     
     ('TISFIAFLCDFT1N001', 2, 'indisponible'),
     ('TISFIAFLCDFT1N002', 2, 'disponible'),
@@ -55,13 +55,18 @@ VALUES
 INSERT INTO public.emprunt
     (date_debut, date_fin, prolongation, livre_id, compte_id)
 VALUES
-    ('2019-06-20', '2019-07-17', false, 1, 3),
-    ('2019-05-20', '2019-06-16', false, 4, 2),
-    ('2019-06-20', '2019-07-17', false, 7, 1),
-    ('2019-06-20', '2019-07-17', false, 10, 3)
+    ('2019-12-20', '2020-01-20', false, 1, 3),
+    ('2019-11-30', '2019-12-30', false, 2, 1),
+    ('2019-11-02', '2019-12-02', false, 4, 1),
+    ('2019-12-05', '2020-01-05', false, 3, 2),
 ;
     
-    
+INSERT INTO public.reservation
+	(date_demande_de_resa, num_position_resa, ouvrage_id, compte_id)
+VALUES
+    ('2019-12-04', 1, 1, 1),
+    ('2019-12-04', 1, 2, 2);
+
     
     
     

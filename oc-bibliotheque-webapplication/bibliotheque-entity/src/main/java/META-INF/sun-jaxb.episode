@@ -5,7 +5,7 @@
 Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.0 
 Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-Généré le : 2019.06.20 à 12:07:28 PM CEST 
+Généré le : 2019.12.17 à 10:45:41 AM CET 
 
   -->
   <bindings xmlns:tns="http://www.webservice.org/bibliotheque-ws" if-exists="true" scd="x-schema::tns">
@@ -186,6 +186,12 @@ Généré le : 2019.06.20 à 12:07:28 PM CEST
     <bindings if-exists="true" scd="tns:deleteEmpruntResponse">
       <class ref="org.bibliotheque.wsdl.DeleteEmpruntResponse"/>
     </bindings>
+    <bindings if-exists="true" scd="tns:getAllEmpruntByOuvrageIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetAllEmpruntByOuvrageIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllEmpruntByOuvrageIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetAllEmpruntByOuvrageIdResponse"/>
+    </bindings>
     <bindings if-exists="true" scd="tns:loginRequest">
       <class ref="org.bibliotheque.wsdl.LoginRequest"/>
     </bindings>
@@ -203,6 +209,45 @@ Généré le : 2019.06.20 à 12:07:28 PM CEST
     </bindings>
     <bindings if-exists="true" scd="tns:getSearchByKeywordResponse">
       <class ref="org.bibliotheque.wsdl.GetSearchByKeywordResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllReservationRequest">
+      <class ref="org.bibliotheque.wsdl.GetAllReservationRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllReservationResponse">
+      <class ref="org.bibliotheque.wsdl.GetAllReservationResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:reservationType">
+      <class ref="org.bibliotheque.wsdl.ReservationType"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getListReservationByOuvrageIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetListReservationByOuvrageIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getListReservationByOuvrageIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetListReservationByOuvrageIdResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getListReservationByCompteIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetListReservationByCompteIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getListReservationByCompteIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetListReservationByCompteIdResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteReservationRequest">
+      <class ref="org.bibliotheque.wsdl.DeleteReservationRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteReservationResponse">
+      <class ref="org.bibliotheque.wsdl.DeleteReservationResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addReservationRequest">
+      <class ref="org.bibliotheque.wsdl.AddReservationRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addReservationResponse">
+      <class ref="org.bibliotheque.wsdl.AddReservationResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateReservationRequest">
+      <class ref="org.bibliotheque.wsdl.UpdateReservationRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateReservationResponse">
+      <class ref="org.bibliotheque.wsdl.UpdateReservationResponse"/>
     </bindings>
   </bindings>
 </bindings>

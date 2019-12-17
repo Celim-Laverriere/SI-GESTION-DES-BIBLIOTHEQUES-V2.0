@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.LivreEntity;
 import org.bibliotheque.entity.OuvrageEntity;
 import org.bibliotheque.entity.PhotoEntity;
+import org.bibliotheque.entity.ReservationEntity;
 import org.bibliotheque.service.contract.OuvrageService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,6 +87,13 @@ public class OuvrageEndpoint {
 
                 BeanUtils.copyProperties(photoEntity, photoType);
                 ouvrageType.getPhotos().add(photoType);
+            }
+
+            for (ReservationEntity reservationEntity : entity.getReservations()){
+                ReservationType reservationType = new ReservationType();
+
+                BeanUtils.copyProperties(reservationEntity, reservationType);
+                ouvrageType.getReservations().add(reservationType);
             }
 
             BeanUtils.copyProperties(entity, ouvrageType);

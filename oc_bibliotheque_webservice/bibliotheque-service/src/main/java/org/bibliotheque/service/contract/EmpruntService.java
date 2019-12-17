@@ -11,6 +11,8 @@ public interface EmpruntService {
 
     List<EmpruntEntity> getAllEmpruntByCompteId(Integer id);
 
+    List<EmpruntEntity> getAllEmpruntByOuvrageId(Integer ouvrageId);
+
     EmpruntEntity addEmprunt(EmpruntEntity emprunt);
 
     boolean updateEmprunt(EmpruntEntity emprunt);

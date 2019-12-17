@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="layout"
+        lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>reservation</title>
+</head>
+<body>
+
+<div layout:fragment = "content">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div th:replace="/fragments/menuCompte :: menuCompte"></div>
+
+            <div class="col col-md-10 ouvrageList">
+
+                <h3 class="styleTitre" style="color: #28a745">MES RESERVATIONS</h3>
+                <hr/>
+                <div class="row justify-content-start" style="margin-left: 15%">
+                    <table class="table table-hover table-striped col col-md-11">
+
+                        <thead class="bg-success">
+                        <tr style="text-align: center">
+                            <th style="padding-left: 19%" scope="col">Ouvrage</th>
+                            <th scope="col"></th>
+                            <th scope="col">Date de resa</th>
+                            <th scope="col">Décompte des jours</th>
+                            <th scope="col">Date de retour</th>
+                            <th scope="col">Position dans la liste</th>
+                            <th scope="col"></th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <th:block th:each="reservation : ${reservationTypeList}">
+                            <tr style="text-align: center">
+                                <th:block th:each="ouvrage : ${ouvrageTypeList}">
+                                    <th:block th:if="${ouvrage.getId() == reservation.getOuvrageId()}">
+                                        <div th:each="photo : ${ouvrage.getPhotos()}">
+                                            <th:block th:if="${photo.getOuvrageId() == ouvrage.getId()}">
+                                                <td style="width: 10%">
+                                                    <img th:src="@{'/image/' + ${photo.getUrlPhoto()}}" style="width: 100px; height: 150px" class="rounded float-left" alt="...">
+                                                </td>
+                                            </th:block>
+                                        </div>
+                                        <td style="width: 30%; vertical-align: middle">
+                                            <p th:text="'Auteur : ' + ${ouvrage.getAuteur()}"></p>
+                                            <p th:text="'Titre : ' + ${ouvrage.getTitre()}"></p>
+                                        </td>
+                                    </th:block>
+                                </th:block>
+                                <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse(reservation.getDateDemandeDeResa().toString()))}"></td>
+                                <td style="vertical-align: middle" th:text="${jourRestantEmprunt.get(reservation.getOuvrageId())} + ' / Jour(s)'"></td>
+                                <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse( dateRetour.get(reservation.getOuvrageId()).getDateFin().toString()))}"></td>
+                                <td style="vertical-align: middle" th:text="${reservation.getNumPositionResa()}"></td>
+                                <td style="vertical-align: middle">
+                                    <a style="text-align: center" class="btn btn-success navMenuCompte" href="#" th:href="@{/detailReservation(ouvrageId=${reservation.getOuvrageId()})}">DETAIL</a>
+                                </td>
+                            </tr>
+                        </th:block>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

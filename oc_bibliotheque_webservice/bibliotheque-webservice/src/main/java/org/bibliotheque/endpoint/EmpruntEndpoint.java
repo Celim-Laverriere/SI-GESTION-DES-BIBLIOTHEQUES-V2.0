@@ -238,4 +238,39 @@ public class EmpruntEndpoint  {
         return response;
     }
 
+    /**
+     * Cette méthode récupère tous les emprunts liés aux livres, eux-mêmes à un ouvrage
+     * @param request
+     * @return
+     */
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllEmpruntByOuvrageIdRequest")
+    @ResponsePayload
+    public GetAllEmpruntByOuvrageIdResponse getAllEmpruntByOuvrageId(@RequestPayload GetAllEmpruntByOuvrageIdRequest request) throws DatatypeConfigurationException {
+        GetAllEmpruntByOuvrageIdResponse response = new GetAllEmpruntByOuvrageIdResponse();
+        List<EmpruntEntity> empruntEntityList = service.getAllEmpruntByOuvrageId(request.getOuvrageId());
+        List<EmpruntType> empruntTypeList = new ArrayList<>();
+
+        for (EmpruntEntity entity : empruntEntityList ) {
+            EmpruntType empruntType = new EmpruntType();
+            GregorianCalendar calendar = new GregorianCalendar();
+
+            calendar.setTime(entity.getDateDebut());
+            XMLGregorianCalendar dateDebut = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
+            calendar.setTime(entity.getDateFin());
+            XMLGregorianCalendar dateFin = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
+            empruntType.setId(entity.getId());
+            empruntType.setDateDebut(dateDebut);
+            empruntType.setDateFin(dateFin);
+            empruntType.setProlongation(entity.getProlongation());
+            empruntType.setCompteId(entity.getCompteId());
+            empruntType.setLivreId(entity.getLivreId());
+
+            empruntTypeList.add(empruntType);
+        }
+
+        response.getEmpruntType().addAll(empruntTypeList);
+        return response;
+    }
 }

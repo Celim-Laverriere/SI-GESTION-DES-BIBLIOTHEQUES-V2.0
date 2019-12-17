@@ -25,25 +25,44 @@
                 <h2 class="rouge">Livres</h2>
                 <hr/>
                 <div class="row justify-content-start" style="margin-left: 15%">
-                    <th:block th:each="ouvrage : ${ouvrageList}">
+                    <th:block th:each="ouvrageListDispo : ${ouvrageListDisponible}">
+
                         <div id="vignette" class="col col-md-3">
                             <div class="thumbnail">
                                 <div class="caption">
-                                    <p th:text="${ouvrage.getTitre()}"></p>
-                                    <p th:text="${ouvrage.getAuteur()}"></p>
-                                    <th:block th:each="photo : ${ouvrage.getPhotos()}">
+                                    <p th:text="${ouvrageListDispo.getTitre()}"></p>
+                                    <p th:text="${ouvrageListDispo.getAuteur()}"></p>
+                                    <th:block th:each="photo : ${ouvrageListDispo.getPhotos()}">
                                         <p>
-                                            <a class="nav-link" href="#" th:href="@{ouvrage(ouvrageId=${ouvrage.getId()})}">
+                                            <a class="nav-link" href="#" th:href="@{ouvrage(ouvrageId=${ouvrageListDispo.getId()})}">
                                                 <img id="imageVignette" th:alt="${photo.getNomPhoto()}" th:src="@{'/image/' + ${photo.getUrlPhoto()}}"/>
                                             </a>
                                         </p>
                                     </th:block>
 
-                                    <p style="text-align: center" th:text="'Nombre de livre(s) disponible(s) : ' + ${ouvrage.getLivres().size()}"></p>
+                                    <th:block th:if="${ouvrageListDispo.getLivres().size() >  0}">
+                                        <p style="text-align: center" th:text="'Nombre de livre(s) disponible(s) : '
+                                        + ${ouvrageListDispo.getLivres().size()}"></p>
+                                    </th:block>
+                                    <th:block th:if="${ouvrageListDispo.getLivres().size() ==  0}">
+                                        <p style="text-align: center" >Aucun livre pour cet ouvrage n'est disponible !</p>
+                                    </th:block>
+
 
                                     <p style="text-align: center">
-                                        <a class="btn btn-light" href="#" th:href="@{/ouvrage(ouvrageId=${ouvrage.getId()})}">Afficher détail</a>
+                                        <a class="btn btn-light" href="#" th:href="@{/ouvrage(ouvrageId=${ouvrageListDispo.getId()})}">Afficher détail</a>
                                     </p>
+
+                                    <th:block th:each="ouvrage : ${ouvrageList}">
+                                        <th:block th:if="${ouvrageListDispo.getId() == ouvrage.getId()
+                                        && ouvrageListDispo.getLivres().size() == 0
+                                        && ouvrage.getReservations().size() < ouvrage.getLivres().size() * 2}">
+                                            <p style="text-align: center">
+                                                <a class="btn btn-success" href="#" th:href="@{/templates/reservation(ouvrageId=${ouvrageListDispo.getId()})}">Réservation</a>
+                                            </p>
+                                        </th:block>
+                                    </th:block>
+
                                 </div>
                             </div>
                         </div>

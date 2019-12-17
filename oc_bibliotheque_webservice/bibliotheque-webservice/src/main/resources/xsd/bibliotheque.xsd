@@ -218,6 +218,7 @@
             <xs:element name="ref" type="xs:string"/>
             <xs:element name="photos" type="tns:photoType" maxOccurs="unbounded" minOccurs="0"/>
             <xs:element name="livres" type="tns:livreType" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element name="reservations" type="tns:reservationType" maxOccurs="unbounded" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -495,6 +496,22 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ==== GET ALL EMPRUNT BY OUVRAGE ID ==== -->
+    <xs:element name="getAllEmpruntByOuvrageIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ouvrageId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getAllEmpruntByOuvrageIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="empruntType" type="tns:empruntType" maxOccurs="unbounded" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

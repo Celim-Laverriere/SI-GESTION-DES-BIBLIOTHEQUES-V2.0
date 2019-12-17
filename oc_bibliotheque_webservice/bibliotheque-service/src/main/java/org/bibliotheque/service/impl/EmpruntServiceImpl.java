@@ -2,7 +2,9 @@ package org.bibliotheque.service.impl;
 
 import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.EmpruntEntity;
+import org.bibliotheque.entity.LivreEntity;
 import org.bibliotheque.repository.EmpruntRepository;
+import org.bibliotheque.repository.LivreRepository;
 import org.bibliotheque.service.contract.EmpruntService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +19,9 @@ public class EmpruntServiceImpl implements EmpruntService {
 
     @Autowired
     private EmpruntRepository repository;
+
+    @Autowired
+    private LivreRepository livreRepository;
 
 
     @Override
@@ -70,5 +75,20 @@ public class EmpruntServiceImpl implements EmpruntService {
         this.repository.findAllByCompteId(id).forEach(e -> empruntEntityList.add(e));
         return empruntEntityList;
     }
+
+    @Override
+    public List<EmpruntEntity> getAllEmpruntByOuvrageId(Integer ouvrageId) {
+        List<LivreEntity> livreEntityList = new ArrayList<>();
+        this.livreRepository.findAllLivreByOuvrageId(ouvrageId).forEach(e -> livreEntityList.add(e));
+
+        List<EmpruntEntity> empruntEntityListByOuvrageId = new ArrayList<>();
+        for (LivreEntity livreEntity : livreEntityList) {
+            this.repository.findAllEmpruntByOuvrageId(livreEntity.getId()).forEach(e -> empruntEntityListByOuvrageId.add(e));
+        }
+
+        return empruntEntityListByOuvrageId;
+    }
+
+
 
 }

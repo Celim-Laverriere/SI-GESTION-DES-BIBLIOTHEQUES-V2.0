@@ -70,4 +70,13 @@ public class SoapConfig {
         return client;
     }
 
+    @Bean
+    public ReservationClient reservationClient(Jaxb2Marshaller marshaller){
+        ReservationClient client = new ReservationClient();
+        client.setDefaultUri("http://localhost:8088/ws/bibliotheque.wsdl");
+        client.setMarshaller(marshaller);
+        client.setUnmarshaller(marshaller);
+        return client;
+    }
+
 }

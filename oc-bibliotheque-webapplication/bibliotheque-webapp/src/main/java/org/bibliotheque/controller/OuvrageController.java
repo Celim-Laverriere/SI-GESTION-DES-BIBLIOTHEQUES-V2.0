@@ -1,8 +1,12 @@
 package org.bibliotheque.controller;
 
+import org.bibliotheque.service.EmpruntService;
 import org.bibliotheque.service.OuvrageService;
+import org.bibliotheque.service.ReservationService;
+import org.bibliotheque.wsdl.EmpruntType;
 import org.bibliotheque.wsdl.LivreType;
 import org.bibliotheque.wsdl.OuvrageType;
+import org.bibliotheque.wsdl.ReservationType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +15,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+
 
 @Controller
 public class OuvrageController {
@@ -21,6 +29,12 @@ public class OuvrageController {
     @Autowired
     private OuvrageService ouvrageService;
 
+    @Autowired
+    private ReservationService reservationService;
+
+    @Autowired
+    private EmpruntService empruntService;
+
 
     @RequestMapping(value = "/ouvrages", method = RequestMethod.GET)
     public String ouvrages(final Model model){
@@ -29,36 +43,53 @@ public class OuvrageController {
         List<OuvrageType> ouvrageTypeList = ouvrageService.ouvrageTypeList();
 
         /**@see OuvrageService#livresDispoForOuvrage(List)*/
-        ouvrageTypeList = ouvrageService.livresDispoForOuvrage(ouvrageTypeList);
+        List<OuvrageType> ouvrageTypeListDisponible = ouvrageService.livresDispoForOuvrage(ouvrageService.ouvrageTypeList());
 
         model.addAttribute("ouvrageList", ouvrageTypeList);
+        model.addAttribute("ouvrageListDisponible", ouvrageTypeListDisponible);
 
-            return "ouvrage/ouvrageList";
+        return "ouvrage/ouvrageList";
     }
 
 
     @RequestMapping(value = "/ouvrage", method = RequestMethod.GET)
     public String ouvrageDetail(Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId){
 
-        String ouvrageReturn;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         try{
+
             /**@see OuvrageService#ouvrageById(Integer)*/
             OuvrageType ouvrageType = ouvrageService.ouvrageById(ouvrageId);
 
             /**@see OuvrageService#nombreDeLivreDispo(List)*/
             List<LivreType> livreTypeListDispo = ouvrageService.nombreDeLivreDispo(ouvrageType.getLivres());
 
+            List<ReservationType> reservationTypeList = reservationService.reservationTypeListByOuvrageId(ouvrageId);
+
+            List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByOuvrageId(ouvrageId);
+
+            if (empruntTypeList.size() > 0) {
+
+                List<Long> jourRestantEmprunt = empruntService.remainingDayOfTheLoan(empruntTypeList);
+                model.addAttribute("compteurJour", jourRestantEmprunt.get(0));
+
+                empruntTypeList = empruntService.earliestReturnDateForLoan(empruntTypeList, jourRestantEmprunt);
+                Date dateRetour = dateFormat.parse(empruntTypeList.get(0).getDateFin().toString());
+                model.addAttribute("dateRetour", dateFormat.format(dateRetour));
+
+            }
+
             model.addAttribute("livreTypeListDispo", livreTypeListDispo);
             model.addAttribute("ouvrageDetail", ouvrageType);
+            model.addAttribute("reservationTypeList", reservationTypeList);
 
-            ouvrageReturn = "ouvrage/ouvrageDetail";
+            return "ouvrage/ouvrageDetail";
 
-        } catch (NullPointerException pEX){
+        } catch (NullPointerException | ParseException pEX){
             logger.error("/ouvrage : {}", pEX.toString());
-            ouvrageReturn = "error";
+            return "error";
         }
-        return ouvrageReturn;
     }
 
 
@@ -69,9 +100,10 @@ public class OuvrageController {
         List<OuvrageType> ouvrageTypeList = ouvrageService.ouvragesByGenreList(motCle);
 
         /**@see OuvrageService#livresDispoForOuvrage(List)*/
-        ouvrageTypeList = ouvrageService.livresDispoForOuvrage(ouvrageTypeList);
+        List<OuvrageType> ouvrageTypeListDisponible = ouvrageService.livresDispoForOuvrage(ouvrageService.ouvragesByGenreList(motCle));
 
         model.addAttribute("ouvrageList", ouvrageTypeList);
+        model.addAttribute("ouvrageListDisponible", ouvrageTypeListDisponible);
 
         return "ouvrage/ouvrageList";
     }

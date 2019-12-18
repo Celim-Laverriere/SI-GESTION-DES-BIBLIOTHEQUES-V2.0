@@ -1,6 +1,8 @@
 package org.bibliotheque.service.contract;
 
 import org.bibliotheque.entity.ReservationEntity;
+
+import javax.xml.datatype.DatatypeConfigurationException;
 import java.util.List;
 
 public interface ReservationService {
@@ -15,7 +17,7 @@ public interface ReservationService {
 
     boolean deleteReservaion(Integer id);
 
-    ReservationEntity addReservation(ReservationEntity reservationEntity);
+    ReservationEntity addReservation(ReservationEntity reservationEntity) throws DatatypeConfigurationException;
 
     boolean updateReservation(ReservationEntity reservationEntity);
 }

@@ -174,7 +174,7 @@ public class ReservationEndpoint {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addReservationRequest")
     @ResponsePayload
-    public AddReservationResponse addReservationResponse(@RequestPayload  AddReservationRequest request){
+    public AddReservationResponse addReservationResponse(@RequestPayload  AddReservationRequest request) throws DatatypeConfigurationException {
         AddReservationResponse response = new AddReservationResponse();
         ReservationType reservationType = new ReservationType();
         ReservationEntity reservationEntity = new ReservationEntity();

@@ -6,8 +6,10 @@ import org.bibliotheque.service.contract.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.List;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.*;
 
 @Service
 @Transactional
@@ -54,7 +56,25 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public ReservationEntity addReservation(ReservationEntity reservationEntity) {
+    public ReservationEntity addReservation(ReservationEntity reservationEntity) throws DatatypeConfigurationException {
+
+        List<Integer> positionResaList = new ArrayList<>();
+        List<ReservationEntity> reservationEntityList = getListReservationByOuvrageId(reservationEntity.getOuvrageId());
+
+        Date dateToDay = new Date();
+        reservationEntity.setDateDemandeDeResa(dateToDay);
+
+        for (ReservationEntity entity : reservationEntityList){
+            positionResaList.add(entity.getNumPositionResa());
+            Collections.sort(positionResaList);
+        }
+
+        if (positionResaList.size() > 0) {
+            reservationEntity.setNumPositionResa(positionResaList.get(positionResaList.size() - 1) + 1);
+        } else {
+            reservationEntity.setNumPositionResa(1);
+        }
+
         try {
             return this.reservationRepository.save(reservationEntity);
         } catch (Exception pEX) {

@@ -7,18 +7,23 @@ import org.bibliotheque.service.ReservationService;
 import org.bibliotheque.wsdl.EmpruntType;
 import org.bibliotheque.wsdl.OuvrageType;
 import org.bibliotheque.wsdl.ReservationType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpSession;
+import javax.xml.datatype.DatatypeConfigurationException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Controller
 public class ReservationController {
+
+    private static final Logger logger = LoggerFactory.getLogger(ReservationController.class);
 
     @Autowired
     private ReservationService reservationService;
@@ -41,9 +46,15 @@ public class ReservationController {
 
         List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByOuvrageId(ouvrageId);
 
-        List<Long> jourRestantEmprunt = empruntService.remainingDayOfTheLoan(empruntTypeList);
+        if (empruntTypeList.size() > 0) {
 
-        empruntTypeList = empruntService.earliestReturnDateForLoan(empruntTypeList, jourRestantEmprunt);
+            List<Long> jourRestantEmprunt = empruntService.remainingDayOfTheLoan(empruntTypeList);
+            model.addAttribute("compteurJour", jourRestantEmprunt.get(0));
+
+            empruntTypeList = empruntService.earliestReturnDateForLoan(empruntTypeList, jourRestantEmprunt);
+            Date dateRetour = dateFormat.parse(empruntTypeList.get(0).getDateFin().toString());
+            model.addAttribute("dateRetour", dateFormat.format(dateRetour));
+        }
 
         List<ReservationType> reservationTypeList = reservationService.reservationTypeListByOuvrageId(ouvrageId);
 
@@ -64,8 +75,6 @@ public class ReservationController {
 
         model.addAttribute("ouvrage", ouvrageType);
         model.addAttribute("reservationList", reservationTypeList);
-        model.addAttribute("dateRetour", empruntTypeList.get(0).getDateFin());
-        model.addAttribute("compteurJour", jourRestantEmprunt.get(0));
         model.addAttribute("resaDejaEnCours", resaDejaEnCours);
         model.addAttribute("dejaEmprunter", dejaEmprunter);
 
@@ -122,10 +131,19 @@ public class ReservationController {
     }
 
     @GetMapping(value = "addReservation")
-    public String addReservation(Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId) {
-        System.out.println(ouvrageId);
+    public String addReservation(HttpSession session, Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId) throws ParseException, DatatypeConfigurationException {
+        Users user = (Users) session.getAttribute("user");
 
-        return null;
+       String statut = reservationService.addReservation(user.getUserId(), ouvrageId);
+
+       if (statut.equals("SUCCESS")) {
+           logger.info("Ajout de la réservation : {}", statut);
+       }
+
+       if (statut.equals("CONFLICT")){
+           logger.error("Ajout de la réservation : {}", statut);
+       }
+        return "redirect:/mesReservations";
 
     }
 

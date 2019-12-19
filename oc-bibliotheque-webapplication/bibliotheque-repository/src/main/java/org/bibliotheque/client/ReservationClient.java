@@ -113,5 +113,20 @@ public class ReservationClient extends WebServiceGatewaySupport {
     }
 
 
+    /**
+     * ==== CETTE METHODE RECUPERER LA LISTE DES RESERVATIONS ====
+     * @return
+     */
+    public GetAllReservationResponse getAllReservation(){
+        GetAllReservationResponse response = new GetAllReservationResponse();
 
+        try {
+            GetAllReservationRequest request = new GetAllReservationRequest();
+            response = (GetAllReservationResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+        } catch (SoapFaultClientException pEx) {
+            logger.error("GetAllReservationResponse : {}", pEx.toString());
+        }
+
+        return response;
+    }
 }

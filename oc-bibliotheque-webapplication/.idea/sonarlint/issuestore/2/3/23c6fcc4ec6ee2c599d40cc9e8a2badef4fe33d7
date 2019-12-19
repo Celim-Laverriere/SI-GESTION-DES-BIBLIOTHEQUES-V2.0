@@ -1,0 +1,3 @@
+
+Ã%squid:RedundantThrowsDeclarationCheck,"ŠRemove the declaration of thrown exception 'javax.xml.datatype.DatatypeConfigurationException', as it cannot be thrown from method's body.(£Ÿ‚þ8½”óñ-
+©%squid:RedundantThrowsDeclarationCheck,"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(£Ÿ‚þ8½”óñ-

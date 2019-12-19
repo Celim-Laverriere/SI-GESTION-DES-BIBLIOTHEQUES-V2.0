@@ -1,5 +1,6 @@
 package org.bibliotheque.config;
 
+import org.bibliotheque.batch.CheckReservationTime;
 import org.bibliotheque.batch.MailItemProcessor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -25,6 +26,8 @@ public class BatchConfiguration {
     @Autowired
     private MailItemProcessor mailItemProcessor;
 
+    @Autowired
+    private CheckReservationTime checkReservationTime;
 
     @Bean
     protected Step processorMail() {
@@ -34,13 +37,29 @@ public class BatchConfiguration {
                 .build();
     }
 
+    protected Step processorCheckReservationTime() {
+        return stepBuilderFactory
+                .get("checkReservationTime")
+                .tasklet(checkReservationTime)
+                .build();
+    }
 
     @Bean
-    public Job mailJob() {
+    public Job jobMail() {
         return jobBuilderFactory
-                .get("mailJob")
+                .get("jobMail")
                 .incrementer(new RunIdIncrementer())
                 .start(processorMail())
+                .next(processorCheckReservationTime())
+                .build();
+    }
+
+    @Bean
+    public Job jobReservationTime() {
+        return jobBuilderFactory
+                .get("jobReservationTime")
+                .incrementer(new RunIdIncrementer())
+                .start(processorCheckReservationTime())
                 .build();
     }
 

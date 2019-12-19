@@ -115,20 +115,20 @@ public class ReservationController {
         return "compte/resaCompte";
     }
 
-    @GetMapping(value = "detailReservation")
-    public String deailReservation(Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId) {
-
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        model.addAttribute("dateFormat", dateFormat);
+    @GetMapping(value = "deleteReservation")
+    public String deleteReservation(Model model, @RequestParam(name = "reservationId") Integer reservationId,
+                                    @RequestParam(name = "ouvrageId") Integer ouvrageId) {
 
         OuvrageType ouvrageType = ouvrageService.ouvrageById(ouvrageId);
+        String statut = reservationService.deleteReservation(reservationId);
 
         model.addAttribute("ouvrageType", ouvrageType);
+        model.addAttribute("statut", statut);
 
-        System.out.println(ouvrageId);
 
-        return "compte/resaDetailCompte";
+        return "compte/compte";
     }
+
 
     @GetMapping(value = "addReservation")
     public String addReservation(HttpSession session, Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId) throws ParseException, DatatypeConfigurationException {

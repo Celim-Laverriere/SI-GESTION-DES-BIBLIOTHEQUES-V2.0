@@ -38,9 +38,21 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public boolean deleteReservaion(Integer id) {
+    public boolean deleteReservation(Integer reservationId) {
+
+        ReservationEntity reservationEntity = getReservationById(reservationId);
+        List<ReservationEntity> reservationEntityList = reservationRepository.findAllByOuvrageId(reservationEntity.getOuvrageId());
+
+        for (ReservationEntity entity : reservationEntityList){
+
+            if (reservationEntity.getNumPositionResa() < entity.getNumPositionResa()) {
+                entity.setNumPositionResa(entity.getNumPositionResa() - 1);
+                updateReservation(entity);
+            }
+        }
+
         try {
-            this.reservationRepository.deleteById(id);
+            this.reservationRepository.deleteById(reservationId);
             return true;
         } catch (Exception pEX) {
             pEX.getMessage();

@@ -30,9 +30,6 @@ public class ReservationEndpoint {
     @Autowired
     private ReservationService service;
 
-    @Autowired
-    private EmpruntService empruntService;
-
 
     /**
      * Cette méthode récupère tous les réservations
@@ -40,7 +37,7 @@ public class ReservationEndpoint {
      * @return
      * @throws DatatypeConfigurationException
      */
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllResrvationRequest")
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllReservationRequest")
     @ResponsePayload
     public GetAllReservationResponse getAllReservation(
             @RequestPayload GetAllReservationRequest request) throws DatatypeConfigurationException {
@@ -152,7 +149,7 @@ public class ReservationEndpoint {
         DeleteReservationResponse response = new DeleteReservationResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        boolean flag = service.deleteReservaion(request.getReservationId());
+        boolean flag = service.deleteReservation(request.getReservationId());
 
         if (flag == false) {
             serviceStatus.setStatusCode("FAIL");

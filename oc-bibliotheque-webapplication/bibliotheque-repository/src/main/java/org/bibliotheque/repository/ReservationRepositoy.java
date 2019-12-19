@@ -54,12 +54,21 @@ public class ReservationRepositoy {
     }
 
     /**
-     * CETTE METHODE MET A JOUR UNE RESERVATION
+     * ==== CETTE METHODE MET A JOUR UNE RESERVATION ====
      * @param reservationType
      * @return
      */
     public String updateReservation(ReservationType reservationType){
         UpdateReservationResponse response = client.updateReservation(reservationType);
         return response.getServiceStatus().getStatusCode();
+    }
+
+    /**
+     * ==== CETTE METHODE RECUPERER LA LISTE DES RESERVATIONS ====
+     * @return
+     */
+    public List<ReservationType> getAllReservation(){
+        GetAllReservationResponse response = client.getAllReservation();
+        return response.getReservationList();
     }
 }

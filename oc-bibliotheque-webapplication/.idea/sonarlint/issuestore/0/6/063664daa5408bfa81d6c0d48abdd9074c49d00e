@@ -1,0 +1,8 @@
+
+¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ε΄Λ¨ύÿÿÿÿ8Τ¤ςρ-
+U
+squid:S106="9Replace this use of System.out or System.err by a logger.(™εμN8¦ϊ—υρ-
+Usquid:S32527"7Use static access with "java.util.Calendar" for "DATE".(°χ¬»8Τ•Μυρ-
+V
+squid:S106A"9Replace this use of System.out or System.err by a logger.(ΪΥϊγ8¦ϊ—υρ-
+Zsquid:UselessImportCheck"/Remove this unused import 'java.util.Calendar'.(ÿΫφ΄8©ή°υρ-

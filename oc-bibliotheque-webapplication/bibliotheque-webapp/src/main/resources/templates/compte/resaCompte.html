@@ -69,7 +69,7 @@
                                     <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse( dateRetour.get(reservation.getOuvrageId()).getDateFin().toString()))}"></td>
                                     <td style="vertical-align: middle" th:text="${reservation.getNumPositionResa()}"></td>
                                     <td style="vertical-align: middle">
-                                        <a style="text-align: center" class="btn btn-success navMenuCompte" href="#" th:href="@{/detailReservation(ouvrageId=${reservation.getOuvrageId()})}">DETAIL</a>
+                                        <a style="text-align: center" class="btn btn-success navMenuCompte" href="#" th:href="@{/deleteReservation(reservationId=${reservation.getId()}, ouvrageId=${reservation.getOuvrageId()})}">SUPPRIMEZ</a>
                                     </td>
                                 </tr>
                             </th:block>

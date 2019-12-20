@@ -4,6 +4,7 @@ CREATE TABLE public.Reservation (
                 id INTEGER NOT NULL DEFAULT nextval('public.reservation_id_seq'),
                 date_demande_de_resa DATE NOT NULL,
                 num_position_resa INTEGER NOT NULL,
+                statut VARCHAR NOT NULL,
                 ouvrage_id INTEGER NOT NULL,
                 compte_id INTEGER NOT NULL,
                 CONSTRAINT reservation_pk PRIMARY KEY (id)

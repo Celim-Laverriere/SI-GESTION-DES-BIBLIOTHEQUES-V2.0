@@ -1,0 +1,4 @@
+
+Xsquid:S3655*"<Call "serviceStatus.isPresent()" before accessing the value.(‹ïÊ¥ıÿÿÿÿ
+»%squid:RedundantThrowsDeclarationCheck "„Remove the declaration of thrown exception 'org.springframework.security.core.AuthenticationException' which is a runtime exception.(ºãğîøÿÿÿÿ
+Wsquid:S24410";Make "Users" serializable or don't store it in the session.(£™Õàûÿÿÿÿ

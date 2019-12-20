@@ -7,230 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="401b9004-2ed0-4147-9f57-ec6c94108e23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/batch/CheckReservationTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/log.log.2019-12-18.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/bibliotheque-entity-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/classes/org/bibliotheque/entity/CompteEntity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/classes/org/bibliotheque/entity/EmpruntEntity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/classes/org/bibliotheque/entity/LivreEntity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/classes/org/bibliotheque/entity/OuvrageEntity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/classes/org/bibliotheque/entity/PhotoEntity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/classes/org/bibliotheque/entity/ReservationEntity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/target/bibliotheque-repository-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/target/classes/org/bibliotheque/repository/CompteRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/target/classes/org/bibliotheque/repository/EmpruntRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/target/classes/org/bibliotheque/repository/LivreRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/target/classes/org/bibliotheque/repository/LoginRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/target/classes/org/bibliotheque/repository/OuvrageRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/target/classes/org/bibliotheque/repository/PhotoRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/target/classes/org/bibliotheque/repository/ReservationRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/bibliotheque-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/contract/CompteService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/contract/EmpruntService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/contract/LivreService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/contract/LoginService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/contract/OuvrageService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/contract/PhotoService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/contract/ReservationService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/impl/CompteServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/impl/EmpruntServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/impl/LivreServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/impl/LoginServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/impl/OuvrageServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/impl/PhotoServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/classes/org/bibliotheque/service/impl/ReservationServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/bibliotheque-webservice.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/bibliotheque-webservice.jar.original" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/AddCompteRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/AddCompteResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/AddEmpruntRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/AddEmpruntResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/AddLivreRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/AddLivreResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/AddOuvrageRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/AddOuvrageResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/AddPhotoRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/AddPhotoResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/AddReservationRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/AddReservationResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/CompteType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/DeleteCompteRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/DeleteCompteResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/DeleteEmpruntRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/DeleteEmpruntResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/DeleteLivreRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/DeleteLivreResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/DeleteOuvrageRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/DeleteOuvrageResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/DeletePhotoRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/DeletePhotoResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/DeleteReservationRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/DeleteReservationResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/EmpruntType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllComptesRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllComptesResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllEmpruntByCompteIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllEmpruntByCompteIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllEmpruntByOuvrageIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllEmpruntByOuvrageIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllEmpruntRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllEmpruntResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllLivresRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllLivresResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllOuvragesRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllOuvragesResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllPhotosRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllPhotosResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllReservationRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetAllReservationResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetCompteAfterLoginSuccessRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetCompteAfterLoginSuccessResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetCompteByIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetCompteByIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetEmpruntByIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetEmpruntByIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetListReservationByCompteIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetListReservationByCompteIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetListReservationByOuvrageIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetListReservationByOuvrageIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetLivreByIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetLivreByIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetOuvrageByIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetOuvrageByIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetPhotoByIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetPhotoByIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetSearchByKeywordRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/GetSearchByKeywordResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/LivreType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/LoginRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/LoginResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/ObjectFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/OuvrageType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/PhotoType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/ReservationType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/ServiceStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/UpdateCompteRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/UpdateCompteResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/UpdateEmpruntRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/UpdateEmpruntResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/UpdateLivreRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/UpdateLivreResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/UpdateOuvrageRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/UpdateOuvrageResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/UpdatePhotoRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/UpdatePhotoResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/UpdateReservationRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/UpdateReservationResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/com/bibliotheque/gs_ws/package-info.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/org/bibliotheque/BibliothequeApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/org/bibliotheque/config/WebServiceConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/org/bibliotheque/endpoint/CompteEndpoint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/org/bibliotheque/endpoint/EmpruntEndpoint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/org/bibliotheque/endpoint/LivreEndpoint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/org/bibliotheque/endpoint/LoginEndpoint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/org/bibliotheque/endpoint/OuvrageEndpoint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/org/bibliotheque/endpoint/PhotoEndpoint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/org/bibliotheque/endpoint/ReservationEndpoint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/classes/xsd/bibliotheque.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/META-INF/sun-jaxb.episode" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/AddCompteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/AddCompteResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/AddEmpruntRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/AddEmpruntResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/AddLivreRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/AddLivreResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/AddOuvrageRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/AddOuvrageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/AddPhotoRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/AddPhotoResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/AddReservationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/AddReservationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/CompteType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/DeleteCompteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/DeleteCompteResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/DeleteEmpruntRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/DeleteEmpruntResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/DeleteLivreRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/DeleteLivreResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/DeleteOuvrageRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/DeleteOuvrageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/DeletePhotoRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/DeletePhotoResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/DeleteReservationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/DeleteReservationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/EmpruntType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllComptesRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllComptesResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllEmpruntByCompteIdRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllEmpruntByCompteIdResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllEmpruntByOuvrageIdRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllEmpruntByOuvrageIdResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllEmpruntRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllEmpruntResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllLivresRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllLivresResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllOuvragesRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllOuvragesResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllPhotosRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllPhotosResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllReservationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetAllReservationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetCompteAfterLoginSuccessRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetCompteAfterLoginSuccessResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetCompteByIdRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetCompteByIdResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetEmpruntByIdRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetEmpruntByIdResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetListReservationByCompteIdRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetListReservationByCompteIdResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetListReservationByOuvrageIdRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetListReservationByOuvrageIdResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetLivreByIdRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetLivreByIdResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetOuvrageByIdRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetOuvrageByIdResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetPhotoByIdRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetPhotoByIdResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetSearchByKeywordRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/GetSearchByKeywordResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/LivreType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/LoginResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/ObjectFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/OuvrageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/PhotoType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/ReservationType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/ServiceStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/UpdateCompteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/UpdateCompteResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/UpdateEmpruntRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/UpdateEmpruntResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/UpdateLivreRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/UpdateLivreResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/UpdateOuvrageRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/UpdateOuvrageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/UpdatePhotoRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/UpdatePhotoResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/UpdateReservationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/UpdateReservationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/generated-sources/jaxb/com/bibliotheque/gs_ws/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/jaxb2/.xjc-schema-xjcStaleFlag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/log.log.2019-12-19.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/LauncherBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/LauncherBatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/config/BatchConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/config/BatchConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/batch/CheckReservationTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/batch/CheckReservationTime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/META-INF/sun-jaxb.episode" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/META-INF/sun-jaxb.episode" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteResponse.java" afterDir="false" />
@@ -313,18 +92,16 @@
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateReservationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateReservationRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateReservationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateReservationResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/ReservationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/ReservationClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/ReservationRepositoy.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/ReservationRepositoy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/OuvrageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/OuvrageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/compte/compte.html" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/compte/compte.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/compte/resaCompte.html" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/compte/resaCompte.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/src/main/java/org/bibliotheque/repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/src/main/java/org/bibliotheque/repository/ReservationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/ReservationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/ReservationEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/ReservationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/ReservationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/ReservationEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -436,7 +213,7 @@
     </option>
     <option name="contentProportion" value="0.17640692" />
   </component>
-  <component name="RunManager" selected="Spring Boot.LauncherBatch">
+  <component name="RunManager" selected="Spring Boot.BibliothequeApplication">
     <configuration name="BibliothequeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="bibliotheque-webapp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.bibliotheque.BibliothequeApplication" />
@@ -546,12 +323,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e5e2a91f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@366309a1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e5e2a91f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@dade4166" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@366309a1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@84a5f9fb" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -642,6 +419,7 @@
       <workItem from="1576571775869" duration="8850000" />
       <workItem from="1576656737086" duration="11952000" />
       <workItem from="1576747411022" duration="16013000" />
+      <workItem from="1576836970856" duration="14229000" />
     </task>
     <servers />
   </component>

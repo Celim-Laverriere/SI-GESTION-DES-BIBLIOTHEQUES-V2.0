@@ -1,0 +1,7 @@
+
+Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(£å£ºúÿÿÿÿ
+Csquid:S1612",Replace this lambda with a method reference.(‚Ì„±
+Csquid:S1612E",Replace this lambda with a method reference.(†¢ðÔ
+?squid:S1148'"#Use a logger to log this exception.(°Ýä‰ýÿÿÿÿ
+?squid:S11482"#Use a logger to log this exception.(°Ýä‰ýÿÿÿÿ
+?squid:S1148="#Use a logger to log this exception.(°Ýä‰ýÿÿÿÿ

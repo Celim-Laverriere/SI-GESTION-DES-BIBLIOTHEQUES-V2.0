@@ -57,6 +57,7 @@ public class ReservationEndpoint {
             reservationType.setDateDemandeDeResa(dateDemandeDeResa);
             reservationType.setOuvrageId(entity.getOuvrageId());
             reservationType.setNumPositionResa(entity.getNumPositionResa());
+            reservationType.setStatut(entity.getStatut());
             reservationType.setCompteId(entity.getCompteId());
 
             reservationTypeList.add(reservationType);
@@ -93,6 +94,7 @@ public class ReservationEndpoint {
             reservationType.setDateDemandeDeResa(dateDemandeDeResa);
             reservationType.setOuvrageId(entity.getOuvrageId());
             reservationType.setNumPositionResa(entity.getNumPositionResa());
+            reservationType.setStatut(entity.getStatut());
             reservationType.setCompteId(entity.getCompteId());
 
             reservationTypeList.add(reservationType);
@@ -128,6 +130,7 @@ public class ReservationEndpoint {
             reservationType.setDateDemandeDeResa(dateDemandeDeResa);
             reservationType.setOuvrageId(entity.getOuvrageId());
             reservationType.setNumPositionResa(entity.getNumPositionResa());
+            reservationType.setStatut(entity.getStatut());
             reservationType.setCompteId(entity.getCompteId());
 
             reservationTypeList.add(reservationType);
@@ -178,6 +181,7 @@ public class ReservationEndpoint {
         ServiceStatus serviceStatus = new ServiceStatus();
 
         BeanUtils.copyProperties(request.getReservationType(), reservationEntity);
+        reservationEntity.setStatut("En cours");
         ReservationEntity savedReservationEntity = service.addReservation(reservationEntity);
 
         if (savedReservationEntity == null) {

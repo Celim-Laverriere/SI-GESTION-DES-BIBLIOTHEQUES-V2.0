@@ -1,11 +1,11 @@
 
-?squid:S1148]"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
+Csquid:S1612B",Replace this lambda with a method reference.(„ğŒÏ
 jsquid:UselessImportCheck
 "?Remove this unused import 'javax.xml.datatype.DatatypeFactory'.(ı®Ã8ªÅËÈñ-
+Bsquid:S1612$",Replace this lambda with a method reference.(Ô
+?squid:S1148]"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
+Csquid:S1612",Replace this lambda with a method reference.(ŠæÖİ
+Msquid:S3655"7Call "Optional#isPresent()" before accessing the value.(ÌÈ 
+?squid:S1148t"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
 \squid:S1155T">Use isEmpty() to check whether the collection is empty or not.(İÕ»£8š³æÈñ-
 tsquid:UselessImportCheck"DRemove this unused import 'javax.xml.datatype.XMLGregorianCalendar'.(€ÛËéÿÿÿÿÿ8ªÅËÈñ-
-Msquid:S3655"7Call "Optional#isPresent()" before accessing the value.(ÌÈ 
-Csquid:S1612B",Replace this lambda with a method reference.(„ğŒÏ
-?squid:S1148h"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
-Csquid:S1612",Replace this lambda with a method reference.(ŠæÖİ
-Bsquid:S1612$",Replace this lambda with a method reference.(Ô

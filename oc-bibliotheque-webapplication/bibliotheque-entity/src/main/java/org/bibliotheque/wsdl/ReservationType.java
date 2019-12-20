@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.0 
 // Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.12.19 à 03:02:37 PM CET 
+// Généré le : 2019.12.20 à 11:26:49 AM CET 
 //
 
 
@@ -29,6 +29,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="dateDemandeDeResa" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *         &lt;element name="numPositionResa" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="statut" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="compteId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
@@ -44,6 +45,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "id",
     "dateDemandeDeResa",
     "numPositionResa",
+    "statut",
     "ouvrageId",
     "compteId"
 })
@@ -54,6 +56,8 @@ public class ReservationType {
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dateDemandeDeResa;
     protected int numPositionResa;
+    @XmlElement(required = true)
+    protected String statut;
     protected int ouvrageId;
     protected int compteId;
 
@@ -111,6 +115,30 @@ public class ReservationType {
      */
     public void setNumPositionResa(int value) {
         this.numPositionResa = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété statut.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getStatut() {
+        return statut;
+    }
+
+    /**
+     * Définit la valeur de la propriété statut.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setStatut(String value) {
+        this.statut = value;
     }
 
     /**

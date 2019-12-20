@@ -1,8 +1,8 @@
 
-xsquid:S3457Y"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(Öï½Õ
 xsquid:S3457m"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(Â—ƒ¤
-isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–ÖÅñ
+Usquid:S2387">"logger" is the name of a field in "WebServiceGatewaySupport".(ó§«ï
 wsquid:S3457F"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(øˆ¸Q
 „squid:S3457"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(ó¯òùþÿÿÿÿ8õ’ôòñ-
-Usquid:S2387">"logger" is the name of a field in "WebServiceGatewaySupport".(ó§«ï
+xsquid:S3457Y"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(Öï½Õ
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–ÖÅñ
 @squid:S1905")Remove this unnecessary cast to "Logger".(ó§«ï

@@ -21,3 +21,11 @@ Wbibliotheque-repository/src/main/java/org/bibliotheque/repository/CompteReposit
 Wbibliotheque-service/src/main/java/org/bibliotheque/service/contract/CompteService.java,f\e\fe306adecfd1b77094a89a877993da9739013c5b
 ‡
 Wbibliotheque-service/src/main/java/org/bibliotheque/service/impl/CompteServiceImpl.java,5\9\591b79abb4f54c7255d60c2f22c6b6b01a6286ee
+€
+Pbibliotheque-entity/src/main/java/org/bibliotheque/entity/ReservationEntity.java,7\5\75a89785f45f0bf782f4e575f0a1db7f4df110fa
+ˆ
+Xbibliotheque-service/src/main/java/org/bibliotheque/service/impl/OuvrageServiceImpl.java,f\1\f1acb361738ca7ab91e48823508cd151d9c25cd8
+z
+Jbibliotheque-entity/src/main/java/org/bibliotheque/entity/LivreEntity.java,4\4\440faed43fd5a99d0409ac7fefacb12b89a27d38
+|
+Lbibliotheque-entity/src/main/java/org/bibliotheque/entity/OuvrageEntity.java,8\0\80e91e7de1ee57618a470924d2f3b37b9d1f1d30

@@ -23,6 +23,9 @@ public class ReservationEntity implements Serializable {
     @Column(name = "num_position_resa")
     private Integer numPositionResa;
 
+    @Column(name = "statut")
+    private String statut;
+
     @Column(name = "ouvrage_id")
     private Integer ouvrageId;
 

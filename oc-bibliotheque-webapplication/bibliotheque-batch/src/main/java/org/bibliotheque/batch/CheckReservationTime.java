@@ -57,11 +57,14 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
 
             dateResa = dateFormat.parse(dateResaLimite.toString());
 
-            if (dateToDay.before(dateResa)){
+            if (dateResa.before(dateToDay) && reservationType.getStatut() != "Annuler"){
                 System.out.println("before : " + dateFormat.format(dateResa));
+                System.out.println("Resa à annuler !");
+                reservationType.setStatut("Annuler");
+                String Statut = reservationService.updateReservation(reservationType);
             }
 
-            if (dateToDay.after(dateResa)){
+            if (dateResa.after(dateToDay)){
                 System.out.println("After : " + dateFormat.format(dateResa));
             }
         }

@@ -31,13 +31,14 @@
                 </th:block>
 
                 <th:block th:if="${!reservationTypeList.isEmpty()}">
-                    <div class="row justify-content-start" style="margin-left: 15%">
+                    <div class="row justify-content-start" style="margin-left: 2%">
                         <table class="table table-hover table-striped col col-md-11">
 
                             <thead class="bg-success">
                             <tr style="text-align: center">
                                 <th style="padding-left: 19%" scope="col">Ouvrage</th>
                                 <th scope="col"></th>
+                                <th scope="col">Statut de la réservation</th>
                                 <th scope="col">Date de resa</th>
                                 <th scope="col">Décompte des jours</th>
                                 <th scope="col">Date de retour</th>
@@ -64,6 +65,7 @@
                                             </td>
                                         </th:block>
                                     </th:block>
+                                    <td style="vertical-align: middle" th:text="${reservation.getStatut()}"></td>
                                     <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse(reservation.getDateDemandeDeResa().toString()))}"></td>
                                     <td style="vertical-align: middle" th:text="${jourRestantEmprunt.get(reservation.getOuvrageId())} + ' / Jour(s)'"></td>
                                     <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse( dateRetour.get(reservation.getOuvrageId()).getDateFin().toString()))}"></td>

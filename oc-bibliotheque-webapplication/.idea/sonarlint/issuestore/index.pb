@@ -41,3 +41,9 @@ Pbibliotheque-batch/src/main/java/org/bibliotheque/config/BatchConfiguration.jav
 Nbibliotheque-batch/src/main/java/org/bibliotheque/batch/MailItemProcessor.java,9\7\97fd6d59edf033c764e9a8988f07e04f9905d6b2
 Å
 Qbibliotheque-batch/src/main/java/org/bibliotheque/batch/CheckReservationTime.java,0\6\063664daa5408bfa81d6c0d48abdd9074c49d00e
+}
+Mbibliotheque-webapp/src/main/java/org/bibliotheque/security/entity/Users.java,b\0\b01d3822284bbb06d90238f38ad0747a86ed3614
+ï
+ebibliotheque-webapp/src/main/java/org/bibliotheque/security/service/CustomAuthenticationProvider.java,5\a\5a989973eb0bcada5dbb88d42abbb743f494056c
+Ü
+Vbibliotheque-webapp/src/main/java/org/bibliotheque/security/config/SecurityConfig.java,3\f\3ffd8d4b3c0880e5d3f9f13491f2da8439108488

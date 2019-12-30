@@ -69,7 +69,12 @@
                                     <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse(reservation.getDateDemandeDeResa().toString()))}"></td>
                                     <td style="vertical-align: middle" th:text="${jourRestantEmprunt.get(reservation.getOuvrageId())} + ' / Jour(s)'"></td>
                                     <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse( dateRetour.get(reservation.getOuvrageId()).getDateFin().toString()))}"></td>
+                                   <th:block th:if="${reservation.getNumPositionResa() > 0}">
                                     <td style="vertical-align: middle" th:text="${reservation.getNumPositionResa()}"></td>
+                                   </th:block>
+                                    <th:block th:if="${reservation.getNumPositionResa() == 0}">
+                                        <td style="vertical-align: middle" th:text="'/'"></td>
+                                    </th:block>
                                     <td style="vertical-align: middle">
                                         <a style="text-align: center" class="btn btn-success navMenuCompte" href="#" th:href="@{/deleteReservation(reservationId=${reservation.getId()}, ouvrageId=${reservation.getOuvrageId()})}">SUPPRIMEZ</a>
                                     </td>

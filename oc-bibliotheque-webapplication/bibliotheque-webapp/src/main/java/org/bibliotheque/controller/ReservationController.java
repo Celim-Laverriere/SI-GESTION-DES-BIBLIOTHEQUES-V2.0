@@ -56,7 +56,8 @@ public class ReservationController {
             model.addAttribute("dateRetour", dateFormat.format(dateRetour));
         }
 
-        List<ReservationType> reservationTypeList = reservationService.reservationTypeListByOuvrageId(ouvrageId);
+        List<ReservationType> reservationTypeList = reservationService.reservationTypeListEnCours(
+                reservationService.reservationTypeListByOuvrageId(ouvrageId));
 
         Boolean resaDejaEnCours = new Boolean(true);
         Boolean dejaEmprunter = new Boolean(true);

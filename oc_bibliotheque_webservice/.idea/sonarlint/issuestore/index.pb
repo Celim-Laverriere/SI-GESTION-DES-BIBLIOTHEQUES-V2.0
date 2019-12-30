@@ -29,3 +29,5 @@ z
 Jbibliotheque-entity/src/main/java/org/bibliotheque/entity/LivreEntity.java,4\4\440faed43fd5a99d0409ac7fefacb12b89a27d38
 |
 Lbibliotheque-entity/src/main/java/org/bibliotheque/entity/OuvrageEntity.java,8\0\80e91e7de1ee57618a470924d2f3b37b9d1f1d30
+ˆ
+Xbibliotheque-service/src/main/java/org/bibliotheque/service/impl/EmpruntServiceImpl.java,1\d\1d71188935a79baad5a0588bcea00a8e57502df1

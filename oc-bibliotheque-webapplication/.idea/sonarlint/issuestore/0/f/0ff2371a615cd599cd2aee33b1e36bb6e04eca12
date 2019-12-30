@@ -1,7 +1,7 @@
 
+isquid:CommentedOutCodeLine("<This block of commented-out lines of code should be removed.(ƒ¨í÷8 ¤œóñ-
+¢%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‡Øë€8³Ðœóñ-
 nsquid:CommentedOutCodeLine$"<This block of commented-out lines of code should be removed.(›ÁÈ¡üÿÿÿÿ8 ¤œóñ-
 Fsquid:S1068"*Remove this unused "logger" private field.(«éû­ûÿÿÿÿ
-¢%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ
-isquid:CommentedOutCodeLine("<This block of commented-out lines of code should be removed.(ƒ¨í÷8 ¤œóñ-
 jsquid:S00112."FDefine and throw a dedicated exception instead of using a generic one.(ö»Ó¼úÿÿÿÿ8¾ØÖòñ-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‡Øë€8³Ðœóñ-

@@ -45,7 +45,7 @@ public class ReservationServiceImpl implements ReservationService {
 
         for (ReservationEntity entity : reservationEntityList){
 
-            if (reservationEntity.getNumPositionResa() < entity.getNumPositionResa()) {
+            if (reservationEntity.getNumPositionResa() < entity.getNumPositionResa() && reservationEntity.getNumPositionResa() != 0) {
                 entity.setNumPositionResa(entity.getNumPositionResa() - 1);
                 updateReservation(entity);
             }
@@ -97,18 +97,6 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public boolean updateReservation(ReservationEntity reservationEntity) {
-
-        List<ReservationEntity> reservationEntityList = reservationRepository.findAllByOuvrageId(reservationEntity.getOuvrageId());
-
-        for (ReservationEntity entity : reservationEntityList){
-
-            if (reservationEntity.getNumPositionResa() < entity.getNumPositionResa() && reservationEntity.getNumPositionResa() != 0) {
-                entity.setNumPositionResa(entity.getNumPositionResa() - 1);
-                updateReservation(entity);
-                reservationEntity.setNumPositionResa(0);
-            }
-        }
-
         try{
             this.reservationRepository.save(reservationEntity);
             return true;

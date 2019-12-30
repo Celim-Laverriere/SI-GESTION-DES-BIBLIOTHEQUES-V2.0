@@ -66,7 +66,8 @@ public class OuvrageController {
             /**@see OuvrageService#nombreDeLivreDispo(List)*/
             List<LivreType> livreTypeListDispo = ouvrageService.nombreDeLivreDispo(ouvrageType.getLivres());
 
-            List<ReservationType> reservationTypeList = reservationService.reservationTypeListByOuvrageId(ouvrageId);
+            List<ReservationType> reservationTypeList = reservationService.reservationTypeListEnCours(
+                    reservationService.reservationTypeListByOuvrageId(ouvrageId));
 
             List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByOuvrageId(ouvrageId);
 

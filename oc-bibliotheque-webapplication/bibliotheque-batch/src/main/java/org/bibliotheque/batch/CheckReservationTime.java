@@ -12,13 +12,12 @@ import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
+import java.util.*;
 
 @Component
 public class CheckReservationTime implements Tasklet, StepExecutionListener {
@@ -41,10 +40,54 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
     public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
 
 
+
+        List<ReservationType> reservationTypeList = reservationService.getAllReservation();
+        List<ReservationType> reservationTypeListBeCancelled = reservationListBeCancelled(reservationTypeList);
+        List<ReservationType> reservationTypeListUpdate = new ArrayList<>();
+
+        for (ReservationType reservationType : reservationTypeListBeCancelled) {
+
+            for (ReservationType type : reservationTypeList) {
+
+                if (reservationType.getNumPositionResa() < type.getNumPositionResa() && type.getId() != reservationType.getId() && type.getNumPositionResa() > 0) {
+                    type.setNumPositionResa(type.getNumPositionResa() - 1);
+                    System.out.println(type.getNumPositionResa());
+                    reservationTypeListUpdate.add(type);
+                }
+            }
+
+            reservationTypeList.clear();
+            reservationTypeList.addAll(reservationTypeListUpdate);
+            reservationTypeListUpdate.clear();
+
+        }
+
+
+        for (ReservationType reservationType : reservationTypeListBeCancelled) {
+            reservationType.setNumPositionResa(0);
+            reservationTypeList.add(reservationType);
+        }
+
+        for (ReservationType reservationType : reservationTypeList){
+            String statut = reservationService.updateReservation(reservationType);
+        }
+
+        return null;
+    }
+
+    /**
+     * ==== CETTE METHODE VÉRIFIE LES DATES DE RESERVATIONS ====
+     * @param reservationTypeList
+     * @return
+     * @throws ParseException
+     * @throws DatatypeConfigurationException
+     */
+    public List<ReservationType> reservationListBeCancelled(List<ReservationType> reservationTypeList) throws ParseException, DatatypeConfigurationException {
+
         Date dateToDay = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-         List<ReservationType> reservationTypeList = reservationService.getAllReservation();
+        List<ReservationType> reservationTypeListBeCancelled = new ArrayList<>();
 
         for (ReservationType reservationType : reservationTypeList) {
 
@@ -57,20 +100,12 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
 
             dateResa = dateFormat.parse(dateResaLimite.toString());
 
-            if (dateResa.before(dateToDay) && reservationType.getStatut() != "Annuler"){
-                System.out.println("before : " + dateFormat.format(dateResa));
-                System.out.println("Resa à annuler !");
+            if (dateResa.before(dateToDay) && reservationType.getStatut().equals("En cours")){
                 reservationType.setStatut("Annuler");
-                String Statut = reservationService.updateReservation(reservationType);
-            }
-
-            if (dateResa.after(dateToDay)){
-                System.out.println("After : " + dateFormat.format(dateResa));
+                reservationTypeListBeCancelled.add(reservationType);
             }
         }
 
-
-
-        return null;
+        return reservationTypeListBeCancelled;
     }
 }

@@ -104,4 +104,22 @@ public class ReservationService {
     public String updateReservation(ReservationType reservationType){
         return reservationRepositoy.updateReservation(reservationType);
     }
+
+    /**
+     * ==== CETTE METHODE TRIE POUR UN OUVRAGE LES RESERVATIONS "EN COURS" ====
+     * @param reservationTypes
+     * @return
+     */
+    public List<ReservationType> reservationTypeListEnCours(List<ReservationType> reservationTypes) {
+
+        List<ReservationType> reservationTypeList = new ArrayList<>();
+
+        for (ReservationType reservationType : reservationTypes){
+            if (!reservationType.getStatut().equals("Annuler")){
+                reservationTypeList.add(reservationType);
+            }
+        }
+
+        return reservationTypeList;
+    }
 }

@@ -53,8 +53,12 @@ public class ReservationEndpoint {
             calendar.setTime(entity.getDateDemandeDeResa());
             XMLGregorianCalendar dateDemandeDeResa = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
 
+            calendar.setTime(entity.getDateOuvrageDisponible());
+            XMLGregorianCalendar dateOuvrageDisponible = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
             reservationType.setId(entity.getId());
             reservationType.setDateDemandeDeResa(dateDemandeDeResa);
+            reservationType.setDateOuvrageDisponible(dateOuvrageDisponible);
             reservationType.setOuvrageId(entity.getOuvrageId());
             reservationType.setNumPositionResa(entity.getNumPositionResa());
             reservationType.setStatut(entity.getStatut());
@@ -90,8 +94,12 @@ public class ReservationEndpoint {
             calendar.setTime(entity.getDateDemandeDeResa());
             XMLGregorianCalendar dateDemandeDeResa = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
 
+            calendar.setTime(entity.getDateOuvrageDisponible());
+            XMLGregorianCalendar dateOuvrageDisponible = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
             reservationType.setId(entity.getId());
             reservationType.setDateDemandeDeResa(dateDemandeDeResa);
+            reservationType.setDateOuvrageDisponible(dateOuvrageDisponible);
             reservationType.setOuvrageId(entity.getOuvrageId());
             reservationType.setNumPositionResa(entity.getNumPositionResa());
             reservationType.setStatut(entity.getStatut());
@@ -126,8 +134,12 @@ public class ReservationEndpoint {
             calendar.setTime(entity.getDateDemandeDeResa());
             XMLGregorianCalendar dateDemandeDeResa = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
 
+            calendar.setTime(entity.getDateOuvrageDisponible());
+            XMLGregorianCalendar dateOuvrageDisponible = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
             reservationType.setId(entity.getId());
             reservationType.setDateDemandeDeResa(dateDemandeDeResa);
+            reservationType.setDateOuvrageDisponible(dateOuvrageDisponible);
             reservationType.setOuvrageId(entity.getOuvrageId());
             reservationType.setNumPositionResa(entity.getNumPositionResa());
             reservationType.setStatut(entity.getStatut());
@@ -221,8 +233,12 @@ public class ReservationEndpoint {
         } else {
             // 2. Obtenir les informations de la réservation à mettre à jour à partir de la requête
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
             Date dateDeResa = dateFormat.parse(request.getReservationType().getDateDemandeDeResa().toString());
             reservationEntity.setDateDemandeDeResa(dateDeResa);
+
+            Date dateOuvrageDisponible = dateFormat.parse(request.getReservationType().getDateOuvrageDisponible().toString());
+            reservationEntity.setDateOuvrageDisponible(dateOuvrageDisponible);
 
             BeanUtils.copyProperties(request.getReservationType(), reservationEntity);
 

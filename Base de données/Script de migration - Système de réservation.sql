@@ -3,6 +3,7 @@ CREATE SEQUENCE public.reservation_id_seq;
 CREATE TABLE public.Reservation (
                 id INTEGER NOT NULL DEFAULT nextval('public.reservation_id_seq'),
                 date_demande_de_resa DATE NOT NULL,
+                date_ouvrage_disponible DATE NOT NULL
                 num_position_resa INTEGER NOT NULL,
                 statut VARCHAR NOT NULL,
                 ouvrage_id INTEGER NOT NULL,

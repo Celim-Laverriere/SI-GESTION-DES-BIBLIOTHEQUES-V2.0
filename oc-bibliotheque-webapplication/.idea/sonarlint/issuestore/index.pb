@@ -47,3 +47,5 @@ Mbibliotheque-webapp/src/main/java/org/bibliotheque/security/entity/Users.java,
 ebibliotheque-webapp/src/main/java/org/bibliotheque/security/service/CustomAuthenticationProvider.java,5\a\5a989973eb0bcada5dbb88d42abbb743f494056c
 Ü
 Vbibliotheque-webapp/src/main/java/org/bibliotheque/security/config/SecurityConfig.java,3\f\3ffd8d4b3c0880e5d3f9f13491f2da8439108488
+ç
+]bibliotheque-batch/src/main/java/org/bibliotheque/Mail/SendingMailThroughGmailSMTPServer.java,8\6\867f8cf6996cc3d8001971547dd064255b90b2d0

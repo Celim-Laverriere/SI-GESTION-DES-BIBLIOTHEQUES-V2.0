@@ -19,6 +19,9 @@ public class EmpruntEntity implements Serializable {
     private Date dateDebut;
     @Column(name = "date_fin")
     private Date dateFin;
+    @Column(name = "statut")
+    private String statut;
+    @Column(name = "prolongation")
     private Boolean prolongation;
     @Column(name = "livre_id")
     private Integer livreId;

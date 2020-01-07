@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.0 
 // Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2020.01.04 à 11:51:03 AM CET 
+// Généré le : 2020.01.07 à 03:33:38 PM CET 
 //
 
 
@@ -28,7 +28,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *       &lt;sequence&gt;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="dateDemandeDeResa" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
- *         &lt;element name="dateOuvrageDisponible" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *         &lt;element name="numPositionResa" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="statut" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
@@ -45,7 +44,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "reservationType", propOrder = {
     "id",
     "dateDemandeDeResa",
-    "dateOuvrageDisponible",
     "numPositionResa",
     "statut",
     "ouvrageId",
@@ -57,9 +55,6 @@ public class ReservationType {
     @XmlElement(required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dateDemandeDeResa;
-    @XmlElement(required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar dateOuvrageDisponible;
     protected int numPositionResa;
     @XmlElement(required = true)
     protected String statut;
@@ -104,30 +99,6 @@ public class ReservationType {
      */
     public void setDateDemandeDeResa(XMLGregorianCalendar value) {
         this.dateDemandeDeResa = value;
-    }
-
-    /**
-     * Obtient la valeur de la propriété dateOuvrageDisponible.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getDateOuvrageDisponible() {
-        return dateOuvrageDisponible;
-    }
-
-    /**
-     * Définit la valeur de la propriété dateOuvrageDisponible.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setDateOuvrageDisponible(XMLGregorianCalendar value) {
-        this.dateOuvrageDisponible = value;
     }
 
     /**

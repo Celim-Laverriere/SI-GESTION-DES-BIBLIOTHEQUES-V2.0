@@ -401,6 +401,7 @@
             <xs:element name="id" type="xs:int"/>
             <xs:element name="dateDebut" type="xs:date"/>
             <xs:element name="dateFin" type="xs:date"/>
+            <xs:element name="statut" type="xs:string"/>
             <xs:element name="prolongation" type="xs:boolean"/>
             <xs:element name="livreId" type="xs:int"/>
             <xs:element name="compteId" type="xs:int"/>
@@ -578,7 +579,6 @@
         <xs:sequence>
             <xs:element name="id" type="xs:int"/>
             <xs:element name="dateDemandeDeResa" type="xs:date"/>
-            <xs:element name="dateOuvrageDisponible" type="xs:date"/>
             <xs:element name="numPositionResa" type="xs:int"/>
             <xs:element name="statut" type="xs:string"/>
             <xs:element name="ouvrageId" type="xs:int"/>

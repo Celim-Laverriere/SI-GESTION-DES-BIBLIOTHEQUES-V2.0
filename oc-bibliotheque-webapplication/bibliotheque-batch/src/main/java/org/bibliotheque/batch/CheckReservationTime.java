@@ -19,6 +19,7 @@ import org.springframework.stereotype.Component;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -51,6 +52,13 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
         return null;
     }
 
+    /**
+     *
+     * @param stepContribution
+     * @param chunkContext
+     * @return
+     * @throws Exception
+     */
     @Override
     public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
 
@@ -59,55 +67,12 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
         Date dateToDay = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-        Map<Integer, EmpruntType> firtReturnDateEmprunt = earliestReturnDateFinEmprunt(reservationTypeListByFirstPosition);
-
-
-        // Vérifie la date de retour d'un livre pour envoyer un mail au client qui à réservé le livre pour venir le chercher
-        for (ReservationType reservationType : reservationTypeListByFirstPosition) {
-
-            Date dateEmpruntFin = dateFormat.parse(reservationType.getDateOuvrageDisponible().toString());
-
-            if (dateFormat.format(dateEmpruntFin).equals(dateFormat.format(dateToDay)) && ouvrageRenderedForReservation(reservationType)) {
-
-                CompteType compteType = compteService.compteById(reservationType.getCompteId());
-                OuvrageType ouvrageType = ouvrageService.ouvrageById(reservationType.getOuvrageId());
-
-                Calendar calendar = Calendar.getInstance();
-                calendar.setTime(dateFormat.parse(reservationType.getDateOuvrageDisponible().toString()));
-                calendar.add(Calendar.DATE, 1);
-                Date dateOuvrageDisponible = calendar.getTime();
-
-                String subject = "Info réservation : Bibliothèque de TILLY";
-                String mail = textMailDisponible(dateOuvrageDisponible, compteType, ouvrageType);
-
-                sendingMailThroughGmailSMTPServer.sendMessage(subject, mail, compteType.getMail(), ouvrageType.getPhotos().get(0).getUrlPhoto());
-            }
-
-            // A faire (Si le livre n'a pas été rendu)
-            if (dateFormat.format(dateEmpruntFin).equals(dateFormat.format(dateToDay)) && !ouvrageRenderedForReservation(reservationType)) {
-
-                CompteType compteType = compteService.compteById(reservationType.getCompteId());
-                OuvrageType ouvrageType = ouvrageService.ouvrageById(reservationType.getOuvrageId());
-
-                Calendar calendar = Calendar.getInstance();
-                calendar.setTime(dateFormat.parse(reservationType.getDateOuvrageDisponible().toString()));
-                calendar.add(Calendar.DATE, 1);
-                Date dateOuvrageDisponible = calendar.getTime();
-
-                String subject = "Info réservation : Bibliothèque de TILLY";
-                String mail = textMailOuvrageIndisponible(dateOuvrageDisponible, compteType, ouvrageType);
-
-                sendingMailThroughGmailSMTPServer.sendMessage(subject, mail, compteType.getMail(), ouvrageType.getPhotos().get(0).getUrlPhoto());
-            }
-
-        }
-
         // Vérifie que le délai de 48 heures pour récupérer le livre n'est pas dépassé
         for (ReservationType reservationType : reservationTypeListByFirstPosition) {
 
             GregorianCalendar calendar = new GregorianCalendar();
 
-            Date dateEmpruntFin = dateFormat.parse(reservationType.getDateOuvrageDisponible().toString());
+            Date dateEmpruntFin = dateFormat.parse(reservationType.getDateDemandeDeResa().toString());
 
             calendar.setTime(dateEmpruntFin);
             calendar.add(GregorianCalendar.DATE, 1);
@@ -116,7 +81,8 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
             dateEmpruntFin = dateFormat.parse(dateResaLimite.toString());
 
             if (dateEmpruntFin.before(dateToDay) && reservationType.getStatut().equals("En cours")){
-                System.out.println("La réservation à exéder 48 heures !" + dateEmpruntFin + " Compte : " + reservationType.getCompteId() );
+                System.out.println("La réservation à exéder 48 heures !" + dateEmpruntFin + " Compte : " +
+                        reservationType.getCompteId() );
                 String statut = reservationBeCancelled(reservationType);
 
                 CompteType compteType = compteService.compteById(reservationType.getCompteId());
@@ -124,12 +90,67 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
                 String subject = "Info réservation : Bibliothèque de TILLY";
 
                 String mail = textMailDelaiExpirer(compteType, ouvrageType);
-                sendingMailThroughGmailSMTPServer.sendMessage(subject, mail, compteType.getMail(), ouvrageType.getPhotos().get(0).getUrlPhoto());
+                sendingMailThroughGmailSMTPServer.sendMessage(subject, mail, compteType.getMail(),
+                        ouvrageType.getPhotos().get(0).getUrlPhoto());
             }
         }
 
-        return null;
+        // Vérifie la date de retour d'un livre pour envoyer un mail au client qui à réservé le livre pour venir le chercher
+
+        reservationTypeListByFirstPosition.clear();
+        reservationTypeListByFirstPosition = reservationTypeListByFirstPosition();
+
+        for (ReservationType reservationType : reservationTypeListByFirstPosition) {
+
+            Date dateEmpruntFin = dateFormat.parse(reservationType.getDateDemandeDeResa().toString());
+
+            if (dateFormat.format(dateEmpruntFin).equals(dateFormat.format(dateToDay)) &&
+                    ouvrageRenderedForReservation(reservationType)) {
+
+                CompteType compteType = compteService.compteById(reservationType.getCompteId());
+                OuvrageType ouvrageType = ouvrageService.ouvrageById(reservationType.getOuvrageId());
+
+                Calendar calendar = Calendar.getInstance();
+                calendar.setTime(dateEmpruntFin);
+                calendar.add(Calendar.DATE, 1);
+                Date dateOuvrageDisponible = calendar.getTime();
+
+                String subject = "Info réservation : Bibliothèque de TILLY";
+                String mail = textMailDisponible(dateOuvrageDisponible, compteType, ouvrageType);
+
+                sendingMailThroughGmailSMTPServer.sendMessage(subject, mail, compteType.getMail(),
+                        ouvrageType.getPhotos().get(0).getUrlPhoto());
+            }
+
+        }
+
+        return RepeatStatus.FINISHED;
     }
+
+    /**
+     *
+     * @param reservationType
+     * @return
+     */
+    public Date empruntDateDeFin(ReservationType reservationType) throws ParseException {
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        Map<Integer, Long> jourRestantEmprunt = new HashMap<>();
+        Map<Integer, EmpruntType> dateRetour = new HashMap<>();
+
+        List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByOuvrageId(reservationType.getOuvrageId());
+        List<Long> jourRestantEmpruntList = empruntService.remainingDayOfTheLoan(empruntTypeList);
+
+        jourRestantEmprunt.put(reservationType.getOuvrageId(), jourRestantEmpruntList.get(0));
+
+        empruntTypeList = empruntService.earliestReturnDateForLoan(empruntTypeList, jourRestantEmpruntList);
+       dateRetour.put(reservationType.getOuvrageId(), empruntTypeList.get(0));
+        System.out.println(dateFormat.parse(dateRetour.get(reservationType.getOuvrageId()).getDateFin().toString()));
+
+        return dateFormat.parse(dateRetour.get(reservationType.getOuvrageId()).getDateFin().toString());
+    }
+
 
     /**
      * ==== CETTE METHODE VÉRIFIE SI LES DATES DE RESERVATIONS N'EXEDENT PAS 48 HEURES  ====
@@ -140,8 +161,8 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
      */
     public String reservationBeCancelled(ReservationType reservationType) throws DatatypeConfigurationException {
 
-        Date dateToDay = new Date();
         GregorianCalendar calendar = new GregorianCalendar();
+        Date dateToDay = new Date();
 
         List<ReservationType> reservationTypeList = reservationService.reservationTypeListByOuvrageId(reservationType.getOuvrageId());
 
@@ -149,14 +170,16 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
 
         for (ReservationType reservation : reservationTypeList) {
 
-            calendar.setTime(dateToDay);
-            XMLGregorianCalendar dateOuvrageDisponible = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+            if (!reservation.getStatut().equals("Annuler")){
+                reservation.setNumPositionResa(reservation.getNumPositionResa() - 1);
 
-            reservation.setNumPositionResa(reservation.getNumPositionResa() - 1);
-            reservation.setDateOuvrageDisponible(dateOuvrageDisponible);
-            reservationTypesUpdate.add(reservation);
-            reservationService.updateReservation(reservation);
+                calendar.setTime(dateToDay);
+                XMLGregorianCalendar gregorianCalendarToDay = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+                reservation.setDateDemandeDeResa(gregorianCalendarToDay);
 
+                reservationTypesUpdate.add(reservation);
+                reservationService.updateReservation(reservation);
+            }
         }
 
         reservationType.setStatut("Annuler");
@@ -165,33 +188,6 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
         String statut = reservationService.updateReservation(reservationType);
 
         return statut;
-    }
-
-    /**
-     *
-     * @param reservationTypeList
-     * @return
-     * @throws ParseException
-     */
-    public Map<Integer, EmpruntType> earliestReturnDateFinEmprunt(List<ReservationType> reservationTypeList) throws ParseException {
-
-        Map<Integer, Long> jourRestantEmprunt = new HashMap<>();
-        Map<Integer, EmpruntType> firstReturnDateByOuvrage = new HashMap<>();
-
-
-        for (ReservationType reservationType : reservationTypeList) {
-
-            List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByOuvrageId(reservationType.getOuvrageId());
-            List<Long> jourRestantEmpruntList = empruntService.remainingDayOfTheLoan(empruntTypeList);
-
-            jourRestantEmprunt.put(reservationType.getOuvrageId(), jourRestantEmpruntList.get(0));
-
-            empruntTypeList = empruntService.earliestReturnDateForLoan(empruntTypeList, jourRestantEmpruntList);
-            firstReturnDateByOuvrage.put(reservationType.getOuvrageId(), empruntTypeList.get(0));
-
-        }
-
-        return firstReturnDateByOuvrage;
     }
 
 
@@ -221,6 +217,7 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
     public Boolean ouvrageRenderedForReservation(ReservationType reservationType) {
 
         OuvrageType ouvrageType = ouvrageService.ouvrageById(reservationType.getOuvrageId());
+
         Boolean livreReserver = false;
 
         for(LivreType livreType : ouvrageType.getLivres()){
@@ -244,18 +241,7 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
-        return ""
-                + "<html>"
-                + " <body>"
-                + "  <h1>Votre réservation disponible !</h1>"
-                + "<hr/>"
-                + "<div id=\"conteneur\" style=\" display:flex; width:70%; margin:auto\">"
-                + "     <div style=\"\">"
-                + "         <img style=\"display: inline-block; height: 300px; width: 200px; vertical-align: top\" src=\"cid:image-id\" />"
-                + "     </div>"
-                + "     <div style=\"margin-left: 20px; border-style: solid; border-bottom: white; border-top: "
-                + "white; border-right: white; border-color: #DCDCDC; border-width: 2px;\">"
-                + ""
+        return textMail().get(0)
                 + "<div style=\"padding-left: 20px\">"
                 + "<p>Bonjour, " + compteType.getPrenom() + "</p>"
                 + "<p>Votre livre sera disponible à partir du "+ dateFormat.format(dateOuvrageDisponible) + " dans votre bibliothèque !</p>"
@@ -263,93 +249,38 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
                 + "<p>Titre de l'ouvrage :  " + ouvrageType.getTitre() + "</p>"
                 + "<p>À très bientôt dans votre bibliothèque préféré pour de nouvelles lécture !</p>"
                 + "</div>"
-                + ""
-                + "</div>"
-                + "</div>"
-                + "<hr/>"
-                + "<div style=\"margin:auto; text-align:center; width:70%\">"
-                + "<h4><a href=\"http://localhost:8080/\">Bibliothéque de Tilly</a></h4>"
-                + "<small>Adresse : 124 Rue Frédéric-Magisson, 80770 Tilly</small></br>"
-                + "<small>La bibliothéque est ouverte du lundi au samedi de 9h00 à 18h00</small></br>"
-                + "<small>Téléphone : 06 00 64 59 12</small></br>"
-                + "<small>Email : tilly.bibliothéque@gmail.com</small></br>"
-                + "</div>"
-                + " </body>"
-                + "</html>";
-    }
-
-    public String textMailOuvrageIndisponible(Date dateOuvrageDisponible, CompteType compteType, OuvrageType ouvrageType){
-
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-
-        return ""
-                + "<html>"
-                + " <body>"
-                + "  <h1>Votre réservation est toujours indisponible !</h1>"
-                + "<hr/>"
-                + "<div id=\"conteneur\" style=\" display:flex; width:70%; margin:auto\">"
-                + "     <div style=\"\">"
-                + "         <img style=\"display: inline-block; height: 300px; width: 200px; vertical-align: top\" src=\"cid:image-id\" />"
-                + "     </div>"
-                + "     <div style=\"margin-left: 20px; border-style: solid; border-bottom: white; border-top: "
-                + "white; border-right: white; border-color: #DCDCDC; border-width: 2px;\">"
-                + ""
-                + "<div style=\"padding-left: 20px\">"
-                + "<p>Bonjour, " + compteType.getPrenom() + "</p>"
-                + "<p>Nous vous informons suite à votre réservation qu'aucun exemplaire nous n'a été restitué pour le moment."
-                + "<p>Nous vous informerons par mail dès qu'un ouvrage sera disponible pour venir le récupérer.</p>"
-                + "<p>Titre de l'ouvrage :  " + ouvrageType.getTitre() + "</p>"
-                + "<p>À très bientôt dans votre bibliothèque préféré pour de nouvelles lécture !</p>"
-                + "</div>"
-                + ""
-                + "</div>"
-                + "</div>"
-                + "<hr/>"
-                + "<div style=\"margin:auto; text-align:center; width:70%\">"
-                + "<h4><a href=\"http://localhost:8080/\">Bibliothéque de Tilly</a></h4>"
-                + "<small>Adresse : 124 Rue Frédéric-Magisson, 80770 Tilly</small></br>"
-                + "<small>La bibliothéque est ouverte du lundi au samedi de 9h00 à 18h00</small></br>"
-                + "<small>Téléphone : 06 00 64 59 12</small></br>"
-                + "<small>Email : tilly.bibliothéque@gmail.com</small></br>"
-                + "</div>"
-                + " </body>"
-                + "</html>";
+                + textMail().get(1);
     }
 
     public String textMailDelaiExpirer(CompteType compteType, OuvrageType ouvrageType) {
 
-        return ""
-                + "<html>"
-                + " <body>"
-                + "  <h1>Votre réservation à expiré !</h1>"
-                + "<hr/>"
-                + "<div id=\"conteneur\" style=\" display:flex; width:70%; margin:auto\">"
-                + "     <div style=\"\">"
-                + "         <img style=\"display: inline-block; height: 300px; width: 200px; vertical-align: top\" src=\"cid:image-id\" />"
-                + "     </div>"
-                + "     <div style=\"margin-left: 20px; border-style: solid; border-bottom: white; border-top: "
-                + "white; border-right: white; border-color: #DCDCDC; border-width: 2px;\">"
-                + ""
+        return textMail().get(0)
                 + "<div style=\"padding-left: 20px\">"
                 + "<p>Bonjour, " + compteType.getPrenom() + "</p>"
                 + "<p>Nous vous informons que votre réservation a expiré le délai de 48h00 pour venir retirer votre livre en bibliothèque.</p>"
                 + "<p>Titre de l'ouvrage :  " + ouvrageType.getTitre() + "</p>"
                 + "<p>À très bientôt dans votre bibliothèque préféré pour de nouvelles lécture !</p>"
                 + "</div>"
-                + ""
-                + "</div>"
-                + "</div>"
-                + "<hr/>"
-                + "<div style=\"margin:auto; text-align:center; width:70%\">"
-                + "<h4><a href=\"http://localhost:8080/\">Bibliothéque de Tilly</a></h4>"
-                + "<small>Adresse : 124 Rue Frédéric-Magisson, 80770 Tilly</small></br>"
-                + "<small>La bibliothéque est ouverte du lundi au samedi de 9h00 à 18h00</small></br>"
-                + "<small>Téléphone : 06 00 64 59 12</small></br>"
-                + "<small>Email : tilly.bibliothéque@gmail.com</small></br>"
-                + "</div>"
-                + " </body>"
-                + "</html>";
+                + textMail().get(1);
     }
 
+    public List<String> textMail(){
+
+        Properties properties = new Properties();
+        InputStream stream = null;
+        List<String> pathMessage = new ArrayList<>();
+
+        try{
+            String filename = "messagesMail.properties";
+            stream = getClass().getClassLoader().getResourceAsStream(filename);
+            properties.load(stream);
+            pathMessage.add(properties.getProperty("mailPartie1"));
+            pathMessage.add(properties.getProperty("adresse_bibliothèque"));
+        } catch (Exception pEX){
+            System.out.println(pEX);
+        }
+
+        return pathMessage;
+    }
 
 }

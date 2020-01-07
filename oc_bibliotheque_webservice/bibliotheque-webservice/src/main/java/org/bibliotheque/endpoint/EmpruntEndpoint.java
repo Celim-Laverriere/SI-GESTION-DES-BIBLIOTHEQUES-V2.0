@@ -83,6 +83,7 @@ public class EmpruntEndpoint  {
             empruntType.setId(entity.getId());
             empruntType.setDateDebut(dateDebut);
             empruntType.setDateFin(dateFin);
+            empruntType.setStatut(entity.getStatut());
             empruntType.setProlongation(entity.getProlongation());
             empruntType.setCompteId(entity.getCompteId());
             empruntType.setLivreId(entity.getLivreId());
@@ -121,6 +122,7 @@ public class EmpruntEndpoint  {
             empruntType.setId(entity.getId());
             empruntType.setDateDebut(dateDebut);
             empruntType.setDateFin(dateFin);
+            empruntType.setStatut(entity.getStatut());
             empruntType.setProlongation(entity.getProlongation());
             empruntType.setCompteId(entity.getCompteId());
             empruntType.setLivreId(entity.getLivreId());
@@ -263,6 +265,7 @@ public class EmpruntEndpoint  {
             empruntType.setId(entity.getId());
             empruntType.setDateDebut(dateDebut);
             empruntType.setDateFin(dateFin);
+            empruntType.setStatut(entity.getStatut());
             empruntType.setProlongation(entity.getProlongation());
             empruntType.setCompteId(entity.getCompteId());
             empruntType.setLivreId(entity.getLivreId());

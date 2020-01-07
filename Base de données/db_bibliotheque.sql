@@ -79,6 +79,7 @@ CREATE TABLE public.emprunt (
                 id INTEGER NOT NULL DEFAULT nextval('public.emprunt_id_seq'),
                 date_debut DATE NOT NULL,
                 date_fin DATE NOT NULL,
+                statut VARCHAR NOT NULL,
                 prolongation BOOLEAN,
                 livre_id INTEGER NOT NULL,
                 compte_id INTEGER NOT NULL,

@@ -53,12 +53,12 @@ VALUES
 ;    
     
 INSERT INTO public.emprunt
-    (date_debut, date_fin, prolongation, livre_id, compte_id)
+    (date_debut, date_fin, statut, prolongation, livre_id, compte_id)
 VALUES
-    ('2019-12-20', '2020-01-20', false, 1, 3),
-    ('2019-11-30', '2019-12-30', false, 2, 1),
-    ('2019-11-02', '2019-12-02', false, 4, 1),
-    ('2019-12-05', '2020-01-05', false, 3, 2)
+    ('2019-12-20', '2020-01-20', 'En cours', false, 1, 3),
+    ('2019-11-30', '2019-12-30', 'En cours', false, 2, 1),
+    ('2019-11-02', '2019-12-02', 'En cours', false, 4, 1),
+    ('2019-12-05', '2020-01-05', 'En cours', false, 3, 2)
 ;
     
 INSERT INTO public.reservation

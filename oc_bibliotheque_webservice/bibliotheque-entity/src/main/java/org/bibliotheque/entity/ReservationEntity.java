@@ -20,9 +20,6 @@ public class ReservationEntity implements Serializable {
     @Column(name = "date_demande_de_resa")
     private Date dateDemandeDeResa;
 
-    @Column(name = "date_ouvrage_disponible")
-    private Date dateOuvrageDisponible;
-
     @Column(name = "num_position_resa")
     private Integer numPositionResa;
 

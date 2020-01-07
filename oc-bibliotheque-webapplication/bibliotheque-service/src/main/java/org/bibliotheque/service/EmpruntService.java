@@ -152,7 +152,7 @@ public class EmpruntService {
 
 
     /**
-     * ==== CETTE METHODE RENVOIE UNE LISTE D'EMPRUNTS TRIE PAR ORDRE CROISANT ====
+     * ==== CETTE METHODE RENVOIE UNE LISTE D'EMPRUNTS TRIE PAR ORDRE CROISANT EN FONCTION DES DATES ====
      * @param empruntTypeList
      * @param jourRestantEmprunt
      * @return

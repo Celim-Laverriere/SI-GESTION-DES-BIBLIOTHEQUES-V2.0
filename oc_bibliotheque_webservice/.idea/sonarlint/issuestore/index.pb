@@ -31,3 +31,9 @@ Jbibliotheque-entity/src/main/java/org/bibliotheque/entity/LivreEntity.java,4\4
 Lbibliotheque-entity/src/main/java/org/bibliotheque/entity/OuvrageEntity.java,8\0\80e91e7de1ee57618a470924d2f3b37b9d1f1d30
 ˆ
 Xbibliotheque-service/src/main/java/org/bibliotheque/service/impl/EmpruntServiceImpl.java,1\d\1d71188935a79baad5a0588bcea00a8e57502df1
+|
+Lbibliotheque-entity/src/main/java/org/bibliotheque/entity/EmpruntEntity.java,1\2\128f941f5a5ede7fa138e559e84043b6e08fd868
+ˆ
+Xbibliotheque-repository/src/main/java/org/bibliotheque/repository/EmpruntRepository.java,f\5\f52ad1146c90dab2c701504170ca970e80655542
+ˆ
+Xbibliotheque-service/src/main/java/org/bibliotheque/service/contract/EmpruntService.java,5\8\58a45ad481c46f059dd1a93a240840dc3a4c30a2

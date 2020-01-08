@@ -51,3 +51,7 @@ Vbibliotheque-webapp/src/main/java/org/bibliotheque/security/config/SecurityConf
 ]bibliotheque-batch/src/main/java/org/bibliotheque/Mail/SendingMailThroughGmailSMTPServer.java,8\6\867f8cf6996cc3d8001971547dd064255b90b2d0
 ~
 Nbibliotheque-repository/src/main/java/org/bibliotheque/client/LoginClient.java,0\0\000bba08c623cf45239791abbb091c0c55bbbceb
+ˆ
+Xbibliotheque-repository/src/main/java/org/bibliotheque/repository/EmpruntRepository.java,f\5\f52ad1146c90dab2c701504170ca970e80655542
+x
+Hbibliotheque-batch/src/main/java/org/bibliotheque/Mail/MessagesMail.java,d\9\d9a1e06b78e2534cb72b21e9b312e9d360335a05

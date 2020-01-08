@@ -1,5 +1,6 @@
 package org.bibliotheque.controller;
 
+import org.bibliotheque.security.entity.Users;
 import org.bibliotheque.service.EmpruntService;
 import org.bibliotheque.service.OuvrageService;
 import org.bibliotheque.service.ReservationService;
@@ -15,6 +16,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.servlet.http.HttpSession;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -54,7 +57,10 @@ public class OuvrageController {
 
 
     @RequestMapping(value = "/ouvrage", method = RequestMethod.GET)
-    public String ouvrageDetail(Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId){
+    public String ouvrageDetail(HttpSession session, Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId){
+
+        Users user = (Users) session.getAttribute("user");
+        Boolean dejaEmprunter = true;
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -69,6 +75,13 @@ public class OuvrageController {
             List<ReservationType> reservationTypeList = reservationService.reservationTypeListEnCours(
                     reservationService.reservationTypeListByOuvrageId(ouvrageId));
 
+            for (ReservationType reservationType : reservationTypeList) {
+
+                if (reservationType.getCompteId() == user.getUserId() && ouvrageId == reservationType.getOuvrageId()) {
+                        dejaEmprunter = false;
+                }
+            }
+
             List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByOuvrageId(ouvrageId);
 
             if (empruntTypeList.size() > 0) {
@@ -79,12 +92,12 @@ public class OuvrageController {
                 empruntTypeList = empruntService.earliestReturnDateForLoan(empruntTypeList, jourRestantEmprunt);
                 Date dateRetour = dateFormat.parse(empruntTypeList.get(0).getDateFin().toString());
                 model.addAttribute("dateRetour", dateFormat.format(dateRetour));
-
             }
 
             model.addAttribute("livreTypeListDispo", livreTypeListDispo);
             model.addAttribute("ouvrageDetail", ouvrageType);
             model.addAttribute("reservationTypeList", reservationTypeList);
+            model.addAttribute("dejaEmprunter", dejaEmprunter);
 
             return "ouvrage/ouvrageDetail";
 

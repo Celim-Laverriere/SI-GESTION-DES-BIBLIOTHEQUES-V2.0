@@ -1,9 +1,9 @@
 
-Lsquid:S3416"0Update this logger to use "EmpruntClient.class".(ášªçÿÿÿÿÿ
 }squid:S3457."aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(¥õ¢¿ùÿÿÿÿ
 }squid:S3457"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(â½©ùüÿÿÿÿ
-}squid:S3457["aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(¸óßùÿÿÿÿ
 }squid:S3457E"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(ÁÉççúÿÿÿÿ
 Zsquid:S2387">"logger" is the name of a field in "WebServiceGatewaySupport".(ášªçÿÿÿÿÿ
-}squid:S3457o"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(¾í¼ùÿÿÿÿ
 Fsquid:S00108/")Either remove or fill this block of code.(°–±šúÿÿÿÿ
+}squid:S3457o"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(¾í¼ùÿÿÿÿ
+}squid:S3457["aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(¸óßùÿÿÿÿ
+Lsquid:S3416"0Update this logger to use "EmpruntClient.class".(ášªçÿÿÿÿÿ

@@ -36,13 +36,12 @@
 
                             <thead class="bg-success">
                             <tr style="text-align: center">
-                                <th style="padding-left: 19%" scope="col">Ouvrage</th>
+                                <th style="padding-left: 19%; vertical-align: middle" scope="col">Ouvrage</th>
                                 <th scope="col"></th>
-                                <th scope="col">Statut de la réservation</th>
-                                <th scope="col">Date de resa</th>
-                                <th scope="col">Décompte des jours</th>
-                                <th scope="col">Date de retour</th>
-                                <th scope="col">Position dans la liste</th>
+                                <th style="vertical-align: middle" scope="col">Statut de la réservation</th>
+                                <th style="vertical-align: middle" scope="col">Décompte des jours</th>
+                                <th style="vertical-align: middle" scope="col">Date de retour estimé</th>
+                                <th style="vertical-align: middle" scope="col">Position dans la liste</th>
                                 <th scope="col"></th>
                             </tr>
                             </thead>
@@ -66,8 +65,23 @@
                                         </th:block>
                                     </th:block>
                                     <td style="vertical-align: middle" th:text="${reservation.getStatut()}"></td>
-                                    <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse(reservation.getDateDemandeDeResa().toString()))}"></td>
-                                    <td style="vertical-align: middle" th:text="${jourRestantEmprunt.get(reservation.getOuvrageId())} + ' / Jour(s)'"></td>
+
+                                    <th:block th:if="${jourRestantEmprunt.get(reservation.getOuvrageId()) > 1}">
+                                    <td style="vertical-align: middle" th:text="${jourRestantEmprunt.get(reservation.getOuvrageId())} + ' Jour(s)'"></td>
+                                    </th:block>
+
+                                    <th:block th:if="${jourRestantEmprunt.get(reservation.getOuvrageId()) < 1
+                                    && reservation.getNumPositionResa() == 1
+                                    && dateRetour.get(reservation.getOuvrageId()).getStatut().equals('Rendu')}">
+                                        <td style="vertical-align: middle" th:text="'Vous avez 48 heures pour venir récupérer votre livre !'"></td>
+                                    </th:block>
+
+                                    <th:block th:if="${jourRestantEmprunt.get(reservation.getOuvrageId()) < 1
+                                    && reservation.getNumPositionResa() >= 2
+                                    && dateRetour.get(reservation.getOuvrageId()).getStatut().equals('Rendu')}">
+                                        <td style="vertical-align: middle" th:text="'Décompte des jours suspendus ! En attente du traitement de la première réservation.'"></td>
+                                    </th:block>
+
                                     <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse( dateRetour.get(reservation.getOuvrageId()).getDateFin().toString()))}"></td>
                                    <th:block th:if="${reservation.getNumPositionResa() > 0}">
                                     <td style="vertical-align: middle" th:text="${reservation.getNumPositionResa()}"></td>

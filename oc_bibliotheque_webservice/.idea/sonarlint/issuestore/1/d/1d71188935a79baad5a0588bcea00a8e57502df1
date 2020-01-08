@@ -1,9 +1,9 @@
 
 Csquid:S1612K",Replace this lambda with a method reference.(ЙююП
-?squid:S11487"#Use a logger to log this exception.(°Эд‰эяяяя
-?squid:S1148,"#Use a logger to log this exception.(°Эд‰эяяяя
-Csquid:S1612V",Replace this lambda with a method reference.(Џђ»ј
-?squid:S1148B"#Use a logger to log this exception.(°Эд‰эяяяя
 Nsquid:S3655"7Call "Optional#isPresent()" before accessing the value.(‡ЈЃЊ
 Hsquid:S1612#",Replace this lambda with a method reference.(ЁгШјыяяяя
+?squid:S11487"#Use a logger to log this exception.(°Эд‰эяяяя
+Csquid:S1612V",Replace this lambda with a method reference.(Џђ»ј
+?squid:S1148,"#Use a logger to log this exception.(°Эд‰эяяяя
 Hsquid:S1612R",Replace this lambda with a method reference.(ЩЌЩ«ъяяяя
+?squid:S1148B"#Use a logger to log this exception.(°Эд‰эяяяя

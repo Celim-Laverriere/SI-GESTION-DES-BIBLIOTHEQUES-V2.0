@@ -1,38 +1,13 @@
 
-msquid:S1192•"IDefine a constant instead of duplicating this literal " </body>" 3 times.(¢›Üÿÿÿÿÿ8ÆÇ¾Ú÷-
-Hsquid:S5411W"*Use the primitive boolean expression here.(Ó©‡ò8ì¸»×÷-
-squid:S1192"zDefine a constant instead of duplicating this literal "<div style=\"margin:auto; text-align:center; width:70%\">" 3 times.(§™àøÿÿÿÿ8ÆÇ¾Ú÷-
-Ssquid:S1481›"/Remove this unused "dateFormat" local variable.(ïÆòøÿÿÿÿ8‰ŒÚ÷-
-¼squid:S1192€"Define a constant instead of duplicating this literal "     <div style=\"margin-left: 20px; border-style: solid; border-bottom: white; border-top: " 3 times.(‚Á’8ÆÇ¾Ú÷-
-•squid:S1192’"qDefine a constant instead of duplicating this literal "<small>TÃ©lÃ©phone : 06 00 64 59 12</small></br>" 3 times.(¡ŸÊ‚ûÿÿÿÿ8ÆÇ¾Ú÷-
-§squid:S1192"‡Define a constant instead of duplicating this literal "<small>Adresse : 124 Rue FrÃ©dÃ©ric-Magisson, 80770 Tilly</small></br>" 3 times.(ğ¡ ³8ÆÇ¾Ú÷-
-ksquid:S1192ø"GDefine a constant instead of duplicating this literal "<html>" 3 times.(™‰öİşÿÿÿÿ8ÆÇ¾Ú÷-
-¬squid:S1192ü"‡Define a constant instead of duplicating this literal "<div id=\"conteneur\" style=\" display:flex; width:70%; margin:auto\">" 3 times.(öÒ¬™şÿÿÿÿ8ÆÇ¾Ú÷-
-¬squid:S1192"‡Define a constant instead of duplicating this literal "<h4><a href=\"http://localhost:8080/\">BibliothÃ©que de Tilly</a></h4>" 3 times.(Âêáíÿÿÿÿÿ8ÆÇ¾Ú÷-
-qsquid:S1192„"MDefine a constant instead of duplicating this literal "<p>Bonjour, " 3 times.(Ä°À©ÿÿÿÿÿ8ÆÇ¾Ú÷-
-Msquid:S5411F"*Use the primitive boolean expression here.(˜©½¶ùÿÿÿÿ8ˆ‹ÎÑ÷-
-gsquid:S1192ù"HDefine a constant instead of duplicating this literal " <body>" 3 times.(ı©ÏÎ8ÆÇ¾Ú÷-
-Øsquid:S1192ş"¸Define a constant instead of duplicating this literal "         <img style=\"display: inline-block; height: 300px; width: 200px; vertical-align: top\" src=\"cid:image-id\" />" 3 times.(…´Ù»8ÆÇ¾Ú÷-
-[squid:S1172™"<Remove this unused method parameter "dateOuvrageDisponible".(Şá³ğ8‰ŒÚ÷-
-Nsquid:S1481x"+Remove this unused "statut" local variable.(Ë‡ıŞûÿÿÿÿ8Í¶şÜö-
-µsquid:S1192‘"•Define a constant instead of duplicating this literal "<small>La bibliothÃ©que est ouverte du lundi au samedi de 9h00 Ã  18h00</small></br>" 3 times.(Ğ¹éõ8ÆÇ¾Ú÷-
-]squid:S1854x":Remove this useless assignment to local variable "statut".(Ë‡ıŞûÿÿÿÿ8Í¶şÜö-
-ºsquid:S1192ˆ"šDefine a constant instead of duplicating this literal "<p>Ã€ trÃ¨s bientÃ´t dans votre bibliothÃ¨que prÃ©fÃ©rÃ© pour de nouvelles lÃ©cture !</p>" 3 times.(Ş“Çı8ÆÇ¾Ú÷-
-ˆsquid:S1192P"kDefine a constant instead of duplicating this literal "Info rÃ©servation : BibliothÃ¨que de TILLY" 3 times.(·¼ˆ#8ƒÇËÚ÷-
-squid:S1192“"zDefine a constant instead of duplicating this literal "<small>Email : tilly.bibliothÃ©que@gmail.com</small></br>" 3 times.(µé·şÿÿÿÿ8ÆÇ¾Ú÷-
-usquid:S1192ı"VDefine a constant instead of duplicating this literal "     <div style=\"\">" 3 times.(ä’‰Ê8ÆÇ¾Ú÷-
-lsquid:S1192‰"HDefine a constant instead of duplicating this literal "</div>" 12 times.(ğöØçıÿÿÿÿ8³“ÏÑ÷-
-ysquid:S1192‡"ZDefine a constant instead of duplicating this literal "<p>Titre de l'ouvrage :  " 3 times.(ÖãÜ8ÆÇ¾Ú÷-
-¤squid:S1186-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Å´Ë¨ıÿÿÿÿ8Ôš¤òñ-
-jsquid:S1192û"FDefine a constant instead of duplicating this literal "<hr/>" 6 times.(‡ÉÇ¶øÿÿÿÿ8òññÙ÷-
-®squid:S1192"‰Define a constant instead of duplicating this literal "white; border-right: white; border-color: #DCDCDC; border-width: 2px;\">" 3 times.(™¾Ó­üÿÿÿÿ8ÆÇ¾Ú÷-
-‚squid:S1488¥"^Immediately return this expression instead of assigning it to the temporary variable "statut".(ÏıÅ÷şÿÿÿÿ8©ÀüÜö-
-gsquid:S1854>"IRemove this useless assignment to local variable "firtReturnDateEmprunt".(æœĞ8¡‘½‡÷-
-psquid:S1192ÿ"LDefine a constant instead of duplicating this literal "     </div>" 3 times.(ğöØçıÿÿÿÿ8ÆÇ¾Ú÷-
-‡squid:S1192ƒ"cDefine a constant instead of duplicating this literal "<div style=\"padding-left: 20px\">" 3 times.(ì¡‰ñúÿÿÿÿ8ÆÇ¾Ú÷-
-Usquid:S3252q"7Use static access with "java.util.Calendar" for "DATE".(‘çø8ÁÏ¿Üö-
+‚squid:S1488¼"^Immediately return this expression instead of assigning it to the temporary variable "statut".(ÏıÅ÷şÿÿÿÿ8Û³š…ø-
+Hsquid:S5411l"*Use the primitive boolean expression here.(Ùîô8Û³š…ø-
+¤squid:S1186."€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Å´Ë¨ıÿÿÿÿ8Ôš¤òñ-
+Nsquid:S1481V"+Remove this unused "statut" local variable.(Ë‡ıŞûÿÿÿÿ8Û³š…ø-
+Usquid:S3252N"7Use static access with "java.util.Calendar" for "DATE".(‘çø8Û³š…ø-
+\
+squid:S106˜"9Replace this use of System.out or System.err by a logger.(ŸùÚÆüÿÿÿÿ8Û³š…ø-
+]squid:S1854V":Remove this useless assignment to local variable "statut".(Ë‡ıŞûÿÿÿÿ8Û³š…ø-
 [
-squid:S106w"9Replace this use of System.out or System.err by a logger.(”÷»áşÿÿÿÿ8ñˆÇÜö-
-bsquid:S1854›">Remove this useless assignment to local variable "dateFormat".(ïÆòøÿÿÿÿ8‰ŒÚ÷-
-Xsquid:S1481>":Remove this unused "firtReturnDateEmprunt" local variable.(æœĞ8¡‘½‡÷-
-gsquid:S1192–"HDefine a constant instead of duplicating this literal "</html>" 3 times.(¾ãÃğ8ÆÇ¾Ú÷-
+squid:S106T"9Replace this use of System.out or System.err by a logger.(é¹¤¥úÿÿÿÿ8Û³š…ø-
+W
+squid:S106•"9Replace this use of System.out or System.err by a logger.(ı„Î8Û³š…ø-

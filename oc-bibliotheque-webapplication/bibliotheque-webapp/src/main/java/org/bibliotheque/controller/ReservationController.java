@@ -126,7 +126,6 @@ public class ReservationController {
         model.addAttribute("ouvrageType", ouvrageType);
         model.addAttribute("statut", statut);
 
-
         return "compte/compte";
     }
 

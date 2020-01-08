@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import javax.xml.datatype.DatatypeConfigurationException;
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.*;
 
 @Service
@@ -72,9 +70,6 @@ public class ReservationServiceImpl implements ReservationService {
 
         List<Integer> positionResaList = new ArrayList<>();
         List<ReservationEntity> reservationEntityList = getListReservationByOuvrageId(reservationEntity.getOuvrageId());
-
-        Date dateToDay = new Date();
-        reservationEntity.setDateDemandeDeResa(dateToDay);
 
         for (ReservationEntity entity : reservationEntityList){
             positionResaList.add(entity.getNumPositionResa());

@@ -52,12 +52,16 @@
                             <th:block th:each="reservation : ${reservationList}">
                                 <tr style="text-align: center">
                                     <th th:text="${reservation.getNumPositionResa()}" scope="row"></th>
-                                    <td th:text="${dateFormat.format(dateFormat.parse(reservation.getDateDemandeDeResa().toString()))}"></td>
-                                    <td th:text="${dateFormat.format(dateFormat.parse(dateRetour.toString()))}"></td>
-                                    <td th:text="${compteurJour}"></td>
+                                    <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse(reservation.getDateResaDisponible().toString()))}"></td>
+                                    <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse(dateRetour.toString()))}"></td>
+                                    <th:block th:if="${compteurJour > 1}">
+                                        <td style="vertical-align: middle" th:text="${compteurJour}"></td>
+                                    </th:block>
+                                    <th:block th:if="${compteurJour < 1}">
+                                        <td style="vertical-align: middle" th:text="'Décompte des jours suspendus ! En attente du traitement de la première réservation.'"></td>
+                                    </th:block>
                                 </tr>
                             </th:block>
-
                             </tbody>
                         </table>
                     </div>

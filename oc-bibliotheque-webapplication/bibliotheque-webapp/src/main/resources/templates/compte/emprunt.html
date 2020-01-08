@@ -76,9 +76,17 @@
                                 </div>
 
                                 <th:block th:if="${!emprunt.isProlongation()}">
-                                    <td style="width: 30%">
-                                        <p><a class="btn btn-outline-primary" href="#" th:href="@{/prolongation(empruntId=${emprunt.getId()})}">PROLONGER</a></p>
+                                    <td style="width: 15%">
+                                        <p><a style="display:block; vertical-align: middle" class="btn btn-outline-primary" href="#" th:href="@{/prolongation(empruntId=${emprunt.getId()})}">PROLONGER</a></p>
                                         <p>Attention vous pouvez polonger votre emprunt pour 4 semaines suplémentaire une seul fois !</p>
+                                    </td>
+                                </th:block>
+
+                                <th:block th:if="${emprunt.getStatut().equals('Rendu')}">
+                                    <td style="width: 30%">
+                                        <h6>Statut de l'emprunt</h6>
+                                        <p>Livre restitué !</p>
+                                        <p>Merci pour votre ponctualité !</p>
                                     </td>
                                 </th:block>
 

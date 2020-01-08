@@ -17,8 +17,8 @@ public class ReservationEntity implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(name = "date_demande_de_resa")
-    private Date dateDemandeDeResa;
+    @Column(name = "date_resa_disponible")
+    private Date dateResaDisponible;
 
     @Column(name = "num_position_resa")
     private Integer numPositionResa;

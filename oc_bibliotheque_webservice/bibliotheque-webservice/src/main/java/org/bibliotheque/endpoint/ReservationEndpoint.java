@@ -3,7 +3,6 @@ package org.bibliotheque.endpoint;
 import com.bibliotheque.gs_ws.*;
 import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.ReservationEntity;
-import org.bibliotheque.service.contract.EmpruntService;
 import org.bibliotheque.service.contract.ReservationService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,11 +49,11 @@ public class ReservationEndpoint {
             ReservationType reservationType = new ReservationType();
             GregorianCalendar calendar = new GregorianCalendar();
 
-            calendar.setTime(entity.getDateDemandeDeResa());
+            calendar.setTime(entity.getDateResaDisponible());
             XMLGregorianCalendar dateDemandeDeResa = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
 
             reservationType.setId(entity.getId());
-            reservationType.setDateDemandeDeResa(dateDemandeDeResa);
+            reservationType.setDateResaDisponible(dateDemandeDeResa);
             reservationType.setOuvrageId(entity.getOuvrageId());
             reservationType.setNumPositionResa(entity.getNumPositionResa());
             reservationType.setStatut(entity.getStatut());
@@ -87,11 +86,11 @@ public class ReservationEndpoint {
             ReservationType reservationType = new ReservationType();
             GregorianCalendar calendar = new GregorianCalendar();
 
-            calendar.setTime(entity.getDateDemandeDeResa());
+            calendar.setTime(entity.getDateResaDisponible());
             XMLGregorianCalendar dateDemandeDeResa = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
 
             reservationType.setId(entity.getId());
-            reservationType.setDateDemandeDeResa(dateDemandeDeResa);
+            reservationType.setDateResaDisponible(dateDemandeDeResa);
             reservationType.setOuvrageId(entity.getOuvrageId());
             reservationType.setNumPositionResa(entity.getNumPositionResa());
             reservationType.setStatut(entity.getStatut());
@@ -123,11 +122,11 @@ public class ReservationEndpoint {
             ReservationType reservationType = new ReservationType();
             GregorianCalendar calendar = new GregorianCalendar();
 
-            calendar.setTime(entity.getDateDemandeDeResa());
-            XMLGregorianCalendar dateDemandeDeResa = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+            calendar.setTime(entity.getDateResaDisponible());
+            XMLGregorianCalendar dateResaDisponible = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
 
             reservationType.setId(entity.getId());
-            reservationType.setDateDemandeDeResa(dateDemandeDeResa);
+            reservationType.setDateResaDisponible(dateResaDisponible);
             reservationType.setOuvrageId(entity.getOuvrageId());
             reservationType.setNumPositionResa(entity.getNumPositionResa());
             reservationType.setStatut(entity.getStatut());
@@ -174,14 +173,17 @@ public class ReservationEndpoint {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addReservationRequest")
     @ResponsePayload
-    public AddReservationResponse addReservationResponse(@RequestPayload  AddReservationRequest request) throws DatatypeConfigurationException {
+    public AddReservationResponse addReservationResponse(@RequestPayload  AddReservationRequest request) throws DatatypeConfigurationException, ParseException {
         AddReservationResponse response = new AddReservationResponse();
         ReservationType reservationType = new ReservationType();
         ReservationEntity reservationEntity = new ReservationEntity();
         ServiceStatus serviceStatus = new ServiceStatus();
 
         BeanUtils.copyProperties(request.getReservationType(), reservationEntity);
-        reservationEntity.setStatut("En cours");
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        reservationEntity.setDateResaDisponible(dateFormat.parse(request.getReservationType().getDateResaDisponible().toString()));
+
         ReservationEntity savedReservationEntity = service.addReservation(reservationEntity);
 
         if (savedReservationEntity == null) {
@@ -222,8 +224,8 @@ public class ReservationEndpoint {
             // 2. Obtenir les informations de la réservation à mettre à jour à partir de la requête
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-            Date dateDeResa = dateFormat.parse(request.getReservationType().getDateDemandeDeResa().toString());
-            reservationEntity.setDateDemandeDeResa(dateDeResa);
+            Date dateDeResa = dateFormat.parse(request.getReservationType().getDateResaDisponible().toString());
+            reservationEntity.setDateResaDisponible(dateDeResa);
 
             BeanUtils.copyProperties(request.getReservationType(), reservationEntity);
 

@@ -62,7 +62,7 @@
                         <hr/>
 
                         <th:block th:if="${livreTypeListDispo.size() == 0
-                                        && ouvrageDetail.getLivres().size() * 2 > reservationTypeList.size()}">
+                                        && ouvrageDetail.getLivres().size() * 2 > reservationTypeList.size() && dejaEmprunter}">
                             <h3>Réservation</h3>
 
                             <table class="table">
@@ -86,6 +86,28 @@
                                                 <a class="btn btn-success" href="#" th:href="@{/templates/reservation(ouvrageId=${ouvrageDetail.getId()})}">Réservation</a>
                                             </p>
                                         </th:block>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </th:block>
+
+                        <th:block th:if="${!dejaEmprunter}">
+
+                            <h3>Réservation</h3>
+
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td style="vertical-align: middle" >
+                                        <h5>Vous avez déjà fait une demande de réservation pour cette ouvrage !</h5></br>
+                                        <p style="text-align: center">
+                                            <a style="width: 45%" class="btn btn-info" th:href="@{/ouvrages}">RETOUR A LA LISTE DES OUVRAGES</a>
+                                        </p>
+                                        <p style="text-align: center">
+                                            <a style="width: 45%" class="btn btn-warning" href="#" th:href="@{/mesReservations}">VOIR MES RESERVATIONS</a>
+                                        </p>
+
                                     </td>
                                 </tr>
                                 </tbody>

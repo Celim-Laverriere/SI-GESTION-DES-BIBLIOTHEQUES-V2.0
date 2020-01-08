@@ -1,20 +1,26 @@
 package org.bibliotheque.service;
 
 import org.bibliotheque.repository.ReservationRepositoy;
+import org.bibliotheque.wsdl.EmpruntType;
 import org.bibliotheque.wsdl.OuvrageType;
 import org.bibliotheque.wsdl.ReservationType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Service
 public class ReservationService {
 
     @Autowired
     private ReservationRepositoy reservationRepositoy;
+
+    @Autowired
+    private EmpruntService empruntService;
 
     /**
      * ==== CETTE METHODE RECUPERER LA LISTE DES RESERVATIONS D'UN OUVRAGE PAR SON IDENTIFIANT ====
@@ -46,8 +52,19 @@ public class ReservationService {
     public String addReservation(Integer compteId, Integer ouvrageId) throws ParseException, DatatypeConfigurationException {
 
         ReservationType reservationType = new ReservationType();
+
+        Map<Integer, Long> jourRestantEmprunt = new HashMap<>();
+
+        List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByOuvrageId(ouvrageId);
+        List<Long> jourRestantEmpruntList = empruntService.remainingDayOfTheLoan(empruntTypeList);
+
+        jourRestantEmprunt.put(reservationType.getOuvrageId(), jourRestantEmpruntList.get(0));
+        empruntTypeList = empruntService.earliestReturnDateForLoan(empruntTypeList, jourRestantEmpruntList);
+
         reservationType.setCompteId(compteId);
         reservationType.setOuvrageId(ouvrageId);
+        reservationType.setStatut("En cours");
+        reservationType.setDateResaDisponible(empruntTypeList.get(0).getDateFin());
 
         return reservationRepositoy.addReservation(reservationType);
     }

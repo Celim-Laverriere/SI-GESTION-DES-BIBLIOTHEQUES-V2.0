@@ -2,129 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2c7fac0-6381-4e83-8550-d1be6347a45d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/logs/log.log.2020-01-07.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/128f941f5a5ede7fa138e559e84043b6e08fd868" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58a45ad481c46f059dd1a93a240840dc3a4c30a2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f52ad1146c90dab2c701504170ca970e80655542" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base de données/Script de migration - Système de réservation.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Base de données/Script de migration - Système de réservation.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/logs/log.log.2020-01-08.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/110f93a34c9d808df082ef2b6cfbf872bcb3c81c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/16c05b06438786e309587e6cbbd26d9a8787d659" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1a327ab6f8603176e1bba55ae0e7420eb6308fc2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/9164a9900bfec938401b0e0350341d73b298d1c2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bc946461db3eea48a1ab94ae3165e93d46f29629" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c1969ec234bec2042cc521e5f15ed229328d33a6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/EmpruntServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/LoginServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-webservice/src/test/java/org/bibliotheque/endpoint/CompteEndpointTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/0/6/063664daa5408bfa81d6c0d48abdd9074c49d00e" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/0/6/063664daa5408bfa81d6c0d48abdd9074c49d00e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/0/f/0ff2371a615cd599cd2aee33b1e36bb6e04eca12" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/0/f/0ff2371a615cd599cd2aee33b1e36bb6e04eca12" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/1/2/122834b80edae8c73dd3b69a2cfd18c018d20ad8" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/1/2/122834b80edae8c73dd3b69a2cfd18c018d20ad8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/2/3/23c6fcc4ec6ee2c599d40cc9e8a2badef4fe33d7" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/2/3/23c6fcc4ec6ee2c599d40cc9e8a2badef4fe33d7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/4/2/42da77e2d440833740165f050444cf3b82e8e535" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/4/2/42da77e2d440833740165f050444cf3b82e8e535" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/4/8/480d730ab9003128b68c25efef85d065ce9326ac" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/4/8/480d730ab9003128b68c25efef85d065ce9326ac" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/8/6/867f8cf6996cc3d8001971547dd064255b90b2d0" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/8/6/867f8cf6996cc3d8001971547dd064255b90b2d0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/9/7/97fd6d59edf033c764e9a8988f07e04f9905d6b2" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/9/7/97fd6d59edf033c764e9a8988f07e04f9905d6b2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/a/a/aa05db6c0adaf4fe8c150759404c82ec2f23106d" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/a/a/aa05db6c0adaf4fe8c150759404c82ec2f23106d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/d/9/d9a1e06b78e2534cb72b21e9b312e9d360335a05" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/sonarlint/issuestore/d/9/d9a1e06b78e2534cb72b21e9b312e9d360335a05" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-batch/src/main/java/org/bibliotheque/Mail/MessagesMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-batch/src/main/java/org/bibliotheque/Mail/MessagesMail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-batch/src/main/java/org/bibliotheque/batch/CheckReservationTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-batch/src/main/java/org/bibliotheque/batch/CheckReservationTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-batch/src/main/resources/messagesMail.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-batch/src/main/resources/messagesMail.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/META-INF/sun-jaxb.episode" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/META-INF/sun-jaxb.episode" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddEmpruntRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddEmpruntRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddEmpruntResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddEmpruntResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddLivreRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddLivreRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddLivreResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddLivreResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddOuvrageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddOuvrageRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddOuvrageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddOuvrageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddPhotoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddPhotoRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddPhotoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddPhotoResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddReservationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddReservationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddReservationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddReservationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/CompteType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/CompteType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteCompteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteCompteRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteCompteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteCompteResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteEmpruntRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteEmpruntRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteEmpruntResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteEmpruntResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteLivreRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteLivreRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteLivreResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteLivreResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteOuvrageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteOuvrageRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteOuvrageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteOuvrageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeletePhotoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeletePhotoRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeletePhotoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeletePhotoResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteReservationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteReservationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteReservationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteReservationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/EmpruntType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/EmpruntType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllComptesRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllComptesRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllComptesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllComptesResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllEmpruntByCompteIdRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllEmpruntByCompteIdRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllEmpruntByCompteIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllEmpruntByCompteIdResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllEmpruntByOuvrageIdRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllEmpruntByOuvrageIdRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllEmpruntByOuvrageIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllEmpruntByOuvrageIdResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllEmpruntRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllEmpruntRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllEmpruntResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllEmpruntResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllLivresRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllLivresRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllLivresResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllLivresResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllOuvragesRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllOuvragesRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllOuvragesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllOuvragesResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllPhotosRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllPhotosRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllPhotosResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllPhotosResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllReservationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllReservationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllReservationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllReservationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetCompteAfterLoginSuccessRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetCompteAfterLoginSuccessRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetCompteAfterLoginSuccessResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetCompteAfterLoginSuccessResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetCompteByIdRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetCompteByIdRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetCompteByIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetCompteByIdResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetEmpruntByIdRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetEmpruntByIdRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetEmpruntByIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetEmpruntByIdResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetListReservationByCompteIdRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetListReservationByCompteIdRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetListReservationByCompteIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetListReservationByCompteIdResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetListReservationByOuvrageIdRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetListReservationByOuvrageIdRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetListReservationByOuvrageIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetListReservationByOuvrageIdResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetLivreByIdRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetLivreByIdRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetLivreByIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetLivreByIdResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetOuvrageByIdRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetOuvrageByIdRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetOuvrageByIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetOuvrageByIdResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetPhotoByIdRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetPhotoByIdRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetPhotoByIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetPhotoByIdResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetSearchByKeywordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetSearchByKeywordRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetSearchByKeywordResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetSearchByKeywordResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/LivreType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/LivreType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/LoginResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/ObjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/OuvrageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/OuvrageType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/PhotoType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/PhotoType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/ReservationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/ReservationType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/ServiceStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/ServiceStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateCompteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateCompteRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateCompteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateCompteResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateEmpruntRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateEmpruntRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateEmpruntResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateEmpruntResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateLivreRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateLivreRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateLivreResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateLivreResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateOuvrageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateOuvrageRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateOuvrageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateOuvrageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdatePhotoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdatePhotoRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdatePhotoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdatePhotoResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateReservationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateReservationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateReservationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateReservationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-service/src/main/java/org/bibliotheque/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-service/src/main/java/org/bibliotheque/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/OuvrageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/OuvrageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/compte/emprunt.html" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/compte/emprunt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/compte/resaCompte.html" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/compte/resaCompte.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/ouvrage/ouvrageDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/ouvrage/ouvrageDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/reservation/reservation.html" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/reservation/reservation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/logs/log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d71188935a79baad5a0588bcea00a8e57502df1" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d71188935a79baad5a0588bcea00a8e57502df1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/591b79abb4f54c7255d60c2f22c6b6b01a6286ee" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/591b79abb4f54c7255d60c2f22c6b6b01a6286ee" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b9d31c87a24ea2367f5ed20f5956873cade3a5b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b9d31c87a24ea2367f5ed20f5956873cade3a5b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/a/9a72af4513152cfa3be278ceecf734e886e7b8de" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/a/9a72af4513152cfa3be278ceecf734e886e7b8de" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c443afcc189c29037d267ee5e9e13e4a0e8bfe6f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c443afcc189c29037d267ee5e9e13e4a0e8bfe6f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/ReservationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/ReservationEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/ReservationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/ReservationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/ReservationEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/bibliotheque-entity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/bibliotheque-entity.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/CompteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/CompteEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/EmpruntEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/EmpruntEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/LivreEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/LivreEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/bibliotheque-repository.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/bibliotheque-repository.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/EmpruntRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/EmpruntRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-service/bibliotheque-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-service/bibliotheque-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webservice/bibliotheque-webservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webservice/bibliotheque-webservice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oc_bibliotheque_webservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/oc_bibliotheque_webservice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="33" />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -135,6 +68,7 @@
         <option value="spring-beans.schema" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -161,7 +95,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bibliotheque-service/src/main" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -176,9 +112,23 @@
     <property name="settings.editor.selected.configurable" value="Console" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.bibliotheque.service.impl" />
+      <recent name="org.bibliotheque.endpoint" />
+      <recent name="org.bibliotheque.repository" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Depot GitHub\SI-GESTION-DES-BIBLIOTHEQUES-V2.0\oc_bibliotheque_webservice\bibliotheque-repository\src\test\resources" />
+      <recent name="F:\Depot GitHub\SI-GESTION-DES-BIBLIOTHEQUES-V2.0\oc_bibliotheque_webservice\bibliotheque-repository\src\main\resources" />
       <recent name="E:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\Test bibliotheque webservice\oc_bibliotheque_webservice\bibliotheque-webservice\src\main\resources\xsd" />
       <recent name="E:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\Test bibliotheque webservice\oc_bibliotheque_webservice\bibliotheque-webservice\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Depot GitHub\SI-GESTION-DES-BIBLIOTHEQUES-V2.0\oc_bibliotheque_webservice\bibliotheque-service\src\main" />
+      <recent name="F:\Depot GitHub\SI-GESTION-DES-BIBLIOTHEQUES-V2.0\oc_bibliotheque_webservice\bibliotheque-webservice\src\main\test\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -193,7 +143,69 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.EmpruntServiceImplTest">
+    <configuration name="BibliothequeRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bibliotheque-webservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bibliotheque.testUnitaire.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.bibliotheque.testUnitaire" />
+      <option name="MAIN_CLASS_NAME" value="org.bibliotheque.testUnitaire.BibliothequeRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpruntServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bibliotheque-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bibliotheque.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.bibliotheque.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.bibliotheque.service.impl.EmpruntServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpruntServiceImplTest.getAllEmpruntByOuvrageId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bibliotheque-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bibliotheque.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.bibliotheque.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.bibliotheque.service.impl.EmpruntServiceImplTest" />
+      <option name="METHOD_NAME" value="getAllEmpruntByOuvrageId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpruntServiceImplTest.getAllEmprunts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bibliotheque-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bibliotheque.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.bibliotheque.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.bibliotheque.service.impl.EmpruntServiceImplTest" />
+      <option name="METHOD_NAME" value="getAllEmprunts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BibliothequeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="bibliotheque-webservice" />
       <extension name="coverage">
@@ -209,6 +221,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmpruntServiceImplTest" />
+        <item itemvalue="JUnit.EmpruntServiceImplTest.getAllEmpruntByOuvrageId" />
+        <item itemvalue="JUnit.EmpruntServiceImplTest.getAllEmprunts" />
         <item itemvalue="Spring Boot.BibliothequeApplication" />
       </list>
     </recent_temporary>
@@ -305,18 +320,14 @@
       <workItem from="1578129281862" duration="2631000" />
       <workItem from="1578298974091" duration="1776000" />
       <workItem from="1578380871003" duration="3408000" />
-      <workItem from="1578471397829" duration="6244000" />
+      <workItem from="1578471397829" duration="6523000" />
+      <workItem from="1578644853764" duration="2570000" />
+      <workItem from="1578652941761" duration="2538000" />
+      <workItem from="1578666900305" duration="5364000" />
+      <workItem from="1578905540508" duration="17447000" />
+      <workItem from="1578987050965" duration="11347000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -343,6 +354,11 @@
         <watch expression="ouvrageType.photos" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/oc_bibliotheque_webservice$EmpruntServiceImplTest.ic" NAME="EmpruntServiceImplTest Coverage Results" MODIFIED="1579016402237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.bibliotheque.service.impl.*</FILTER>
+    </SUITE>
   </component>
   <component name="masterDetails">
     <states>

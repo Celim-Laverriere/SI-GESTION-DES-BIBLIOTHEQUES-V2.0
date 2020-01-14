@@ -1,0 +1,5 @@
+
+_squid:S1192Z"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó
+psquid:S22937"YReplace the type specification in this constructor call with the diamond operator ("<>").(”÷Œ…
+Asquid:S1125˜")Remove the literal "false" boolean value.(ûÅŸ
+@squid:S1125}")Remove the literal "false" boolean value.(ûÅŸ

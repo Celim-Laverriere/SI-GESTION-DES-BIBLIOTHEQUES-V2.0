@@ -1,8 +1,7 @@
 package org.bibliotheque.entity;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -10,6 +9,8 @@ import java.io.Serializable;
 @Table(name = "livre")
 @Getter @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class LivreEntity implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)

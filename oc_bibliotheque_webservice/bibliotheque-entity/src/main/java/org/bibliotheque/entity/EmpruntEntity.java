@@ -1,9 +1,9 @@
 package org.bibliotheque.entity;
 
 import java.util.Date;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+
+import lombok.*;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -11,6 +11,8 @@ import java.io.Serializable;
 @Table(name = "emprunt")
 @Getter @Setter
 @NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class EmpruntEntity implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)

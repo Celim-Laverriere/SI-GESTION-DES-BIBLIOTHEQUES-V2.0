@@ -1,5 +1,4 @@
 
-}squid:UselessImportCheck"MRemove this unused import 'org.bibliotheque.service.contract.EmpruntService'.(Ÿ°Ëıÿÿÿÿ8œ–‰ôñ-
-gsquid:S1192¡"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó8‘¥÷-
-Hsquid:S1125é")Remove the literal "false" boolean value.(ûÅŸ8‘¥÷-
-Hsquid:S1125")Remove the literal "false" boolean value.(ûÅŸ8‘¥÷-
+gsquid:S1192 "HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó8‘¥÷-
+Hsquid:S1125œ")Remove the literal "false" boolean value.(ûÅŸ8‘¥÷-
+Hsquid:S1125ë")Remove the literal "false" boolean value.(ûÅŸ8‘¥÷-

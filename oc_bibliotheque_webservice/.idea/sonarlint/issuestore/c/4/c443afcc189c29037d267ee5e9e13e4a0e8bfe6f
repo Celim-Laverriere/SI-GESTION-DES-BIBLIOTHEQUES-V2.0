@@ -1,11 +1,8 @@
 
-\squid:S1155T">Use isEmpty() to check whether the collection is empty or not.(›’ª£8ö≥Ê»Ò-
-Msquid:S3655"7Call "Optional#isPresent()" before accessing the value.(Ã»†
-tsquid:UselessImportCheck"DRemove this unused import 'javax.xml.datatype.XMLGregorianCalendar'.(Ä€ÀÈˇˇˇˇˇ8™≈À»Ò-
-?squid:S1148]"#Use a logger to log this exception.(∞›‰â˝ˇˇˇˇ
-Fsquid:S1148h"#Use a logger to log this exception.(∞›‰â˝ˇˇˇˇ8ÌÈ¨≤ı-
-Bsquid:S1612$",Replace this lambda with a method reference.(ê‘Å
-Csquid:S1612",Replace this lambda with a method reference.(äÊ÷›
-Csquid:S1612B",Replace this lambda with a method reference.(Ñåœ
-jsquid:UselessImportCheck
-"?Remove this unused import 'javax.xml.datatype.DatatypeFactory'.(˝ùÆ√8™≈À»Ò-
+Csquid:S1612@",Replace this lambda with a method reference.(Ñåœ
+?squid:S1148X"#Use a logger to log this exception.(∞›‰â˝ˇˇˇˇ
+Fsquid:S1148c"#Use a logger to log this exception.(∞›‰â˝ˇˇˇˇ8ÌÈ¨≤ı-
+Bsquid:S1612"",Replace this lambda with a method reference.(ê‘Å
+Msquid:S3655"7Call "Optional#isPresent()" before accessing the value.(Ã»†
+Csquid:S1612",Replace this lambda with a method reference.(äÊ÷›
+\squid:S1155O">Use isEmpty() to check whether the collection is empty or not.(›’ª£8ö≥Ê»Ò-

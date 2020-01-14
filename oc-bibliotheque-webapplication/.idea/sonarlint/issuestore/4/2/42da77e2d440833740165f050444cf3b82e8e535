@@ -1,7 +1,7 @@
 
-xsquid:S3457\"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(çÒîã
-Usquid:S1155J">Use isEmpty() to check whether the collection is empty or not.(ÙÈ¾²
-dsquid:S44888"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¹é™Úıÿÿÿÿ
-dsquid:S4488("HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¯â”üıÿÿÿÿ
-dsquid:S4488b"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(²æî¤úÿÿÿÿ
-[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8šşÏšò-
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8šşÏšò-
+dsquid:S4488+"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¯â”üıÿÿÿÿ
+dsquid:S4488;"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¹é™Úıÿÿÿÿ
+ksquid:S4488o"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(²æî¤úÿÿÿÿ8õ›ƒ¥ø-
+\squid:S1155W">Use isEmpty() to check whether the collection is empty or not.(ÙÈ¾²8õ›ƒ¥ø-
+squid:S3457i"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(çÒîã8õ›ƒ¥ø-

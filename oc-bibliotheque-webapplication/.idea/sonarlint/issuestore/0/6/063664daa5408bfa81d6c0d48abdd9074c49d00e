@@ -1,13 +1,10 @@
 
-‚squid:S1488¼"^Immediately return this expression instead of assigning it to the temporary variable "statut".(ÏıÅ÷şÿÿÿÿ8Û³š…ø-
-Hsquid:S5411l"*Use the primitive boolean expression here.(Ùîô8Û³š…ø-
-¤squid:S1186."€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Å´Ë¨ıÿÿÿÿ8Ôš¤òñ-
-Nsquid:S1481V"+Remove this unused "statut" local variable.(Ë‡ıŞûÿÿÿÿ8Û³š…ø-
-Usquid:S3252N"7Use static access with "java.util.Calendar" for "DATE".(‘çø8Û³š…ø-
-\
-squid:S106˜"9Replace this use of System.out or System.err by a logger.(ŸùÚÆüÿÿÿÿ8Û³š…ø-
-]squid:S1854V":Remove this useless assignment to local variable "statut".(Ë‡ıŞûÿÿÿÿ8Û³š…ø-
+‚squid:S1488§"^Immediately return this expression instead of assigning it to the temporary variable "statut".(ÏıÅ÷şÿÿÿÿ8Û³š…ø-
+]squid:S1854Z":Remove this useless assignment to local variable "statut".(Ë‡ıŞûÿÿÿÿ8Û³š…ø-
+¤squid:S11862"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Å´Ë¨ıÿÿÿÿ8Ôš¤òñ-
 [
-squid:S106T"9Replace this use of System.out or System.err by a logger.(é¹¤¥úÿÿÿÿ8Û³š…ø-
-W
-squid:S106•"9Replace this use of System.out or System.err by a logger.(ı„Î8Û³š…ø-
+squid:S106X"9Replace this use of System.out or System.err by a logger.(é¹¤¥úÿÿÿÿ8Û³š…ø-
+Nsquid:S1481Z"+Remove this unused "statut" local variable.(Ë‡ıŞûÿÿÿÿ8Û³š…ø-
+Usquid:S3252R"7Use static access with "java.util.Calendar" for "DATE".(‘çø8Û³š…ø-
+[squid:UselessImportCheck"0Remove this unused import 'java.io.InputStream'.(¹»º8Ê˜ˆ©ø-
+Hsquid:S5411p"*Use the primitive boolean expression here.(Ùîô8Û³š…ø-

@@ -217,6 +217,8 @@ public class ReservationEndpoint {
         // 1. Trouver si la réservation est disponible
         ReservationEntity reservationEntity = service.getReservationById(request.getReservationType().getId());
 
+        System.out.println(request.getReservationType().getNumPositionResa());
+
         if (reservationEntity == null){
             serviceStatus.setStatusCode("NOT FOUND");
             serviceStatus.setMessage("Réservation : " + request.getReservationType().getId() + " not found");
@@ -228,6 +230,7 @@ public class ReservationEndpoint {
             reservationEntity.setDateResaDisponible(dateDeResa);
 
             BeanUtils.copyProperties(request.getReservationType(), reservationEntity);
+            System.out.println(reservationEntity.getNumPositionResa());
 
             // 3. Mettre à jour l'emprunt dans la base de données
             boolean flag = service.updateReservation(reservationEntity);

@@ -1,8 +1,6 @@
 package org.bibliotheque.entity;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,6 +10,8 @@ import java.util.Date;
 @Table(name = "reservation")
 @Getter @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class ReservationEntity implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)

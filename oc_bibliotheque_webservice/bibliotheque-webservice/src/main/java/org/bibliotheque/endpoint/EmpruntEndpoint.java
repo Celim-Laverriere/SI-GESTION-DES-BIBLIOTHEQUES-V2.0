@@ -142,13 +142,17 @@ public class EmpruntEndpoint  {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addEmpruntRequest")
     @ResponsePayload
-    public AddEmpruntResponse addEmprunt(@RequestPayload AddEmpruntRequest request){
+    public AddEmpruntResponse addEmprunt(@RequestPayload AddEmpruntRequest request) throws ParseException {
         AddEmpruntResponse response = new AddEmpruntResponse();
         EmpruntType newEmpruntType = new EmpruntType();
         EmpruntEntity newEmpruntEntity = new EmpruntEntity();
         ServiceStatus serviceStatus = new ServiceStatus();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         BeanUtils.copyProperties(request.getEmpruntType(), newEmpruntEntity);
+        newEmpruntEntity.setDateDebut(dateFormat.parse(request.getEmpruntType().getDateDebut().toString()));
+        newEmpruntEntity.setDateFin(dateFormat.parse(request.getEmpruntType().getDateFin().toString()));
+
         EmpruntEntity savedEmpruntEntity = service.addEmprunt(newEmpruntEntity);
 
         if(savedEmpruntEntity == null){

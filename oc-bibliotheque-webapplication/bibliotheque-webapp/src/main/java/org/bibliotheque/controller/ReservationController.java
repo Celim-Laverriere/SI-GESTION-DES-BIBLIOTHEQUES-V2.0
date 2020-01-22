@@ -108,6 +108,8 @@ public class ReservationController {
 
         List<OuvrageType> ouvrageTypeList = ouvrageService.ouvrageTypeList();
 
+
+
         model.addAttribute("dateRetour", dateRetour);
         model.addAttribute("jourRestantEmprunt", jourRestantEmprunt);
         model.addAttribute("reservationTypeList", reservationTypeList);

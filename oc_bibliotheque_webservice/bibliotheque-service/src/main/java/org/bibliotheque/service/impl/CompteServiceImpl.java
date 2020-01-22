@@ -4,6 +4,7 @@ import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.CompteEntity;
 import org.bibliotheque.repository.CompteRepository;
 import org.bibliotheque.service.contract.CompteService;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
@@ -33,34 +34,17 @@ public class CompteServiceImpl implements CompteService {
 
     @Override
     public CompteEntity addCompte(CompteEntity compte) {
-        try{
-            return this.repository.save(compte);
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return null;
-        }
+        return this.repository.save(compte);
     }
 
     @Override
-    public boolean updateCompte(CompteEntity compte) {
-        try{
-            this.repository.save(compte);
-            return true;
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return false;
-        }
+    public void updateCompte(CompteEntity compte) {
+        this.repository.save(compte);
     }
 
     @Override
-    public boolean deleteCompte(Integer id) {
-        try{
-            this.repository.deleteById(id);
-            return true;
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return false;
-        }
+    public void deleteCompte(Integer id) {
+        this.repository.deleteById(id);
     }
 
 }

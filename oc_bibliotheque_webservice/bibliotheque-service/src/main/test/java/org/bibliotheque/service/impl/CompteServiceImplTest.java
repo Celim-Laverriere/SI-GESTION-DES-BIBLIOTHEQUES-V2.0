@@ -8,11 +8,16 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 class CompteServiceImplTest {
@@ -38,6 +43,12 @@ class CompteServiceImplTest {
         when(compteRepository.findById(1)).thenReturn(java.util.Optional.ofNullable(compteMock));
         final CompteEntity compteEntity = compteServiceImpl.getCompteById(1);
         Assertions.assertEquals(compteMock.getAdresse(), compteEntity.getAdresse());
+
+        when(compteRepository.save(compteMock)).thenThrow(NoSuchElementException.class);
+        Assertions.assertThrows(NoSuchElementException.class, () -> {
+            compteServiceImpl.getCompteById(101);
+        });
+
     }
 
     @Test
@@ -59,4 +70,33 @@ class CompteServiceImplTest {
         final List<CompteEntity> compteEntityList = compteServiceImpl.getAllComptes();
         Assertions.assertEquals(compteEntityList.size(), 2);
     }
+
+    @Test
+    void addCompte() {
+
+        CompteEntity compteMock = CompteEntity.builder().id( 1 ).mail( "evancarre@fakeemail.tld" ).prenom( "Evan" )
+                .nom( "Carre" ).adresse( "65 Rue Basfroi" ).codePostal( 79170 ).ville( "Tilly" ).motDePasse( "Evan" )
+                .numCarteBibliotheque( 656310049 ).numDomicile( null ).numPortable( 646864294 ).build();
+
+        when(compteRepository.save(compteMock)).thenThrow(DataIntegrityViolationException.class);
+        Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
+            compteServiceImpl.addCompte(compteMock);
+        });
+    }
+
+    @Test
+    void updateCompte() {
+
+        CompteEntity compteMock = CompteEntity.builder().id( 101 ).mail( "evancarre@fakeemail.tld" ).prenom( "Evan" )
+                .nom( "Carre" ).adresse( "65 Rue Basfroi" ).codePostal( 79170 ).ville( "Tilly" ).motDePasse( "Evan" )
+                .numCarteBibliotheque( 656310049 ).numDomicile( null ).numPortable( 646864294 ).build();
+
+        when(compteRepository.save(compteMock)).thenThrow(DataIntegrityViolationException.class);
+        Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
+            compteServiceImpl.updateCompte(compteMock);
+        });
+
+    }
+
+
 }

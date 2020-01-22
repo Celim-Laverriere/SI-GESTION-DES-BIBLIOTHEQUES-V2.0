@@ -1,7 +1,7 @@
 
-Nsquid:S3655"7Call "Optional#isPresent()" before accessing the value.(‡£Œ
 Hsquid:S1612",Replace this lambda with a method reference.(é†¾‰ÿÿÿÿÿ
 ?squid:S1148'"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(°÷ÇØüÿÿÿÿ
 ?squid:S11482"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
 ?squid:S1148="#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
-usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(°÷ÇØüÿÿÿÿ
+Nsquid:S3655"7Call "Optional#isPresent()" before accessing the value.(‡£Œ

@@ -75,7 +75,7 @@
                                     </th:block>
                                 </div>
 
-                                <th:block th:if="${!emprunt.isProlongation()}">
+                                <th:block th:if="${!emprunt.isProlongation() && emprunt.getStatut().equals('En cours')}">
                                     <td style="width: 15%">
                                         <p><a style="display:block; vertical-align: middle" class="btn btn-outline-primary" href="#" th:href="@{/prolongation(empruntId=${emprunt.getId()})}">PROLONGER</a></p>
                                         <p>Attention vous pouvez polonger votre emprunt pour 4 semaines suplémentaire une seul fois !</p>

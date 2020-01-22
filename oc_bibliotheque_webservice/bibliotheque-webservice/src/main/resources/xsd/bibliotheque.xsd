@@ -136,6 +136,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="compteType" type="tns:compteType"/>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -448,6 +449,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="empruntType" type="tns:empruntType" maxOccurs="unbounded" minOccurs="0"/>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -513,6 +515,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="empruntType" type="tns:empruntType" maxOccurs="unbounded" minOccurs="0"/>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

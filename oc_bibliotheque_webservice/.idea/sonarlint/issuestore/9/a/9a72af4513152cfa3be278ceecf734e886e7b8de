@@ -1,4 +1,10 @@
 
-Hsquid:S1125Ì")Remove the literal "false" boolean value.(ûÅŸ8ÎØœÇñ-
-Asquid:S1125ç")Remove the literal "false" boolean value.(ûÅŸ
-`squid:S1192 "HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó
+©%squid:RedundantThrowsDeclarationChecki"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(†‚µÜ8û„œïü-
+Gsquid:S1148å"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8å•›ïü-
+gsquid:S1192©"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó8å•›ïü-
+nsquid:S1192ˆ"JDefine a constant instead of duplicating this literal "NOT FOUND" 3 times.(º…Å‹üÿÿÿÿ8å•›ïü-
+Gsquid:S1148Ş"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8å•›ïü-
+Ysquid:S1141Ó"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8å•›ïü-
+Gsquid:S1148‚"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8å•›ïü-
+lsquid:S1192‰"MDefine a constant instead of duplicating this literal " : not found" 3 times.(—¡›8 Ššïü-
+Gsquid:S1148°"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8å•›ïü-

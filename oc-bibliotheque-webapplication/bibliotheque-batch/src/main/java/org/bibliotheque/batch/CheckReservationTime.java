@@ -84,19 +84,26 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
 
             dateEmpruntFin = dateFormat.parse(dateResaLimite.toString());
 
-            if (dateEmpruntFin.before(dateToDay) && reservationType.getStatut().equals("En cours")){
-                System.out.println("La réservation à exéder 48 heures !" + dateEmpruntFin + " Compte : " +
-                        reservationType.getCompteId() );
-                String statut = reservationBeCancelled(reservationType);
+            List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByOuvrageId(reservationType.getOuvrageId());
 
-                CompteType compteType = compteService.compteById(reservationType.getCompteId());
-                OuvrageType ouvrageType = ouvrageService.ouvrageById(reservationType.getOuvrageId());
-                String subject = "Info réservation : Bibliothèque de TILLY";
+            for (EmpruntType empruntType : empruntTypeList) {
 
-                String mail = messagesMail.textMailDelaiExpirer(compteType, ouvrageType);
-                sendingMailThroughGmailSMTPServer.sendMessage(subject, mail, compteType.getMail(),
-                        ouvrageType.getPhotos().get(0).getUrlPhoto());
+                if (dateEmpruntFin.before(dateToDay) && reservationType.getStatut().equals("En cours")
+                && empruntType.getStatut().equals("Rendu")){
+
+                    String statut = reservationBeCancelled(reservationType);
+
+                    CompteType compteType = compteService.compteById(reservationType.getCompteId());
+                    OuvrageType ouvrageType = ouvrageService.ouvrageById(reservationType.getOuvrageId());
+                    String subject = "Info réservation : Bibliothèque de TILLY";
+
+                    String mail = messagesMail.textMailDelaiExpirer(compteType, ouvrageType);
+                    sendingMailThroughGmailSMTPServer.sendMessage(subject, mail, compteType.getMail(),
+                            ouvrageType.getPhotos().get(0).getUrlPhoto());
+                }
             }
+
+
         }
 
         // Vérifie la date de retour d'un livre pour envoyer un mail au client qui à réservé le livre pour venir le chercher
@@ -202,8 +209,13 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
 
         for(LivreType livreType : ouvrageType.getLivres()){
 
-            if (livreType.getStatut().equals("Reserver")) {
-                livreReserver = true;
+            List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByOuvrageId(ouvrageType.getId());
+
+            for (EmpruntType empruntType : empruntTypeList) {
+                if (livreType.getStatut().equals("Reserver") && empruntType.getLivreId() == livreType.getId()
+                && empruntType.getStatut().equals("Rendu")) {
+                    livreReserver = true;
+                }
             }
         }
 

@@ -57,8 +57,6 @@ O
 Sbibliotheque-webservice/src/main/java/org/bibliotheque/BibliothequeApplication.java,0\7\0728700116728ef1c80151800f48402c30753978
 {
 Kbibliotheque-entity/src/main/java/org/bibliotheque/entity/CompteEntity.java,c\0\c0d0f01919ba42861d3d2eaea3821602b511e0f3
-á
-Wbibliotheque-webservice/src/test/java/org/bibliotheque/endpoint/CompteEndpointTest.java,2\9\29cd8935b1b064dac702d2d68a74b4a914dbbb1b
 Ü
 Vbibliotheque-service/src/main/java/org/bibliotheque/service/impl/LoginServiceImpl.java,a\1\a17a45a608e67b893f6f495b47fcb5ea017d0444
 è
@@ -71,3 +69,17 @@ Jbibliotheque-entity/src/main/java/org/bibliotheque/entity/PhotoEntity.java,d\d
 Vbibliotheque-service/src/main/java/org/bibliotheque/service/impl/LivreServiceImpl.java,2\c\2c7e488be5aeffaed587f79d37ca3ca7f50827a6
 ë
 abibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/OuvrageServiceImplTest.java,2\d\2d9e670fcf29cfdd6ed44204f3a773ab15b678cd
+É
+Sbibliotheque-webservice/src/main/java/org/bibliotheque/config/WebServiceConfig.java,1\e\1e22c422527e0c0515ef73ec6393ed37b1d90547
+ê
+`bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/CompteServiceImplTest.java,6\2\62fb555864caaaeba93aeb85cfedfda2290987a6
+è
+_bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/PhotoServiceImplTest.java,1\5\156d866bd048ac8e3e93c7a035eeed37fbce8d0c
+Ü
+Vbibliotheque-service/src/main/java/org/bibliotheque/service/impl/PhotoServiceImpl.java,d\b\db82a847d8f42ed54e56894f5005ce1fd2efe6c6
+è
+_bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/LivreServiceImplTest.java,1\7\17cccf42ce7da7bdf743d7f7c3a3c21bf2ef4522
+Ç
+Rbibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/LoginEndpoint.java,c\e\ce3b0ce56ced5eb7e3d7ea0121100e05d00a0130
+ï
+ebibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/ReservationServiceImplTest.java,e\f\eff974536bdaa0ee6ae0ff2a48adf4aa7ee75ee5

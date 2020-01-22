@@ -11,6 +11,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.dao.DataIntegrityViolationException;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -95,6 +97,12 @@ class EmpruntServiceImplTest {
         final List<EmpruntEntity> empruntEntityList = empruntServiceImpl.getAllEmpruntByCompteId(1);
         Assertions.assertEquals(empruntMockList.size(), empruntEntityList.size());
         Assertions.assertEquals(empruntMockList.get(0).getId(), empruntEntityList.get(0).getId());
+
+        empruntMockList.clear();
+
+        when(empruntRepository.findAllByCompteId(anyInt())).thenReturn(empruntMockList);
+        final  List<EmpruntEntity> empruntEntityList2 = empruntServiceImpl.getAllEmpruntByCompteId(100);
+        Assertions.assertTrue(empruntEntityList2.isEmpty());
     }
 
     @Test
@@ -134,6 +142,36 @@ class EmpruntServiceImplTest {
         Assertions.assertEquals(empruntEntityList.get(0).getLivreId(), livreMockList.get(0).getId());
         Assertions.assertEquals(empruntEntityList.get(1).getLivreId(), livreMockList.get(1).getId());
 
+    }
+
+    @Test
+    void addEmprunt() throws ParseException {
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        EmpruntEntity empruntMock = EmpruntEntity.builder().id(1).dateDebut(dateFormat.parse("2019-12-20"))
+                .dateFin(dateFormat.parse("2020-01-13")).statut("En cours").prolongation(false).livreId(2)
+                .compteId(3).build();
+
+        when(empruntRepository.save(empruntMock)).thenThrow(DataIntegrityViolationException.class);
+        Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
+            empruntServiceImpl.addEmprunt(empruntMock);
+        });
+    }
+
+    @Test
+    void updateEmprunt() throws ParseException {
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        EmpruntEntity empruntMock = EmpruntEntity.builder().id(1).dateDebut(dateFormat.parse("2019-12-20"))
+                .dateFin(dateFormat.parse("2020-01-13")).statut("En cours").prolongation(false).livreId(2)
+                .compteId(3).build();
+
+        when(empruntRepository.save(empruntMock)).thenThrow(DataIntegrityViolationException.class);
+        Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
+            empruntServiceImpl.updateEmprunt(empruntMock);
+        });
 
     }
 }

@@ -38,35 +38,17 @@ public class EmpruntServiceImpl implements EmpruntService {
 
     @Override
     public EmpruntEntity addEmprunt(EmpruntEntity emprunt) {
-        try{
-            return this.repository.save(emprunt);
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return null;
-        }
+        return this.repository.save(emprunt);
     }
 
     @Override
-    public boolean updateEmprunt(EmpruntEntity emprunt) {
-        try{
-            this.repository.save(emprunt);
-            return true;
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return false;
-        }
+    public void updateEmprunt(EmpruntEntity emprunt) {
+        this.repository.save(emprunt);
     }
 
     @Override
-    public boolean deleteEmprunt(Integer id) {
-        try{
-            this.repository.deleteById(id);
-            return true;
-        }catch (Exception pEX){
-            pEX.printStackTrace();
-            return false;
-        }
-
+    public void deleteEmprunt(Integer id) {
+        this.repository.deleteById(id);
     }
 
     @Override
@@ -78,10 +60,12 @@ public class EmpruntServiceImpl implements EmpruntService {
 
     @Override
     public List<EmpruntEntity> getAllEmpruntByOuvrageId(Integer ouvrageId) {
+
         List<LivreEntity> livreEntityList = new ArrayList<>();
+        List<EmpruntEntity> empruntEntityListByOuvrageId = new ArrayList<>();
+
         this.livreRepository.findAllLivreByOuvrageId(ouvrageId).forEach(e -> livreEntityList.add(e));
 
-        List<EmpruntEntity> empruntEntityListByOuvrageId = new ArrayList<>();
         for (LivreEntity livreEntity : livreEntityList) {
             this.repository.findAllEmpruntByOuvrageId(livreEntity.getId()).forEach(e -> empruntEntityListByOuvrageId.add(e));
         }

@@ -1,4 +1,11 @@
 
-Asquid:S1125˜")Remove the literal "false" boolean value.(ûÅŸ
-_squid:S1192X"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó
-@squid:S1125|")Remove the literal "false" boolean value.(ûÅŸ
+|squid:UselessImportCheck"QRemove this unused import 'org.hibernate.exception.ConstraintViolationException'.(°Î¥Í8Ê èíü-
+Fsquid:S11483"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8Ê èíü-
+Ysquid:S1141ˆ"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8Ê èíü-
+\
+squid:S106"9Replace this use of System.out or System.err by a logger.(ŸùÚÆüÿÿÿÿ8Ê èíü-
+Gsquid:S1148"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8Ê èíü-
+Gsquid:S1148•"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8Ê èíü-
+_squid:S1192f"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó
+Gsquid:S1148º"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8Ê èíü-
+Fsquid:S1148m"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8À‰ÿíü-

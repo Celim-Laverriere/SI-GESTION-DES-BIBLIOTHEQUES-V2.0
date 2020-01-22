@@ -55,3 +55,5 @@ Nbibliotheque-repository/src/main/java/org/bibliotheque/client/LoginClient.java
 Xbibliotheque-repository/src/main/java/org/bibliotheque/repository/EmpruntRepository.java,f\5\f52ad1146c90dab2c701504170ca970e80655542
 x
 Hbibliotheque-batch/src/main/java/org/bibliotheque/Mail/MessagesMail.java,d\9\d9a1e06b78e2534cb72b21e9b312e9d360335a05
+
+Obibliotheque-webapp/src/main/java/org/bibliotheque/BibliothequeApplication.java,5\9\595efa963af4a44363c29a7839ccb560822e1975

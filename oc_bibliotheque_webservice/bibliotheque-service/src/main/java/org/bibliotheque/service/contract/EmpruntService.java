@@ -15,8 +15,8 @@ public interface EmpruntService {
 
     EmpruntEntity addEmprunt(EmpruntEntity emprunt);
 
-    boolean updateEmprunt(EmpruntEntity emprunt);
+    void updateEmprunt(EmpruntEntity emprunt);
 
-    boolean deleteEmprunt(Integer id);
+    void deleteEmprunt(Integer id);
 
 }

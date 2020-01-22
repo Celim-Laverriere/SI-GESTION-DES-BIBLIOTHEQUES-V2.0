@@ -77,7 +77,7 @@ public class MailItemProcessor implements Tasklet, StepExecutionListener {
 
               nombreDeJours = (empruntDateFin.getTime() - dateToDay.getTime())/(1000*60*60*24);
 
-          } else if(empruntDateFin.before(dateToDay)){
+          } else if(empruntDateFin.before(dateToDay) && empruntType.getStatut().equals("En cours")){
 
               /**@see CompteService#compteById(Integer)*/
               CompteType compteType = compteService.compteById(empruntType.getCompteId());

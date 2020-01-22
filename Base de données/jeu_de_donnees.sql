@@ -7,7 +7,9 @@ INSERT INTO public.compte
 VALUES 
     ('Carre', 'Evan', '65 Rue Basfroi', 79170, 'Tilly', 0646864294, null, 656310049, 'evancarre@fakeemail.tld', 'Evan'),
     ('Jolivet', 'Gilbert', '82 Cité Hiver', 77184, 'Tilly', 0686081870, null, 821157968, 'gilbertjolivet@fakeemail.tld', 'Gilbert'),
-    ('Le gall', 'Nolan', '18 Rue Esquirol', 36310, 'Tilly', null, 0460941524, 189275124, 'nolanle.gall@fakeemail.tld', 'Nolan')
+    ('Le gall', 'Nolan', '18 Rue Esquirol', 36310, 'Tilly', null, 0460941524, 189275124, 'nolanle.gall@fakeemail.tld', 'Nolan'),
+    ('Julie', 'Dakota', '2 Rue Bastion', 79170, 'Tilly', 646868956, null, 656310449, 'julie_dakota@dakota.tld', 'dakota'),
+    ('Will', 'Paul', '9 Rue des artistes', 36310, 'Tilly', null, 460941524, 189275124, 'paul.gall@will.tld', 'will')
 ;
 
 
@@ -55,10 +57,10 @@ VALUES
 INSERT INTO public.emprunt
     (date_debut, date_fin, statut, prolongation, livre_id, compte_id)
 VALUES
-    ('2019-12-20', '2020-01-20', 'En cours', false, 1, 3),
+    ('2019-12-20', '2020-01-20', 'En cours', false, 1, 2),
     ('2019-11-30', '2019-12-30', 'En cours', false, 2, 1),
-    ('2019-11-02', '2019-12-02', 'En cours', false, 4, 1),
-    ('2019-12-05', '2020-01-05', 'En cours', false, 3, 2)
+    ('2019-11-02', '2019-12-02', 'En cours', false, 6, 1),
+    ('2019-12-05', '2020-01-05', 'En cours', false, 8, 4)
 ;
     
 INSERT INTO public.reservation

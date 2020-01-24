@@ -30,11 +30,13 @@
 
                     <h2 class="rouge" th:text="'Réservation : ' + ${ouvrage.getTitre()}"></h2>
                     <hr/>
-                    <div class="row justify-content-start" style="margin-left: 15%">
 
+                    <th:block th:if="${!reservationList.isEmpty()}">
+
+                    <div class="row justify-content-start" style="margin-left: 15%">
                         <div>
                             <h4 style="text-align: center" th:text="'Le prochain livre pour cette ouvrage sera disponible dans ' + ${compteurJour}
-                        + ' jour(s), pour le ' + ${dateFormat.format(dateFormat.parse(dateRetour.toString()))}"></h4>
+                        + ' jour(s), pour le ' + ${dateRetour}"></h4>
                         </div>
                         <hr/>
 
@@ -65,7 +67,17 @@
                             </tbody>
                         </table>
                     </div>
+                    </th:block>
+
+                    <th:block th:if="${reservationList.isEmpty()}">
+                        <div>
+                            <h4 style="text-align: center" th:text="'Le prochain livre pour cette ouvrage sera disponible dans ' + ${compteurJour}
+                        + ' jour(s), pour le ' + ${dateRetour}"></h4>
+                        </div>
+                    </th:block>
+
                     <hr/>
+
                     <div class="row justify-content-start" style="margin-left: 15%">
                         <div class="col col-md-9">
                             <p style="text-align: center">

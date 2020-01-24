@@ -60,6 +60,7 @@ public class OuvrageController {
     public String ouvrageDetail(HttpSession session, Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId){
 
         Users user = (Users) session.getAttribute("user");
+        Boolean dejaReserver = true;
         Boolean dejaEmprunter = true;
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -75,14 +76,25 @@ public class OuvrageController {
             List<ReservationType> reservationTypeList = reservationService.reservationTypeListEnCours(
                     reservationService.reservationTypeListByOuvrageId(ouvrageId));
 
-            for (ReservationType reservationType : reservationTypeList) {
+            if (user != null) {
+                for (ReservationType reservationType : reservationTypeList) {
 
-                if (reservationType.getCompteId() == user.getUserId() && ouvrageId == reservationType.getOuvrageId()) {
-                        dejaEmprunter = false;
+                    if (reservationType.getCompteId() == user.getUserId() && ouvrageId == reservationType.getOuvrageId()) {
+                        dejaReserver = false;
+                    }
                 }
             }
 
             List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByOuvrageId(ouvrageId);
+
+            if (user != null) {
+                for (EmpruntType empruntType : empruntTypeList) {
+
+                    if (empruntType.getCompteId() == user.getUserId()) {
+                        dejaEmprunter = false;
+                    }
+                }
+            }
 
             if (empruntTypeList.size() > 0) {
 
@@ -97,6 +109,7 @@ public class OuvrageController {
             model.addAttribute("livreTypeListDispo", livreTypeListDispo);
             model.addAttribute("ouvrageDetail", ouvrageType);
             model.addAttribute("reservationTypeList", reservationTypeList);
+            model.addAttribute("dejaReserver", dejaReserver);
             model.addAttribute("dejaEmprunter", dejaEmprunter);
 
             return "ouvrage/ouvrageDetail";

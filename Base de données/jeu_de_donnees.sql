@@ -30,19 +30,13 @@ INSERT INTO public.livre
 VALUES
     ('TISFFPHDT1N001', 1, 'indisponible'),
     ('TISFFPHDT1N002', 1, 'indisponible'),
-    ('TISFFPHDT1N003', 1, 'indisponible'),
-    
+   
     ('TISFIAFLCDFT1N001', 2, 'indisponible'),
-    ('TISFIAFLCDFT1N002', 2, 'disponible'),
-    ('TISFIAFLCDFT1N003', 2, 'disponible'),
     
-    ('TIFRHARAAT1N001', 3, 'indisponible'),
-    ('TIFRHARAAT1N002', 3, 'disponible'),
-    ('TIFRHARAAT1N003', 3, 'disponible'),
-    
-    ('TIFPRCDTDRLNVT1N001', 4, 'disponible'),
-    ('TIFPRCDTDRLNVT1N002', 4, 'disponible'),
-    ('TIFPRCDTDRLNVT1N003', 4, 'disponible')
+    ('TIFRHARAAT1N001', 3, 'disponible'),
+  
+    ('TIFPRCDTDRLNVT1N001', 4, 'disponible')
+
 ;
 
 INSERT INTO public.photo
@@ -57,20 +51,18 @@ VALUES
 INSERT INTO public.emprunt
     (date_debut, date_fin, statut, prolongation, livre_id, compte_id)
 VALUES
-    ('2019-12-20', '2020-01-20', 'En cours', false, 1, 2),
-    ('2019-11-30', '2019-12-30', 'En cours', false, 2, 1),
-    ('2019-11-02', '2019-12-02', 'En cours', false, 6, 1),
-    ('2019-12-05', '2020-01-05', 'En cours', false, 8, 4)
+    ('2019-12-24', '2020-02-24', 'En cours', false, 1, 2),
+    ('2019-12-30', '2020-01-30', 'En cours', false, 2, 1),
+    ('2019-12-05', '2020-01-05', 'En cours', false, 3, 4)
 ;
     
 INSERT INTO public.reservation
-	(date_demande_de_resa, num_position_resa, statut, ouvrage_id, compte_id)
+	(date_resa_disponible, num_position_resa, statut, ouvrage_id, compte_id)
 VALUES
-    ('2019-12-18', 2, 'En cours', 4, 3),
-	('2019-12-19', 1, 'En cours', 1, 2),
-	('2019-12-19', 2, 'En cours', 1, 4),
-	('2019-12-27', 3, 'En cours', 1, 1),
-	('2019-12-16', 1, 'En cours', 4, 4)
+    ('2020-01-24', 1, 'En cours', 1, 3),
+	('2020-01-24', 2, 'En cours', 1, 4),
+	('2020-01-24', 3, 'En cours', 1, 5),
+
 ;
 
 

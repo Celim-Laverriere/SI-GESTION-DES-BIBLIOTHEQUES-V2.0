@@ -172,6 +172,5 @@ class EmpruntServiceImplTest {
         Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
             empruntServiceImpl.updateEmprunt(empruntMock);
         });
-
     }
 }

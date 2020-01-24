@@ -303,7 +303,6 @@ public class EmpruntEndpoint  {
             serviceStatus.setMessage("Emprunt " + request.getOuvrageId() + " : not found");
         }
 
-
         response.getEmpruntType().addAll(empruntTypeList);
         response.setServiceStatus(serviceStatus);
         return response;

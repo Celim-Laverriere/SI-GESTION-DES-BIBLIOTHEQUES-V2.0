@@ -62,7 +62,7 @@
                         <hr/>
 
                         <th:block th:if="${livreTypeListDispo.size() == 0
-                                        && ouvrageDetail.getLivres().size() * 2 > reservationTypeList.size() && dejaEmprunter}">
+                                        && ouvrageDetail.getLivres().size() * 2 > reservationTypeList.size() && dejaReserver && dejaEmprunter}">
                             <h3>Réservation</h3>
 
                             <table class="table">
@@ -92,7 +92,7 @@
                             </table>
                         </th:block>
 
-                        <th:block th:if="${!dejaEmprunter}">
+                        <th:block th:if="${!dejaReserver}">
 
                             <h3>Réservation</h3>
 
@@ -106,6 +106,27 @@
                                         </p>
                                         <p style="text-align: center">
                                             <a style="width: 45%" class="btn btn-warning" href="#" th:href="@{/mesReservations}">VOIR MES RESERVATIONS</a>
+                                        </p>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </th:block>
+
+                        <th:block th:if="${!dejaEmprunter}">
+                            <h3>Réservation</h3>
+
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td style="vertical-align: middle" >
+                                        <h5>Vous avez déjà cet ouvrage en votre possession !</h5></br>
+                                        <p style="text-align: center">
+                                            <a style="width: 45%" class="btn btn-info" th:href="@{/ouvrages}">RETOUR A LA LISTE DES OUVRAGES</a>
+                                        </p>
+                                        <p style="text-align: center">
+                                            <a style="width: 40%" class="btn btn-warning" href="#" th:href="@{/emprunt}">VOIR MES EMPRUNTS</a>
                                         </p>
 
                                     </td>

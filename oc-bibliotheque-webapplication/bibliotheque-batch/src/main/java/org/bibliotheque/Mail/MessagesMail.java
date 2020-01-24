@@ -28,10 +28,11 @@ public class MessagesMail {
         return textMail().get(0)
                 + "<div style=\"padding-left: 20px\">"
                 + "<p>Bonjour, " + compteType.getPrenom() + "</p>"
-                + "<p>Votre livre sera disponible à partir du "+ dateFormat.format(dateOuvrageDisponible) + " dans votre bibliothèque !</p>"
-                + "<p>Vous pouvez vous présenter à l'accueil de la bibliothéque pour venir le récupérer!</p>"
+                + "<p>Votre livre est disponible !</p>"
+                + "<p>Vous pouvez vous présenter à l'accueil de la bibliothéque pour venir le récupérer !</p>"
                 + "<p>Titre de l'ouvrage :  " + ouvrageType.getTitre() + "</p>"
                 + "<p>À très bientôt dans votre bibliothèque préféré pour de nouvelles lécture !</p>"
+                + "<p>Rappel : vous avez 48 heures pour venir récupérer votre livre, passé ce délai votre réservation sera annulé.</p>"
                 + "</div>"
                 + textMail().get(1);
     }

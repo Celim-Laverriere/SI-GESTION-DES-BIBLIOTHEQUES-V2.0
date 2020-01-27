@@ -36,7 +36,8 @@ public class EmpruntEndpoint  {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getEmpruntByIdRequest")
     @ResponsePayload
-    public GetEmpruntByIdResponse getEmpruntById(@RequestPayload GetEmpruntByIdRequest request) throws DatatypeConfigurationException {
+    public GetEmpruntByIdResponse getEmpruntById(@RequestPayload GetEmpruntByIdRequest request)
+            throws DatatypeConfigurationException {
         GetEmpruntByIdResponse response = new GetEmpruntByIdResponse();
         EmpruntEntity empruntEntity = service.getEmpruntById(request.getEmpruntId());
         EmpruntType empruntType = new EmpruntType();
@@ -64,7 +65,8 @@ public class EmpruntEndpoint  {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllEmpruntRequest")
     @ResponsePayload
-    public GetAllEmpruntResponse getAllEmprunt(@RequestPayload GetAllEmpruntRequest request) throws DatatypeConfigurationException {
+    public GetAllEmpruntResponse getAllEmprunt(@RequestPayload GetAllEmpruntRequest request)
+            throws DatatypeConfigurationException {
         GetAllEmpruntResponse response = new GetAllEmpruntResponse();
         List<EmpruntType> empruntTypeList = new ArrayList<>();
         List<EmpruntEntity> empruntEntityList = service.getAllEmprunts();
@@ -102,7 +104,8 @@ public class EmpruntEndpoint  {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllEmpruntByCompteIdRequest")
     @ResponsePayload
-    public GetAllEmpruntByCompteIdResponse getAllEmpruntByCompteId(@RequestPayload GetAllEmpruntByCompteIdRequest request) throws DatatypeConfigurationException, ParseException {
+    public GetAllEmpruntByCompteIdResponse getAllEmpruntByCompteId(@RequestPayload GetAllEmpruntByCompteIdRequest request)
+            throws DatatypeConfigurationException, ParseException {
         GetAllEmpruntByCompteIdResponse response = new GetAllEmpruntByCompteIdResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
         List<EmpruntType> empruntTypeList = new ArrayList<>();
@@ -173,7 +176,7 @@ public class EmpruntEndpoint  {
             serviceStatus.setStatusCode("CONFLICT");
             serviceStatus.setMessage("Exception while adding Entity");
         } catch (Exception pEX) {
-            pEX.printStackTrace();
+          pEX.printStackTrace();
         }
 
         response.setEmpruntType(newEmpruntType);
@@ -269,7 +272,8 @@ public class EmpruntEndpoint  {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllEmpruntByOuvrageIdRequest")
     @ResponsePayload
-    public GetAllEmpruntByOuvrageIdResponse getAllEmpruntByOuvrageId(@RequestPayload GetAllEmpruntByOuvrageIdRequest request) throws DatatypeConfigurationException {
+    public GetAllEmpruntByOuvrageIdResponse getAllEmpruntByOuvrageId(@RequestPayload GetAllEmpruntByOuvrageIdRequest request)
+            throws DatatypeConfigurationException {
         GetAllEmpruntByOuvrageIdResponse response = new GetAllEmpruntByOuvrageIdResponse();
         List<EmpruntType> empruntTypeList = new ArrayList<>();
         ServiceStatus serviceStatus = new ServiceStatus();

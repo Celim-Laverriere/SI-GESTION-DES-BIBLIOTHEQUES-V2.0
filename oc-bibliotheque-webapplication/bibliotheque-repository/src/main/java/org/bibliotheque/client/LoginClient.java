@@ -10,6 +10,7 @@ public class LoginClient extends WebServiceGatewaySupport {
 
     private static final Logger logger = LoggerFactory.getLogger(OuvrageClient.class);
 
+
     /**
      *  ==== GET COMPTE BY MAIL AND PASSWORD FOR LOGIN ====
      * @param mail
@@ -37,6 +38,7 @@ public class LoginClient extends WebServiceGatewaySupport {
 
         return response;
     }
+
 
     /**
      * ==== GET COMPTE AFTER LOGIN SUCCESS ====

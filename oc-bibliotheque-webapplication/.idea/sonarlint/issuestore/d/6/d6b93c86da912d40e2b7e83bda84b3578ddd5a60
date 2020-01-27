@@ -1,7 +1,7 @@
 
-Wsquid:S1854/";Remove this useless assignment to local variable "message".(²Ìããûÿÿÿÿ
-Hsquid:S1481/",Remove this unused "message" local variable.(²Ìããûÿÿÿÿ
 csquid:S1226!"GIntroduce a new variable instead of reusing the parameter "compteType".(½™åøÿÿÿÿÿ
+Hsquid:S1481/",Remove this unused "message" local variable.(²Ìããûÿÿÿÿ
+Wsquid:S1854/";Remove this useless assignment to local variable "message".(²Ìããûÿÿÿÿ
 dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ˆñ”¡üÿÿÿÿ
 fsquid:S4488*"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÁŸ©óúÿÿÿÿ
 _squid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ï×ï‹

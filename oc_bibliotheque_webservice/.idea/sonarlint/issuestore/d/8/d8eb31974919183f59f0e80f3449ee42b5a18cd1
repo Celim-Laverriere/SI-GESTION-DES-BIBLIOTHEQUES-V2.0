@@ -1,4 +1,7 @@
 
-@squid:S1125{")Remove the literal "false" boolean value.(ûÅŸ
-_squid:S1192X"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó
-Asquid:S1125–")Remove the literal "false" boolean value.(ûÅŸ
+Gsquid:S1148Œ"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8ìò•¸ş-
+Gsquid:S1148…"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8œ«¸ş-
+Xsquid:S1141z"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8œ«¸ş-
+Gsquid:S1148©"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8„–—¸ş-
+fsquid:S1192X"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó8É¡‰¸ş-
+Fsquid:S1148_"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8Ò¬ë·ş-

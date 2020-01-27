@@ -31,7 +31,7 @@ public class LauncherBatch{
         SpringApplication.run(LauncherBatch.class, args);
     }
 
-    // Le batch est paramétré pour s'exécuter toutes les 24h00
+    // LE BATCH EST PARAMETRE POUR S'EXECUTER TOUTES LES 24H00
     @Scheduled(cron = "0 0 */24 * * ?")
     public void perform() throws Exception {
 
@@ -41,8 +41,8 @@ public class LauncherBatch{
         jobLauncher.run(jobMail, params);
     }
 
-    // Le batch est paramétré pour s'exécuter toutes les 48h00
-    @Scheduled(cron = "0 */10 * * * ?")
+    // LE BATCH EST PARAMETRE POUR S'EXECUTER TOUTES LES 48H00
+    @Scheduled(cron = "0 0 */48 * * ?")
     public void perform2() throws Exception {
 
         JobParameters params = new JobParametersBuilder()

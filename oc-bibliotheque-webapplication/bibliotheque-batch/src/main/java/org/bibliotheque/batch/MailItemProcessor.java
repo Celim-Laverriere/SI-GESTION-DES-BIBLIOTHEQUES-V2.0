@@ -48,9 +48,9 @@ public class MailItemProcessor implements Tasklet, StepExecutionListener {
 
 
     /**
-     * Cette méthode a pour rôle de contrôler les dates de fin des emprunts en fonction de la date courante, et au cas
-     * échéant de traiter les emprunts non rendus dans le délai légal. Pour ce faire un e-mail de rappel est envoyé via
-     * la classe "sendingmailthroughgmailsmtpserver".
+     * CETTE METHODE A POUR ROLE DE CONTROLER LES DATES DE FIN DES EMPRUNTS EN FONCTION DE LA DATE COURANTE, ET AU CAS
+     * ECHEANT DE TRAITER LES EMPRUNTS NON RENDUS DANS LE DELAI LEGAL. POUR CE FAIRE UN E-MAIL DE RAPPEL EST ENVOYE VIA
+     * LA CLASSE "sendingmailthroughgmailsmtpserver".
      * @return
      * @throws Exception
      */

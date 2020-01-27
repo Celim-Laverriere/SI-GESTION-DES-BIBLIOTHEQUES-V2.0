@@ -16,11 +16,9 @@ import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -57,7 +55,8 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
     }
 
     /**
-     *
+     * CETTE PARTIE VERIFIE QUE LE DELAI DE 48 HEURES POUR RECUPERER LE LIVRE N'EST PAS DEPASSE
+     * ET VERIFIE SI LE LIVRE A BIEN ETE RETOURNE, POUR ENVOYER UN MAIL AU CLIENT QUI L’A RESERVE POUR VENIR LE CHERCHER
      * @param stepContribution
      * @param chunkContext
      * @return
@@ -71,7 +70,8 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
         Date dateToDay = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-        // Vérifie que le délai de 48 heures pour récupérer le livre n'est pas dépassé
+        /* ==== CETTE PARTIE VERIFIE QUE LE DELAI DE 48 HEURES POUR RECUPERER LE LIVRE N'EST PAS DEPASSE ==== */
+
         for (ReservationType reservationType : reservationTypeListByFirstPosition) {
 
             GregorianCalendar calendar = new GregorianCalendar();
@@ -106,10 +106,11 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
 
         }
 
-        // Vérifie la date de retour d'un livre pour envoyer un mail au client qui à réservé le livre pour venir le chercher
-
         reservationTypeListByFirstPosition.clear();
         reservationTypeListByFirstPosition = reservationTypeListByFirstPosition();
+
+        /* ==== CETTE PARTIE VERIFIE SI LE LIVRE A BIEN ETE RETOURNE, POUR ENVOYER UN MAIL AU CLIENT
+        QUI L’A RESERVE POUR VENIR LE CHERCHER ==== */
 
         for (ReservationType reservationType : reservationTypeListByFirstPosition) {
 
@@ -178,7 +179,7 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
 
 
     /**
-     *
+     * CETTE METHODE RECUPERE LA RESERVATION EN PREMIERE POSITION DANS LA LISTE
      * @return
      */
     public List<ReservationType> reservationTypeListByFirstPosition(){
@@ -197,7 +198,7 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
 
 
     /**
-     *
+     * CETTE METHODE VERIFIE SI LE LIVRE A BIEN ETE RENDU
      * @param reservationType
      * @return
      */
@@ -221,7 +222,5 @@ public class CheckReservationTime implements Tasklet, StepExecutionListener {
 
         return livreReserver;
     }
-
-
 
 }

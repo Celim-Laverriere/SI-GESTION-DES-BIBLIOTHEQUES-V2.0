@@ -8,11 +8,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-
+import org.springframework.dao.DataIntegrityViolationException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 class PhotoServiceImplTest {
@@ -57,5 +55,29 @@ class PhotoServiceImplTest {
         Assertions.assertEquals(photoEntityList.size(), 2);
         Assertions.assertEquals(photoEntityList.get(0).getNomPhoto(), photoMock1.getNomPhoto());
 
+    }
+
+    @Test
+    void addPhoto() {
+
+        PhotoEntity photoMock = PhotoEntity.builder().urlPhoto("Le_fou_et_assassin.jpg")
+                .nomPhoto("Le_fou_et_assassin_tome_1").ouvrageId(3).build();
+
+        when(photoRepository.save(photoMock)).thenThrow(DataIntegrityViolationException.class);
+        Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
+            photoServiceImpl.addPhoto(photoMock);
+        });
+    }
+
+    @Test
+    void updatePhoto() {
+
+        PhotoEntity photoMock = PhotoEntity.builder().urlPhoto("Le_fou_et_assassin.jpg")
+                .nomPhoto("Le_fou_et_assassin_tome_1").ouvrageId(3).build();
+
+        when(photoRepository.save(photoMock)).thenThrow(DataIntegrityViolationException.class);
+        Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
+            photoServiceImpl.updatePhoto(photoMock);
+        });
     }
 }

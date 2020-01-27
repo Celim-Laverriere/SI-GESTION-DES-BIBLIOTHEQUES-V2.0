@@ -28,6 +28,7 @@ public class EmpruntClient extends WebServiceGatewaySupport {
         return response;
     }
 
+
     /**
      * ==== CETTE METHODE RECUPERER TOUS LES EMPRUNTS D'UN CLIENT ====
      * @param id

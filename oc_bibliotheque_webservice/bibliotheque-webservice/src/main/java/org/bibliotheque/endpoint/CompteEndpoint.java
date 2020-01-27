@@ -4,7 +4,6 @@ import com.bibliotheque.gs_ws.*;
 import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.CompteEntity;
 import org.bibliotheque.service.contract.CompteService;
-import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;

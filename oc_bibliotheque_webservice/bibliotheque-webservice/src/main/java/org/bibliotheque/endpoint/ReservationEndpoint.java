@@ -6,6 +6,8 @@ import org.bibliotheque.entity.ReservationEntity;
 import org.bibliotheque.service.contract.ReservationService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -15,10 +17,7 @@ import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
+import java.util.*;
 
 @Endpoint
 @NoArgsConstructor
@@ -151,14 +150,20 @@ public class ReservationEndpoint {
         DeleteReservationResponse response = new DeleteReservationResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        boolean flag = service.deleteReservation(request.getReservationId());
+        try {
+            service.deleteReservation(request.getReservationId());
 
-        if (flag == false) {
-            serviceStatus.setStatusCode("FAIL");
-            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getReservationId());
-        } else {
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Deleted Successfully");
+
+        } catch (NoSuchElementException pEX) {
+            serviceStatus.setStatusCode("NOT FOUND");
+            serviceStatus.setMessage("Réservation " + request.getReservationId() + " : not found");
+        } catch(EmptyResultDataAccessException pEX) {
+            serviceStatus.setStatusCode("FAIL");
+            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getReservationId());
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setServiceStatus(serviceStatus);
@@ -173,7 +178,8 @@ public class ReservationEndpoint {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addReservationRequest")
     @ResponsePayload
-    public AddReservationResponse addReservationResponse(@RequestPayload  AddReservationRequest request) throws DatatypeConfigurationException, ParseException {
+    public AddReservationResponse addReservationResponse(@RequestPayload  AddReservationRequest request)
+            throws DatatypeConfigurationException, ParseException {
         AddReservationResponse response = new AddReservationResponse();
         ReservationType reservationType = new ReservationType();
         ReservationEntity reservationEntity = new ReservationEntity();
@@ -184,15 +190,18 @@ public class ReservationEndpoint {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         reservationEntity.setDateResaDisponible(dateFormat.parse(request.getReservationType().getDateResaDisponible().toString()));
 
-        ReservationEntity savedReservationEntity = service.addReservation(reservationEntity);
-
-        if (savedReservationEntity == null) {
-            serviceStatus.setStatusCode("CONFLICT");
-            serviceStatus.setMessage("Exception while adding Entity");
-        } else {
+        try {
+            ReservationEntity savedReservationEntity = service.addReservation(reservationEntity);
             BeanUtils.copyProperties(savedReservationEntity, reservationType);
+
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Added Successfully");
+
+        } catch (DataIntegrityViolationException pEX) {
+            serviceStatus.setStatusCode("CONFLICT");
+            serviceStatus.setMessage("Exception while adding Entity");
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setReservationType(reservationType);
@@ -209,42 +218,47 @@ public class ReservationEndpoint {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "updateReservationRequest")
     @ResponsePayload
-    public UpdateReservationResponse updateReservation (@RequestPayload UpdateReservationRequest request) throws ParseException {
+    public UpdateReservationResponse updateReservation (@RequestPayload UpdateReservationRequest request)
+            throws ParseException {
         UpdateReservationResponse response = new UpdateReservationResponse();
         ReservationType reservationType = new ReservationType();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        // 1. Trouver si la réservation est disponible
-        ReservationEntity reservationEntity = service.getReservationById(request.getReservationType().getId());
+      try {
+          // 1. Trouver si la réservation est disponible
+          ReservationEntity reservationEntity = service.getReservationById(request.getReservationType().getId());
 
-        System.out.println(request.getReservationType().getNumPositionResa());
+          // 2. Obtenir les informations de la réservation à mettre à jour à partir de la requête
+          SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-        if (reservationEntity == null){
-            serviceStatus.setStatusCode("NOT FOUND");
-            serviceStatus.setMessage("Réservation : " + request.getReservationType().getId() + " not found");
-        } else {
-            // 2. Obtenir les informations de la réservation à mettre à jour à partir de la requête
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+          Date dateDeResa = dateFormat.parse(request.getReservationType().getDateResaDisponible().toString());
+          reservationEntity.setDateResaDisponible(dateDeResa);
 
-            Date dateDeResa = dateFormat.parse(request.getReservationType().getDateResaDisponible().toString());
-            reservationEntity.setDateResaDisponible(dateDeResa);
+          BeanUtils.copyProperties(request.getReservationType(), reservationEntity);
 
-            BeanUtils.copyProperties(request.getReservationType(), reservationEntity);
-            System.out.println(reservationEntity.getNumPositionResa());
+          try {
+              // 3. Mettre à jour l'emprunt dans la base de données
+              service.updateReservation(reservationEntity);
 
-            // 3. Mettre à jour l'emprunt dans la base de données
-            boolean flag = service.updateReservation(reservationEntity);
+              serviceStatus.setStatusCode("SUCCESS");
+              serviceStatus.setMessage("Content updated Successfully");
 
-            if(flag == false) {
-                serviceStatus.setStatusCode("CONFLICT");
-                serviceStatus.setMessage("Exception while updating Entity : " + request.getReservationType().getId());
-            } else {
-                serviceStatus.setStatusCode("SUCCESS");
-                serviceStatus.setMessage("Content updated Successfully");
-                reservationEntity = service.getReservationById(request.getReservationType().getId());
-                BeanUtils.copyProperties(reservationEntity, reservationType);
-            }
-        }
+              reservationEntity = service.getReservationById(request.getReservationType().getId());
+              BeanUtils.copyProperties(reservationEntity, reservationType);
+
+          } catch (DataIntegrityViolationException pEX) {
+              serviceStatus.setStatusCode("CONFLICT");
+              serviceStatus.setMessage("Exception while updating Entity : " + request.getReservationType().getId());
+          } catch (Exception pEX) {
+              pEX.printStackTrace();
+          }
+
+      } catch (NoSuchElementException pEX) {
+          serviceStatus.setStatusCode("NOT FOUND");
+          serviceStatus.setMessage("Réservation : " + request.getReservationType().getId() + " not found");
+      } catch (Exception pEX) {
+          pEX.printStackTrace();
+      }
 
         response.setReservationType(reservationType);
         response.setServiceStatus(serviceStatus);

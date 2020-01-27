@@ -15,9 +15,9 @@ public interface ReservationService {
 
     List<ReservationEntity> getListReservationByCompteId(Integer compteId);
 
-    boolean deleteReservation(Integer id);
+    void deleteReservation(Integer id);
 
     ReservationEntity addReservation(ReservationEntity reservationEntity) throws DatatypeConfigurationException;
 
-    boolean updateReservation(ReservationEntity reservationEntity);
+    void updateReservation(ReservationEntity reservationEntity);
 }

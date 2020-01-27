@@ -36,29 +36,6 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public boolean deleteReservation(Integer reservationId) {
-
-        ReservationEntity reservationEntity = getReservationById(reservationId);
-        List<ReservationEntity> reservationEntityList = reservationRepository.findAllByOuvrageId(reservationEntity.getOuvrageId());
-
-        for (ReservationEntity entity : reservationEntityList){
-
-            if (reservationEntity.getNumPositionResa() < entity.getNumPositionResa() && reservationEntity.getNumPositionResa() != 0) {
-                entity.setNumPositionResa(entity.getNumPositionResa() - 1);
-                updateReservation(entity);
-            }
-        }
-
-        try {
-            this.reservationRepository.deleteById(reservationId);
-            return true;
-        } catch (Exception pEX) {
-            pEX.getMessage();
-            return false;
-        }
-    }
-
-    @Override
     public List<ReservationEntity> getListReservationByCompteId(Integer compteId) {
         List<ReservationEntity> reservationEntities = new ArrayList<>();
         this.reservationRepository.findAllByCompteId(compteId).forEach(e -> reservationEntities.add(e));
@@ -82,22 +59,28 @@ public class ReservationServiceImpl implements ReservationService {
             reservationEntity.setNumPositionResa(1);
         }
 
-        try {
-            return this.reservationRepository.save(reservationEntity);
-        } catch (Exception pEX) {
-            pEX.printStackTrace();
-            return null;
-        }
+        return this.reservationRepository.save(reservationEntity);
     }
 
     @Override
-    public boolean updateReservation(ReservationEntity reservationEntity) {
-        try{
-            this.reservationRepository.save(reservationEntity);
-            return true;
-        } catch (Exception pEX) {
-            pEX.printStackTrace();
-            return false;
+    public void updateReservation(ReservationEntity reservationEntity) {
+        this.reservationRepository.save(reservationEntity);
+    }
+
+    @Override
+    public void deleteReservation(Integer reservationId) {
+
+        ReservationEntity reservationEntity = getReservationById(reservationId);
+        List<ReservationEntity> reservationEntityList = reservationRepository.findAllByOuvrageId(reservationEntity.getOuvrageId());
+
+        for (ReservationEntity entity : reservationEntityList){
+
+            if (reservationEntity.getNumPositionResa() < entity.getNumPositionResa() && reservationEntity.getNumPositionResa() != 0) {
+                entity.setNumPositionResa(entity.getNumPositionResa() - 1);
+                updateReservation(entity);
+            }
         }
+
+        this.reservationRepository.deleteById(reservationId);
     }
 }

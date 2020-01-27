@@ -1,11 +1,10 @@
 
-Ysquid:S1141"5Extract this nested try block into a separate method.(΅»Άόωÿÿÿÿ8Κ θνό-
-|squid:UselessImportCheck"QRemove this unused import 'org.hibernate.exception.ConstraintViolationException'.(°Ξ¥Ν8Κ θνό-
-_squid:S1192f"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Γέ—σ
-Fsquid:S1148m"#Use a logger to log this exception.(°έδ‰ύÿÿÿÿ8ΐ‰ÿνό-
+Gsquid:S1148”"#Use a logger to log this exception.(°έδ‰ύÿÿÿÿ8Κ θνό-
+Fsquid:S1148l"#Use a logger to log this exception.(°έδ‰ύÿÿÿÿ8ΐ‰ÿνό-
+Gsquid:S1148"#Use a logger to log this exception.(°έδ‰ύÿÿÿÿ8Κ θνό-
+Gsquid:S1148Ή"#Use a logger to log this exception.(°έδ‰ύÿÿÿÿ8Κ θνό-
+Fsquid:S11482"#Use a logger to log this exception.(°έδ‰ύÿÿÿÿ8Κ θνό-
 \
-squid:S106"9Replace this use of System.out or System.err by a logger.(ωΪΖόÿÿÿÿ8Κ θνό-
-Gsquid:S1148"#Use a logger to log this exception.(°έδ‰ύÿÿÿÿ8Κ θνό-
-Gsquid:S1148•"#Use a logger to log this exception.(°έδ‰ύÿÿÿÿ8Κ θνό-
-Gsquid:S1148Ί"#Use a logger to log this exception.(°έδ‰ύÿÿÿÿ8Κ θνό-
-Fsquid:S11483"#Use a logger to log this exception.(°έδ‰ύÿÿÿÿ8Κ θνό-
+squid:S106"9Replace this use of System.out or System.err by a logger.(ωΪΖόÿÿÿÿ8Κ θνό-
+_squid:S1192e"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Γέ—σ
+Ysquid:S1141‡"5Extract this nested try block into a separate method.(΅»Άόωÿÿÿÿ8Κ θνό-

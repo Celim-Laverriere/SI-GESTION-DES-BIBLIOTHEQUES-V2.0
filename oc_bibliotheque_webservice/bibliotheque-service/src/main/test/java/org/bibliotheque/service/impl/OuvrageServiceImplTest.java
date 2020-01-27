@@ -9,11 +9,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-
+import org.springframework.dao.DataIntegrityViolationException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 @DisplayName( "Testing OuvrageServiceImpl" )
@@ -97,6 +95,33 @@ class OuvrageServiceImplTest {
         when(ouvrageRepository.findAllOuvragesByKeyword("Dune")).thenReturn((ouvrageMockList));
         final List<OuvrageEntity> ouvrageEntityList1 = ouvrageServiceImpl.getAllOuvagesByKeyword("Dune");
         Assertions.assertEquals(ouvrageEntity2.getAuteur(), ouvrageEntityList1.get(0).getAuteur());
+
+    }
+
+    @Test
+    void addOuvrage() {
+
+        OuvrageEntity ouvrageMock = OuvrageEntity.builder().titre("Fondation - Le cycle de Fondation Tome 1")
+                .genre("science-fiction").resumer("En ce début de treizième millénaire...").auteur("Isaac Asimov")
+                .editeur("Gallimard").ref("978-2070360536").build();
+
+        when(ouvrageRepository.save(ouvrageMock)).thenThrow(DataIntegrityViolationException.class);
+        Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
+            ouvrageServiceImpl.addOuvrage(ouvrageMock);
+        });
+    }
+
+    @Test
+    void updateOuvrage() {
+
+        OuvrageEntity ouvrageMock = OuvrageEntity.builder().id(20).titre("Fondation - Le cycle de Fondation Tome 1")
+                .genre("science-fiction").resumer("En ce début de treizième millénaire...").auteur("Isaac Asimov")
+                .editeur("Gallimard").ref("978-2070360536").build();
+
+        when(ouvrageRepository.save(ouvrageMock)).thenThrow(DataIntegrityViolationException.class);
+        Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
+            ouvrageServiceImpl.updateOuvrage(ouvrageMock);
+        });
 
     }
 }

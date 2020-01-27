@@ -7,262 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="401b9004-2ed0-4147-9f57-ec6c94108e23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/bibliotheque-batch.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/bibliotheque-batch.jar.original" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/classes/messagesMail.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/classes/org/bibliotheque/LauncherBatch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/classes/org/bibliotheque/Mail/MessagesMail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/classes/org/bibliotheque/Mail/SendingMailThroughGmailSMTPServer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/classes/org/bibliotheque/batch/CheckReservationTime.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/classes/org/bibliotheque/batch/MailItemProcessor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/classes/org/bibliotheque/config/BatchConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/classes/urlImageBatch.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-batch/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/bibliotheque-entity-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/META-INF/sun-jaxb.episode" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/AddCompteRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/AddCompteResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/AddEmpruntRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/AddEmpruntResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/AddLivreRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/AddLivreResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/AddOuvrageRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/AddOuvrageResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/AddPhotoRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/AddPhotoResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/AddReservationRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/AddReservationResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/CompteType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/DeleteCompteRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/DeleteCompteResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/DeleteEmpruntRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/DeleteEmpruntResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/DeleteLivreRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/DeleteLivreResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/DeleteOuvrageRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/DeleteOuvrageResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/DeletePhotoRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/DeletePhotoResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/DeleteReservationRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/DeleteReservationResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/EmpruntType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllComptesRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllComptesResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllEmpruntByCompteIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllEmpruntByCompteIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllEmpruntByOuvrageIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllEmpruntByOuvrageIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllEmpruntRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllEmpruntResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllLivresRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllLivresResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllOuvragesRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllOuvragesResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllPhotosRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllPhotosResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllReservationRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetAllReservationResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetCompteAfterLoginSuccessRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetCompteAfterLoginSuccessResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetCompteByIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetCompteByIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetEmpruntByIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetEmpruntByIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetListReservationByCompteIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetListReservationByCompteIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetListReservationByOuvrageIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetListReservationByOuvrageIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetLivreByIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetLivreByIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetOuvrageByIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetOuvrageByIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetPhotoByIdRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetPhotoByIdResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetSearchByKeywordRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/GetSearchByKeywordResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/LivreType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/LoginRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/LoginResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/ObjectFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/OuvrageType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/PhotoType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/ReservationType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/ServiceStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/UpdateCompteRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/UpdateCompteResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/UpdateEmpruntRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/UpdateEmpruntResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/UpdateLivreRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/UpdateLivreResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/UpdateOuvrageRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/UpdateOuvrageResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/UpdatePhotoRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/UpdatePhotoResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/UpdateReservationRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/UpdateReservationResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/classes/org/bibliotheque/wsdl/package-info.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/bibliotheque-repository-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/client/CompteClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/client/EmpruntClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/client/LivreClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/client/LoginClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/client/OuvrageClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/client/ReservationClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/client/SearchClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/configSoap/SoapConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/repository/CompteRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/repository/EmpruntRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/repository/LivreRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/repository/LoginRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/repository/OuvrageRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/repository/ReservationRepositoy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/classes/org/bibliotheque/repository/SearchRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-service/target/bibliotheque-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-service/target/classes/org/bibliotheque/service/CompteService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-service/target/classes/org/bibliotheque/service/EmpruntService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-service/target/classes/org/bibliotheque/service/LivreService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-service/target/classes/org/bibliotheque/service/OuvrageService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-service/target/classes/org/bibliotheque/service/ReservationService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-service/target/classes/org/bibliotheque/service/SearchService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp.war.original" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/org/bibliotheque/BibliothequeApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/org/bibliotheque/controller/AccueilController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/org/bibliotheque/controller/CompteController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/org/bibliotheque/controller/EmpruntController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/org/bibliotheque/controller/OuvrageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/org/bibliotheque/controller/ReservationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/org/bibliotheque/controller/SearchController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/org/bibliotheque/controller/SecurityController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/org/bibliotheque/security/config/SecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/org/bibliotheque/security/entity/Users.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/org/bibliotheque/security/service/CustomAuthenticationProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/static/image/403.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/static/image/Assassin_royal_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/static/image/Dune_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/static/image/Fondation_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/static/image/Le_nom_du_vent_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/static/image/error.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/accueil.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/compte/compte.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/compte/emprunt.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/compte/infoPerso.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/compte/resaCompte.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/error/403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/fragments/menuCompte.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/fragments/menuOuvrage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/login/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/ouvrage/ouvrageDetail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/ouvrage/ouvrageList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/classes/templates/reservation/reservation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/attoparser-2.0.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/bibliotheque-entity-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/bibliotheque-repository-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/bibliotheque-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/classmate-1.4.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/commons-io-2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/groovy-2.5.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/hibernate-validator-6.0.16.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/jackson-annotations-2.9.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/jackson-core-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/jackson-databind-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/jackson-datatype-jdk8-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/jackson-datatype-jsr310-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/jackson-module-parameter-names-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/javassist-3.20.0-GA.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/javax.annotation-api-1.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/jul-to-slf4j-1.7.26.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/log4j-api-2.11.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/log4j-to-slf4j-2.11.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/logback-classic-1.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/logback-core-1.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/ognl-3.1.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/slf4j-api-1.7.26.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/snakeyaml-1.23.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-aop-5.1.6.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-beans-5.1.6.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-boot-2.1.4.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-boot-autoconfigure-2.1.4.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-boot-starter-2.1.4.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-boot-starter-json-2.1.4.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-boot-starter-logging-2.1.4.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-boot-starter-security-2.1.4.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-boot-starter-thymeleaf-2.1.4.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-boot-starter-web-2.1.4.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-context-5.1.6.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-core-5.1.6.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-expression-5.1.6.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-jcl-5.1.6.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-oxm-5.1.6.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-security-config-5.1.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-security-core-5.1.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-security-web-5.1.5.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-web-5.1.6.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-webmvc-5.1.6.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-ws-core-3.0.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/spring-xml-3.0.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/thymeleaf-3.0.11.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/thymeleaf-expression-processor-1.1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/thymeleaf-extras-java8time-3.0.4.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/thymeleaf-layout-dialect-2.3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/thymeleaf-spring5-3.0.11.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/unbescape-1.1.6.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp/WEB-INF/lib/validation-api-2.0.1.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/org/bibliotheque/BibliothequeApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/org/bibliotheque/controller/AccueilController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/org/bibliotheque/controller/CompteController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/org/bibliotheque/controller/EmpruntController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/org/bibliotheque/controller/OuvrageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/org/bibliotheque/controller/ReservationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/org/bibliotheque/controller/SearchController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/org/bibliotheque/controller/SecurityController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/org/bibliotheque/security/config/SecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/org/bibliotheque/security/entity/Users.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/org/bibliotheque/security/service/CustomAuthenticationProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/static/image/403.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/static/image/Assassin_royal_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/static/image/Dune_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/static/image/Fondation_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/static/image/Le_nom_du_vent_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/static/image/error.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/accueil.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/compte/compte.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/compte/emprunt.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/compte/infoPerso.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/compte/resaCompte.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/error/403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/fragments/menuCompte.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/fragments/menuOuvrage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/login/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/ouvrage/ouvrageDetail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/ouvrage/ouvrageList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/classes/templates/reservation/reservation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/log.log.2020-01-17.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/log.log.2020-01-23.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/log.log.2020-01-24.0.gz" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/bibliotheque-entity-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/classes/org/bibliotheque/entity/CompteEntity$CompteEntityBuilder.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/target/classes/org/bibliotheque/entity/CompteEntity.class" afterDir="false" />
@@ -496,12 +241,19 @@
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base de données/jeu_de_donnees.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Base de données/jeu_de_donnees.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/063664daa5408bfa81d6c0d48abdd9074c49d00e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/063664daa5408bfa81d6c0d48abdd9074c49d00e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/122834b80edae8c73dd3b69a2cfd18c018d20ad8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/122834b80edae8c73dd3b69a2cfd18c018d20ad8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/23c6fcc4ec6ee2c599d40cc9e8a2badef4fe33d7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/23c6fcc4ec6ee2c599d40cc9e8a2badef4fe33d7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/42da77e2d440833740165f050444cf3b82e8e535" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/42da77e2d440833740165f050444cf3b82e8e535" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/8/480d730ab9003128b68c25efef85d065ce9326ac" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/8/480d730ab9003128b68c25efef85d065ce9326ac" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/6/867f8cf6996cc3d8001971547dd064255b90b2d0" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/6/867f8cf6996cc3d8001971547dd064255b90b2d0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97fd6d59edf033c764e9a8988f07e04f9905d6b2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97fd6d59edf033c764e9a8988f07e04f9905d6b2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d9a1e06b78e2534cb72b21e9b312e9d360335a05" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d9a1e06b78e2534cb72b21e9b312e9d360335a05" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/LauncherBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/LauncherBatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/Mail/MessagesMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/Mail/MessagesMail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/batch/CheckReservationTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/batch/CheckReservationTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/batch/MailItemProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-batch/src/main/java/org/bibliotheque/batch/MailItemProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/META-INF/sun-jaxb.episode" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/META-INF/sun-jaxb.episode" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteResponse.java" afterDir="false" />
@@ -584,16 +336,62 @@
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateReservationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateReservationRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateReservationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateReservationResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/EmpruntClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/EmpruntClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/LoginClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/LoginClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/ReservationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/ReservationClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/SearchClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/SearchClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/CompteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/CompteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/EmpruntRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/EmpruntRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LoginRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/ReservationRepositoy.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/ReservationRepositoy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/CompteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/CompteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/EmpruntService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/EmpruntService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/ReservationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/OuvrageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/OuvrageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/ouvrage/ouvrageDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/ouvrage/ouvrageDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/reservation/reservation.html" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/reservation/reservation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/security/service/CustomAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/security/service/CustomAuthenticationProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/1/3/1399cedeee0eac667a35228ec5c71d45b9fe71ef" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/1/3/1399cedeee0eac667a35228ec5c71d45b9fe71ef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/1/7/17cccf42ce7da7bdf743d7f7c3a3c21bf2ef4522" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/1/7/17cccf42ce7da7bdf743d7f7c3a3c21bf2ef4522" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/1/a/1a327ab6f8603176e1bba55ae0e7420eb6308fc2" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/1/a/1a327ab6f8603176e1bba55ae0e7420eb6308fc2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/1/d/1d71188935a79baad5a0588bcea00a8e57502df1" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/1/d/1d71188935a79baad5a0588bcea00a8e57502df1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/2/c/2c7e488be5aeffaed587f79d37ca3ca7f50827a6" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/2/c/2c7e488be5aeffaed587f79d37ca3ca7f50827a6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/2/d/2d9e670fcf29cfdd6ed44204f3a773ab15b678cd" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/2/d/2d9e670fcf29cfdd6ed44204f3a773ab15b678cd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/6/b/6b9d31c87a24ea2367f5ed20f5956873cade3a5b" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/6/b/6b9d31c87a24ea2367f5ed20f5956873cade3a5b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/9/a/9a72af4513152cfa3be278ceecf734e886e7b8de" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/9/a/9a72af4513152cfa3be278ceecf734e886e7b8de" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/c/4/c443afcc189c29037d267ee5e9e13e4a0e8bfe6f" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/c/4/c443afcc189c29037d267ee5e9e13e4a0e8bfe6f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/d/4/d493d18bad24efc345bbddab3027bca920b73e5f" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/d/4/d493d18bad24efc345bbddab3027bca920b73e5f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/f/1/f1acb361738ca7ab91e48823508cd151d9c25cd8" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/f/1/f1acb361738ca7ab91e48823508cd151d9c25cd8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/CompteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/CompteEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/EmpruntEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/EmpruntEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/LivreEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/LivreEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/OuvrageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/OuvrageEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/PhotoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/PhotoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/ReservationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/ReservationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/LivreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/LivreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/OuvrageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/OuvrageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/PhotoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/PhotoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/CompteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/CompteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/LivreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/LivreServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/OuvrageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/OuvrageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/PhotoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/PhotoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/ReservationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/CompteServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/CompteServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/EmpruntServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/EmpruntServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/LivreServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/LivreServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/OuvrageServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/OuvrageServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/PhotoServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/PhotoServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/ReservationServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/ReservationServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/CompteEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/CompteEndpoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/EmpruntEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/EmpruntEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/LivreEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/LivreEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/OuvrageEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/OuvrageEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/PhotoEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/PhotoEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/ReservationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/ReservationEndpoint.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -632,6 +430,12 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="F:/Applications/Developpement/Resource/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="C:\Users\CELIM\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -652,7 +456,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bibliotheque-webapp/target/bibliotheque-webapp.war" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -706,6 +510,33 @@
     <option name="contentProportion" value="0.17640692" />
   </component>
   <component name="RunManager" selected="Spring Boot.BibliothequeApplication">
+    <configuration name="bibliotheque [clean,verify,sonar:sonar]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="verify" />
+                <option value="sonar:sonar" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="BibliothequeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="bibliotheque-webapp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.bibliotheque.BibliothequeApplication" />
@@ -797,6 +628,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Maven.bibliotheque [clean,verify,sonar:sonar]" />
       <item itemvalue="Spring Boot.BibliothequeApplication" />
       <item itemvalue="Spring Boot.LauncherBatch" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.12" />
@@ -815,17 +647,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b325892e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18ef893" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b325892e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@adef0b1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b325892e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9a05fbae" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18ef893" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3aa50600" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -938,7 +765,8 @@
       <workItem from="1579775530487" duration="624000" />
       <workItem from="1579788229541" duration="1408000" />
       <workItem from="1579796227994" duration="24000" />
-      <workItem from="1579854510490" duration="11258000" />
+      <workItem from="1579854510490" duration="12838000" />
+      <workItem from="1580132094211" duration="3283000" />
     </task>
     <servers />
   </component>
@@ -974,11 +802,6 @@
           <line>17</line>
           <properties field="CONTEXT_PARAMETERS_BEAN_NAME" class="org.springframework.web.context.WebApplicationContext" />
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/OuvrageController.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

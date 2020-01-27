@@ -1,7 +1,6 @@
 
-[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8šþÏšò-
-dsquid:S4488+"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¯â”üýÿÿÿÿ
-dsquid:S4488;"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¹é™Úýÿÿÿÿ
-ksquid:S4488o"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(²æî¤úÿÿÿÿ8õ›ƒ¥ø-
-\squid:S1155W">Use isEmpty() to check whether the collection is empty or not.(ÙÈ¾²8õ›ƒ¥ø-
-squid:S3457i"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(çÒîã8õ›ƒ¥ø-
+\squid:S1155`">Use isEmpty() to check whether the collection is empty or not.(ÙÈ¾²8³àö¾ý-
+dsquid:S44888"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¹é™Úýÿÿÿÿ
+squid:S3457s"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(çÒîã8³àö¾ý-
+dsquid:S4488("HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¯â”üýÿÿÿÿ
+ksquid:S4488y"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(²æî¤úÿÿÿÿ8³àö¾ý-

@@ -4,7 +4,6 @@ import org.bibliotheque.client.LoginClient;
 import org.bibliotheque.wsdl.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import java.util.Optional;
 
 @Repository
@@ -12,6 +11,7 @@ public class LoginRepository {
 
     @Autowired
     private LoginClient client;
+
 
     /**
      * ==== GET COMPTE BY MAIL AND PASSWORD FOR LOGIN ====
@@ -24,6 +24,7 @@ public class LoginRepository {
         LoginResponse response = client.login(mail, password);
         return Optional.ofNullable(response.getServiceStatus());
     }
+
 
     /**
      * GET COMPTE AFTER LOGIN SUCCESS

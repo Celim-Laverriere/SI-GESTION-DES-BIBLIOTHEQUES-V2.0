@@ -11,8 +11,8 @@ public interface PhotoService {
 
     PhotoEntity addPhoto(PhotoEntity photo);
 
-    boolean updatePhoto(PhotoEntity photo);
+    void updatePhoto(PhotoEntity photo);
 
-    boolean deletePhoto(Integer id);
+    void deletePhoto(Integer id);
 
 }

@@ -83,3 +83,9 @@ _bibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/LivreServ
 Rbibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/LoginEndpoint.java,c\e\ce3b0ce56ced5eb7e3d7ea0121100e05d00a0130
 •
 ebibliotheque-service/src/main/test/java/org/bibliotheque/service/impl/ReservationServiceImplTest.java,e\f\eff974536bdaa0ee6ae0ff2a48adf4aa7ee75ee5
+†
+Vbibliotheque-service/src/main/java/org/bibliotheque/service/contract/LivreService.java,8\2\829a40d978bc14e5f85202df1e1a8eebfbc94a2e
+ˆ
+Xbibliotheque-service/src/main/java/org/bibliotheque/service/contract/OuvrageService.java,b\6\b67d4518a4d66b91ab60ece009a104d85c0794da
+†
+Vbibliotheque-service/src/main/java/org/bibliotheque/service/contract/PhotoService.java,6\2\6276bc3d2aa86acfab9e018290007498c8d1a381

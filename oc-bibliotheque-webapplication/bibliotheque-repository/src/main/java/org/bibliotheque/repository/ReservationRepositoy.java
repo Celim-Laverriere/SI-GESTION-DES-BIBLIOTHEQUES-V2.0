@@ -4,7 +4,6 @@ import org.bibliotheque.client.ReservationClient;
 import org.bibliotheque.wsdl.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 @Repository
@@ -12,6 +11,7 @@ public class ReservationRepositoy {
 
     @Autowired
     private ReservationClient client;
+
 
     /**
      * ==== CETTE METHODE RECUPERER LA LISTE DES RESERVATIONS D'UN OUVRAGE PAR SON IDENTIFIANT ====
@@ -23,6 +23,7 @@ public class ReservationRepositoy {
         return response.getReservationListByOuvrageId();
     }
 
+
     /**
      * ==== CETTE METHODE RECUPERER LA LISTE DES RESERVATIONS D'UN CLIENT PAR SON IDENTIFIANT ====
      * @param compteId
@@ -32,6 +33,7 @@ public class ReservationRepositoy {
         GetListReservationByCompteIdResponse response = client.getListReservationByCompteId(compteId);
         return response.getReservationListByCompteId();
     }
+
 
     /**
      * ==== CETTE METHODE AJOUTE UNE RESERVATION FAITE PAR UN CLIENT ====
@@ -43,6 +45,7 @@ public class ReservationRepositoy {
         return response.getServiceStatus().getStatusCode();
     }
 
+
     /**
      * CETTE METHODE SUPPRIME UNE RESERVATION
      * @param reservationId
@@ -53,6 +56,7 @@ public class ReservationRepositoy {
         return response.getServiceStatus().getStatusCode();
     }
 
+
     /**
      * ==== CETTE METHODE MET A JOUR UNE RESERVATION ====
      * @param reservationType
@@ -62,6 +66,7 @@ public class ReservationRepositoy {
         UpdateReservationResponse response = client.updateReservation(reservationType);
         return response.getServiceStatus().getStatusCode();
     }
+
 
     /**
      * ==== CETTE METHODE RECUPERER LA LISTE DES RESERVATIONS ====

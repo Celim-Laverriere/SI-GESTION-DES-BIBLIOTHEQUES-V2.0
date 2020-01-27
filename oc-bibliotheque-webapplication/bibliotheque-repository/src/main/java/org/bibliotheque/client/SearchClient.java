@@ -11,6 +11,7 @@ public class SearchClient extends WebServiceGatewaySupport {
 
     private static final Logger logger = LoggerFactory.getLogger(OuvrageClient.class);
 
+
     /**
      * ==== CETTE METHODE RECUPERER UN OU UNE LISTE D'OUVRAGE(S) PAR MOT-CLE ====
      * @param keyword

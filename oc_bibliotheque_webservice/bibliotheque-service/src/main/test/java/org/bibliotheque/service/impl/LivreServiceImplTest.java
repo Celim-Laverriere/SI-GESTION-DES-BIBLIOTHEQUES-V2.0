@@ -8,11 +8,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-
+import org.springframework.dao.DataIntegrityViolationException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 class LivreServiceImplTest {
@@ -56,6 +54,29 @@ class LivreServiceImplTest {
         final List<LivreEntity> livreEntityList = livreServiceImpl.getAllLivres();
         Assertions.assertEquals(livreEntityList.size(), 2);
 
+    }
 
+    @Test
+    void addLivre() {
+
+        LivreEntity livreMock = LivreEntity.builder()
+                .refBibliotheque("TIFRHARAAT1N004").statut("disponible").ouvrageId(3).build();
+
+        when(livreRepository.save(livreMock)).thenThrow(DataIntegrityViolationException.class);
+        Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
+            livreServiceImpl.addLivre(livreMock);
+        });
+    }
+
+    @Test
+    void updateLivre() {
+
+        LivreEntity livreMock = LivreEntity.builder().id(8).refBibliotheque("TIFRHARAAT1N004")
+                .statut("disponible").ouvrageId(3).build();
+
+        when(livreRepository.save(livreMock)).thenThrow(DataIntegrityViolationException.class);
+        Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
+            livreServiceImpl.updateLivre(livreMock);
+        });
     }
 }

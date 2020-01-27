@@ -1,5 +1,8 @@
 
-_squid:S1192Z"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó
-psquid:S22937"YReplace the type specification in this constructor call with the diamond operator ("<>").(”÷Œ…
-Asquid:S1125˜")Remove the literal "false" boolean value.(ûÅŸ
-@squid:S1125}")Remove the literal "false" boolean value.(ûÅŸ
+Gsquid:S1148"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8·×ü°ş-
+psquid:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(”÷Œ…
+Xsquid:S1141|"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8Ë²‚±ş-
+Fsquid:S1148a"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8è´Í°ş-
+Gsquid:S1148«"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8èª”±ş-
+fsquid:S1192Z"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó8²ŒÍ°ş-
+Gsquid:S1148‡"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8Ë²‚±ş-

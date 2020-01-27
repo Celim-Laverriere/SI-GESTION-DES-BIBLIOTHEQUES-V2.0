@@ -1,8 +1,7 @@
 
-Hsquid:S1125î")Remove the literal "false" boolean value.(ûÅŸ8‘¥÷-
-Hsquid:S1125œ")Remove the literal "false" boolean value.(ûÅŸ8‘¥÷-
-\
-squid:S106Ü"9Replace this use of System.out or System.err by a logger.(ôÙ¯ùÿÿÿÿ8ÅÕ¹øú-
-\
-squid:S106é"9Replace this use of System.out or System.err by a logger.(¦õšƒüÿÿÿÿ8Ãá¼øú-
-gsquid:S1192 "HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó8‘¥÷-
+gsquid:S1192œ"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Ãİ—ó8ÛÓÕ¸ş-
+Gsquid:S1148Ì"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8›¹®¸ş-
+Gsquid:S1148„"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8¬¸¿¸ş-
+Ysquid:S1141ï"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8É‡Å¸ş-
+Gsquid:S1148ı"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8Û¹Å¸ş-
+Gsquid:S1148¦"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ8úÇğ¸ş-

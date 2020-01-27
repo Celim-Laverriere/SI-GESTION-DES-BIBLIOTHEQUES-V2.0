@@ -34,6 +34,7 @@ public class ReservationController {
     @Autowired
     private EmpruntService empruntService;
 
+
     @GetMapping (value = "/templates/reservation")
     public String reservation(HttpSession session, Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId) throws ParseException {
 
@@ -117,6 +118,7 @@ public class ReservationController {
 
         return "compte/resaCompte";
     }
+
 
     @GetMapping(value = "deleteReservation")
     public String deleteReservation(Model model, @RequestParam(name = "reservationId") Integer reservationId,

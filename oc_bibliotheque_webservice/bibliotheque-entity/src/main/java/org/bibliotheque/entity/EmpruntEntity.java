@@ -1,9 +1,7 @@
 package org.bibliotheque.entity;
 
 import java.util.Date;
-
 import lombok.*;
-
 import javax.persistence.*;
 import java.io.Serializable;
 

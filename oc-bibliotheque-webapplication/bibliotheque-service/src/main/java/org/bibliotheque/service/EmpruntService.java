@@ -15,7 +15,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-
 @Service
 public class EmpruntService {
 
@@ -67,6 +66,7 @@ public class EmpruntService {
         return livreTypeList;
     }
 
+
     /**
      * ==== CETTE METHODE RECUPERER TOUS LES OUVRAGES DES LIVRES EMPRUNTES PAR LE CLIENT ====
      * @param livreTypeList
@@ -112,6 +112,7 @@ public class EmpruntService {
         return statusCode;
     }
 
+
     /**
      * ==== CETTE METHODE RECUPERE TOUS LES EMPRUNTS LIE à UN OUVRAGE ====
      * @param ouvrage_id
@@ -120,6 +121,7 @@ public class EmpruntService {
     public List<EmpruntType> getAllEmpruntByOuvrageId(Integer ouvrage_id){
         return empruntRepository.getAllEmpruntByOuvrageId(ouvrage_id);
     }
+
 
     /**
      * ==== CETTE METHODE RENVOIE LE NOMBRES DE JOURS RESTANT DE L'EMPRUNT ====

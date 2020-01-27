@@ -1,9 +1,9 @@
 
-Lsquid:S1191"5Use classes from the Java API instead of Sun classes.(Á¢Şø
-?squid:S1148]"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(œ«€ 
-Fsquid:S00108N")Either remove or fill this block of code.(ò êµÿÿÿÿÿ
-msquid:S2068"V'password' detected in this expression, review this potentially hard-coded credential.(«±Òİ
 xsquid:S3457&"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(ƒ°°
-?squid:S1148E"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
+?squid:S1148]"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
+Fsquid:S00108N")Either remove or fill this block of code.(ò êµÿÿÿÿÿ
 ?squid:S1148d"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
+msquid:S2068"V'password' detected in this expression, review this potentially hard-coded credential.(«±Òİ
+Lsquid:S1191"5Use classes from the Java API instead of Sun classes.(Á¢Şø
+?squid:S1148E"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ

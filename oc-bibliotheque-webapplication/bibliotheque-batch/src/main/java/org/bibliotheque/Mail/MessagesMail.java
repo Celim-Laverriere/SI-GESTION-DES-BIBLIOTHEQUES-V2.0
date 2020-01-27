@@ -15,7 +15,7 @@ public class MessagesMail {
 
 
     /**
-     *
+     * MAIL " LIVRE DISPONNIBLE "
      * @param dateOuvrageDisponible
      * @param compteType
      * @param ouvrageType
@@ -39,7 +39,7 @@ public class MessagesMail {
 
 
     /**
-     *
+     * MAIL " DELAI DE 48H00 EXPIRE "
      * @param compteType
      * @param ouvrageType
      * @return
@@ -58,7 +58,8 @@ public class MessagesMail {
 
 
     /**
-     *
+     * CETTE METHODE RECUPERE DANS LE FICHIER "messagesMail.properties" LA PREMIERE PARTIE DU MAIL
+     * ET L'ADRESSE DE LA BIBLIOTHEQUE QUI EST PROPRE A TOUS LES MAILS
      * @return
      */
     public List<String> textMail(){
@@ -74,7 +75,7 @@ public class MessagesMail {
             pathMessage.add(properties.getProperty("mailPartie1"));
             pathMessage.add(properties.getProperty("adresse_bibliothèque"));
         } catch (Exception pEX){
-            System.out.println(pEX);
+            pEX.printStackTrace();
         }
 
         return pathMessage;

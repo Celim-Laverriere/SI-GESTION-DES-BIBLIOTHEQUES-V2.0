@@ -7,10 +7,7 @@ import org.bibliotheque.wsdl.ReservationType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.xml.datatype.DatatypeConfigurationException;
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Service
@@ -22,6 +19,7 @@ public class ReservationService {
     @Autowired
     private EmpruntService empruntService;
 
+
     /**
      * ==== CETTE METHODE RECUPERER LA LISTE DES RESERVATIONS D'UN OUVRAGE PAR SON IDENTIFIANT ====
      * @param ouvrageId
@@ -30,6 +28,7 @@ public class ReservationService {
     public List<ReservationType> reservationTypeListByOuvrageId(Integer ouvrageId){
         return reservationRepositoy.reservationTypeListByOuvrageId(ouvrageId);
     }
+
 
     /**
      * ==== CETTE METHODE RECUPERER LA LISTE DES RESERVATIONS D'UN CLIENT PAR SON IDENTIFIANT ====
@@ -79,6 +78,7 @@ public class ReservationService {
         return reservationRepositoy.deleteReservation(reservationId);
     }
 
+
     /**
      * ==== CETTE METHODE RECUPERER LA LISTE DES RESERVATIONS ====
      * @return
@@ -86,6 +86,7 @@ public class ReservationService {
     public List<ReservationType> getAllReservation(){
         return reservationRepositoy.getAllReservation();
     }
+
 
     /**
      * ==== CETTE METHODE TRIE POUR CHAQUE OUVRAGE LE NOMBRE DE RESERVATION "EN COURS" ====
@@ -118,9 +119,11 @@ public class ReservationService {
         return ouvrageTypeList;
     }
 
+
     public String updateReservation(ReservationType reservationType){
         return reservationRepositoy.updateReservation(reservationType);
     }
+
 
     /**
      * ==== CETTE METHODE TRIE POUR UN OUVRAGE LES RESERVATIONS "EN COURS" ====

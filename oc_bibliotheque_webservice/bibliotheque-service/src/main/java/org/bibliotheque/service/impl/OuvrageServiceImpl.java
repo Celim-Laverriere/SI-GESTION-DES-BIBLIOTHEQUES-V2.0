@@ -33,34 +33,17 @@ public class OuvrageServiceImpl implements OuvrageService {
 
     @Override
     public OuvrageEntity addOuvrage(OuvrageEntity ouvrage) {
-        try{
-            return this.ouvrageRepository.save(ouvrage);
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return null;
-        }
+        return this.ouvrageRepository.save(ouvrage);
     }
 
     @Override
-    public boolean updateOuvrage(OuvrageEntity ouvrage) {
-        try {
-            this.ouvrageRepository.save(ouvrage);
-            return true;
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return false;
-        }
+    public void updateOuvrage(OuvrageEntity ouvrage) {
+        this.ouvrageRepository.save(ouvrage);
     }
 
     @Override
-    public boolean deleteOuvrage(Integer id) {
-        try {
-            this.ouvrageRepository.deleteById(id);
-            return true;
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return false;
-        }
+    public void deleteOuvrage(Integer id) {
+        this.ouvrageRepository.deleteById(id);
     }
 
     @Override

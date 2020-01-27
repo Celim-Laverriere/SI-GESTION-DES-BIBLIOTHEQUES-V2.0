@@ -8,13 +8,11 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-
+import org.springframework.dao.DataIntegrityViolationException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 class ReservationServiceImplTest {
@@ -121,5 +119,35 @@ class ReservationServiceImplTest {
         final List<ReservationEntity> reservationEntityList = reservationServiceImpl.getListReservationByCompteId(2);
         Assertions.assertEquals(reservationEntityList.size(), 2);
         Assertions.assertEquals(reservationEntityList.get(1).getCompteId(), reservationMock2.getCompteId());
+    }
+
+    @Test
+    void addReservation() throws ParseException {
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        ReservationEntity reservationMock = ReservationEntity.builder()
+                .dateResaDisponible(dateFormat.parse("2020-01-08")).numPositionResa(1).ouvrageId(1).compteId(2)
+                .build();
+
+        when(reservationRepository.save(reservationMock)).thenThrow(DataIntegrityViolationException.class);
+        Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
+            reservationServiceImpl.addReservation(reservationMock);
+        });
+    }
+
+    @Test
+    void updateReservation() throws ParseException {
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        ReservationEntity reservationMock = ReservationEntity.builder().id(20)
+                .dateResaDisponible(dateFormat.parse("2020-01-08")).numPositionResa(1).ouvrageId(1).compteId(2)
+                .build();
+
+        when(reservationRepository.save(reservationMock)).thenThrow(DataIntegrityViolationException.class);
+        Assertions.assertThrows(DataIntegrityViolationException.class, () -> {
+            reservationServiceImpl.updateReservation(reservationMock);
+        });
     }
 }

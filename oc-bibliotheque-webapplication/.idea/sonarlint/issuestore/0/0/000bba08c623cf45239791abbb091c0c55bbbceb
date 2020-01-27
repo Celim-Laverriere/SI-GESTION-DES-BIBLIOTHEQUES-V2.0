@@ -1,5 +1,5 @@
 
 Jsquid:S3416".Update this logger to use "LoginClient.class".(αªηÿÿÿÿÿ
+}squid:S3457!"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(υε‰ύÿÿÿÿ
 Zsquid:S2387">"logger" is the name of a field in "WebServiceGatewaySupport".(αªηÿÿÿÿÿ
-}squid:S3457 "aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(υε‰ύÿÿÿÿ
-xsquid:S34578"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(Ί΅ώμ
+xsquid:S3457:"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(Ί΅ώμ

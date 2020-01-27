@@ -1,8 +1,6 @@
 
-Csquid:S1612@",Replace this lambda with a method reference.(Ñåœ
-Fsquid:S1148c"#Use a logger to log this exception.(∞›‰â˝ˇˇˇˇ8ÌÈ¨≤ı-
 Msquid:S3655"7Call "Optional#isPresent()" before accessing the value.(Ã»†
-Bsquid:S1612"",Replace this lambda with a method reference.(ê‘Å
-?squid:S1148X"#Use a logger to log this exception.(∞›‰â˝ˇˇˇˇ
-\squid:S1155O">Use isEmpty() to check whether the collection is empty or not.(›’ª£8ö≥Ê»Ò-
+\squid:S11558">Use isEmpty() to check whether the collection is empty or not.(›’ª£8ö≥Ê»Ò-
 Csquid:S1612",Replace this lambda with a method reference.(äÊ÷›
+Bsquid:S1612"",Replace this lambda with a method reference.(ê‘Å
+Csquid:S1612)",Replace this lambda with a method reference.(Ñåœ

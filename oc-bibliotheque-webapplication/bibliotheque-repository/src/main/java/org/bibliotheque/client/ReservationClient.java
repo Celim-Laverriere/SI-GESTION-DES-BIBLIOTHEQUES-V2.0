@@ -1,6 +1,5 @@
 package org.bibliotheque.client;
 
-
 import org.bibliotheque.wsdl.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +9,7 @@ import org.springframework.ws.soap.client.SoapFaultClientException;
 public class ReservationClient extends WebServiceGatewaySupport {
 
     private static final Logger logger = (Logger) LoggerFactory.getLogger(ReservationClient.class);
+
 
     /**
      * ==== CETTE METHODE RECUPERER LA LISTE DES RESERVATIONS D'UN OUVRAGE PAR SON IDENTIFIANT ====
@@ -54,6 +54,7 @@ public class ReservationClient extends WebServiceGatewaySupport {
         return response;
     }
 
+
     /**
      * ==== CETTE METHODE AJOUTE UNE RESERVATION FAITE PAR UN CLIENT ====
      * @param reservationType
@@ -72,6 +73,7 @@ public class ReservationClient extends WebServiceGatewaySupport {
 
         return response;
     }
+
 
     /**
      * CETTE METHODE SUPPRIME UNE RESERVATION

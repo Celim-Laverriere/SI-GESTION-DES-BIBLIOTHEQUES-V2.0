@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.0 
 // Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.06.20 à 12:07:28 PM CEST 
+// Généré le : 2020.01.27 à 02:35:03 PM CET 
 //
 
 
@@ -35,6 +35,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="ref" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="photos" type="{http://www.webservice.org/bibliotheque-ws}photoType" maxOccurs="unbounded" minOccurs="0"/&gt;
  *         &lt;element name="livres" type="{http://www.webservice.org/bibliotheque-ws}livreType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="reservations" type="{http://www.webservice.org/bibliotheque-ws}reservationType" maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -53,7 +54,8 @@ import javax.xml.bind.annotation.XmlType;
     "editeur",
     "ref",
     "photos",
-    "livres"
+    "livres",
+    "reservations"
 })
 public class OuvrageType {
 
@@ -72,6 +74,7 @@ public class OuvrageType {
     protected String ref;
     protected List<PhotoType> photos;
     protected List<LivreType> livres;
+    protected List<ReservationType> reservations;
 
     /**
      * Obtient la valeur de la propriété id.
@@ -289,6 +292,35 @@ public class OuvrageType {
             livres = new ArrayList<LivreType>();
         }
         return this.livres;
+    }
+
+    /**
+     * Gets the value of the reservations property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the reservations property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getReservations().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReservationType }
+     * 
+     * 
+     */
+    public List<ReservationType> getReservations() {
+        if (reservations == null) {
+            reservations = new ArrayList<ReservationType>();
+        }
+        return this.reservations;
     }
 
 }

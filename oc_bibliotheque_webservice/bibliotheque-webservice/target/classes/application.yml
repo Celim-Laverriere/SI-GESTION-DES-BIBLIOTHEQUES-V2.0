@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/db_oc_bibliotheque
+    username: adm_oc_bibliotheque
+    password: bibliotheque
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        temp:
+          #Évite les erreurs avec jpa et hibernate
+          use_jdbc_metadata_defaults: false
+    show-sql: true
+server:
+  port: 8088

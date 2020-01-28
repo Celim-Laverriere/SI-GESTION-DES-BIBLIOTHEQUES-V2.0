@@ -25,7 +25,7 @@ public class CompteService {
 
 
     /**
-     * UPDATE COMPTE
+     * ==== UPDATE COMPTE ====
      * @param compteType @return message de confirmation
      * @see CompteClient#updateCompte(CompteType)
      */

@@ -11,8 +11,8 @@ public interface LivreService {
 
    LivreEntity addLivre(LivreEntity livre);
 
-   boolean updateLivre(LivreEntity livre);
+   void updateLivre(LivreEntity livre);
 
-   boolean deleteLivre(Integer id);
+   void deleteLivre(Integer id);
 
 }

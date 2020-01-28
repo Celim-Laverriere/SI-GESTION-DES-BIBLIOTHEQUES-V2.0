@@ -6,6 +6,8 @@ import org.bibliotheque.entity.EmpruntEntity;
 import org.bibliotheque.service.contract.EmpruntService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -15,10 +17,7 @@ import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
+import java.util.*;
 
 @Endpoint
 @NoArgsConstructor
@@ -37,7 +36,8 @@ public class EmpruntEndpoint  {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getEmpruntByIdRequest")
     @ResponsePayload
-    public GetEmpruntByIdResponse getEmpruntById(@RequestPayload GetEmpruntByIdRequest request) throws DatatypeConfigurationException {
+    public GetEmpruntByIdResponse getEmpruntById(@RequestPayload GetEmpruntByIdRequest request)
+            throws DatatypeConfigurationException {
         GetEmpruntByIdResponse response = new GetEmpruntByIdResponse();
         EmpruntEntity empruntEntity = service.getEmpruntById(request.getEmpruntId());
         EmpruntType empruntType = new EmpruntType();
@@ -65,7 +65,8 @@ public class EmpruntEndpoint  {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllEmpruntRequest")
     @ResponsePayload
-    public GetAllEmpruntResponse getAllEmprunt(@RequestPayload GetAllEmpruntRequest request) throws DatatypeConfigurationException {
+    public GetAllEmpruntResponse getAllEmprunt(@RequestPayload GetAllEmpruntRequest request)
+            throws DatatypeConfigurationException {
         GetAllEmpruntResponse response = new GetAllEmpruntResponse();
         List<EmpruntType> empruntTypeList = new ArrayList<>();
         List<EmpruntEntity> empruntEntityList = service.getAllEmprunts();
@@ -83,6 +84,7 @@ public class EmpruntEndpoint  {
             empruntType.setId(entity.getId());
             empruntType.setDateDebut(dateDebut);
             empruntType.setDateFin(dateFin);
+            empruntType.setStatut(entity.getStatut());
             empruntType.setProlongation(entity.getProlongation());
             empruntType.setCompteId(entity.getCompteId());
             empruntType.setLivreId(entity.getLivreId());
@@ -102,33 +104,44 @@ public class EmpruntEndpoint  {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllEmpruntByCompteIdRequest")
     @ResponsePayload
-    public GetAllEmpruntByCompteIdResponse getAllEmpruntByCompteId(@RequestPayload GetAllEmpruntByCompteIdRequest request) throws DatatypeConfigurationException, ParseException {
+    public GetAllEmpruntByCompteIdResponse getAllEmpruntByCompteId(@RequestPayload GetAllEmpruntByCompteIdRequest request)
+            throws DatatypeConfigurationException, ParseException {
         GetAllEmpruntByCompteIdResponse response = new GetAllEmpruntByCompteIdResponse();
-        List<EmpruntEntity> empruntEntityList = service.getAllEmpruntByCompteId(request.getId());
+        ServiceStatus serviceStatus = new ServiceStatus();
         List<EmpruntType> empruntTypeList = new ArrayList<>();
 
+        List<EmpruntEntity> empruntEntityList = service.getAllEmpruntByCompteId(request.getId());
 
-        for (EmpruntEntity entity : empruntEntityList){
-            EmpruntType empruntType = new EmpruntType();
-            GregorianCalendar calendar = new GregorianCalendar();
+        if (!empruntEntityList.isEmpty()) {
 
-            calendar.setTime(entity.getDateDebut());
-            XMLGregorianCalendar dateDebut = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+            for (EmpruntEntity entity : empruntEntityList){
+                EmpruntType empruntType = new EmpruntType();
+                GregorianCalendar calendar = new GregorianCalendar();
 
-            calendar.setTime(entity.getDateFin());
-            XMLGregorianCalendar dateFin = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+                calendar.setTime(entity.getDateDebut());
+                XMLGregorianCalendar dateDebut = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
 
-            empruntType.setId(entity.getId());
-            empruntType.setDateDebut(dateDebut);
-            empruntType.setDateFin(dateFin);
-            empruntType.setProlongation(entity.getProlongation());
-            empruntType.setCompteId(entity.getCompteId());
-            empruntType.setLivreId(entity.getLivreId());
+                calendar.setTime(entity.getDateFin());
+                XMLGregorianCalendar dateFin = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
 
-            empruntTypeList.add(empruntType);
+                empruntType.setId(entity.getId());
+                empruntType.setDateDebut(dateDebut);
+                empruntType.setDateFin(dateFin);
+                empruntType.setStatut(entity.getStatut());
+                empruntType.setProlongation(entity.getProlongation());
+                empruntType.setCompteId(entity.getCompteId());
+                empruntType.setLivreId(entity.getLivreId());
+
+                empruntTypeList.add(empruntType);
+            }
+
+        } else {
+            serviceStatus.setStatusCode("NOT FOUND");
+            serviceStatus.setMessage("Emprunt pour le compte id " + request.getId() + " : not found");
         }
 
         response.getEmpruntType().addAll(empruntTypeList);
+        response.setServiceStatus(serviceStatus);
         return response;
     }
 
@@ -140,23 +153,30 @@ public class EmpruntEndpoint  {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addEmpruntRequest")
     @ResponsePayload
-    public AddEmpruntResponse addEmprunt(@RequestPayload AddEmpruntRequest request){
+    public AddEmpruntResponse addEmprunt(@RequestPayload AddEmpruntRequest request) throws ParseException {
         AddEmpruntResponse response = new AddEmpruntResponse();
         EmpruntType newEmpruntType = new EmpruntType();
         EmpruntEntity newEmpruntEntity = new EmpruntEntity();
         ServiceStatus serviceStatus = new ServiceStatus();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         BeanUtils.copyProperties(request.getEmpruntType(), newEmpruntEntity);
-        EmpruntEntity savedEmpruntEntity = service.addEmprunt(newEmpruntEntity);
+        newEmpruntEntity.setDateDebut(dateFormat.parse(request.getEmpruntType().getDateDebut().toString()));
+        newEmpruntEntity.setDateFin(dateFormat.parse(request.getEmpruntType().getDateFin().toString()));
 
-        if(savedEmpruntEntity == null){
-            serviceStatus.setStatusCode("CONFLICT");
-            serviceStatus.setMessage("Exception while adding Entity");
-        } else {
+        try {
 
+            EmpruntEntity savedEmpruntEntity = service.addEmprunt(newEmpruntEntity);
             BeanUtils.copyProperties(savedEmpruntEntity, newEmpruntType);
+
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Added Successfully");
+
+        } catch (DataIntegrityViolationException pEX) {
+            serviceStatus.setStatusCode("CONFLICT");
+            serviceStatus.setMessage("Exception while adding Entity");
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setEmpruntType(newEmpruntType);
@@ -176,18 +196,12 @@ public class EmpruntEndpoint  {
     public UpdateEmpruntResponse updateEmprunt(@RequestPayload UpdateEmpruntRequest request) throws ParseException {
         UpdateEmpruntResponse response = new UpdateEmpruntResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date toDay = new Date();
 
-        // 1. Trouver si l'emprunt est disponible
-        EmpruntEntity upEmprunt = service.getEmpruntById(request.getEmpruntType().getId());
-
-        if (upEmprunt == null){
-            serviceStatus.setStatusCode("NOT FOUND");
-            serviceStatus.setMessage("Emprunt : " + request.getEmpruntType().getId() + " not found");
-        } else {
-
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-            Date toDay = new Date();
-            boolean flag;
+        try{
+            // 1. Trouver si l'emprunt est disponible
+            EmpruntEntity upEmprunt = service.getEmpruntById(request.getEmpruntType().getId());
 
             // Vérifie si la date de fin d'emprunt n'est pas passée
             if (upEmprunt.getDateFin().after(toDay)) {
@@ -201,21 +215,30 @@ public class EmpruntEndpoint  {
 
                 BeanUtils.copyProperties(request.getEmpruntType(), upEmprunt);
 
-                // 3. Mettre à jour l'emprunt dans la base de données
-                flag = service.updateEmprunt(upEmprunt);
+                try {
+                    // 3. Mettre à jour l'emprunt dans la base de données
+                    service.updateEmprunt(upEmprunt);
 
-                if (flag == false) {
-                    serviceStatus.setStatusCode("CONFLICT");
-                    serviceStatus.setMessage("Exception while updating Entity : " + request.getEmpruntType().getId());
-                } else {
                     serviceStatus.setStatusCode("SUCCESS");
                     serviceStatus.setMessage("Content updated Successfully");
+
+                } catch (DataIntegrityViolationException pEX) {
+                    serviceStatus.setStatusCode("CONFLICT");
+                    serviceStatus.setMessage("Exception while updating Entity : " + request.getEmpruntType().getId());
+                } catch (Exception pEX) {
+                    pEX.printStackTrace();
                 }
 
             } else {
                 serviceStatus.setStatusCode("DATE-EXPIRED");
                 serviceStatus.setMessage("La date de fin d'emprunt est dépassée, vous ne pouvez pas prolonger l'emprunt");
             }
+
+        } catch (NoSuchElementException pEX) {
+            serviceStatus.setStatusCode("NOT FOUND");
+            serviceStatus.setMessage("Emprunt " + request.getEmpruntType().getId() + " : not found");
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setServiceStatus(serviceStatus);
@@ -234,18 +257,67 @@ public class EmpruntEndpoint  {
         DeleteEmpruntResponse response = new DeleteEmpruntResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        boolean flag = service.deleteEmprunt(request.getEmpruntId());
+        try {
+            service.deleteEmprunt(request.getEmpruntId());
 
-        if (flag == false){
-            serviceStatus.setStatusCode("FAIL");
-            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getEmpruntId());
-        } else {
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Deleted Successfully");
+
+        } catch (EmptyResultDataAccessException pEX) {
+            serviceStatus.setStatusCode("FAIL");
+            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getEmpruntId());
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setServiceStatus(serviceStatus);
         return response;
     }
 
+    /**
+     * Cette méthode récupère tous les emprunts liés aux livres, eux-mêmes à un ouvrage
+     * @param request
+     * @return
+     */
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllEmpruntByOuvrageIdRequest")
+    @ResponsePayload
+    public GetAllEmpruntByOuvrageIdResponse getAllEmpruntByOuvrageId(@RequestPayload GetAllEmpruntByOuvrageIdRequest request)
+            throws DatatypeConfigurationException {
+        GetAllEmpruntByOuvrageIdResponse response = new GetAllEmpruntByOuvrageIdResponse();
+        List<EmpruntType> empruntTypeList = new ArrayList<>();
+        ServiceStatus serviceStatus = new ServiceStatus();
+
+        List<EmpruntEntity> empruntEntityList = service.getAllEmpruntByOuvrageId(request.getOuvrageId());
+
+        if (!empruntEntityList.isEmpty()) {
+
+            for (EmpruntEntity entity : empruntEntityList ) {
+                EmpruntType empruntType = new EmpruntType();
+                GregorianCalendar calendar = new GregorianCalendar();
+
+                calendar.setTime(entity.getDateDebut());
+                XMLGregorianCalendar dateDebut = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
+                calendar.setTime(entity.getDateFin());
+                XMLGregorianCalendar dateFin = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
+                empruntType.setId(entity.getId());
+                empruntType.setDateDebut(dateDebut);
+                empruntType.setDateFin(dateFin);
+                empruntType.setStatut(entity.getStatut());
+                empruntType.setProlongation(entity.getProlongation());
+                empruntType.setCompteId(entity.getCompteId());
+                empruntType.setLivreId(entity.getLivreId());
+
+                empruntTypeList.add(empruntType);
+            }
+        } else {
+            serviceStatus.setStatusCode("NOT FOUND");
+            serviceStatus.setMessage("Emprunt " + request.getOuvrageId() + " : not found");
+        }
+
+        response.getEmpruntType().addAll(empruntTypeList);
+        response.setServiceStatus(serviceStatus);
+        return response;
+    }
 }

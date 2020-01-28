@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="layout"
+        lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>reservation</title>
+</head>
+<body>
+<div layout:fragment = "content">
+
+    <div class="container-fluid" >
+        <div class="row">
+
+            <div th:replace="/fragments/menuOuvrage :: menuOuvrage"></div>
+
+            <th:block th:if="${resaDejaEnCours && dejaEmprunter}">
+                <div class="col col-md-10 ouvrageList">
+
+                    <h2 class="rouge" th:text="'Réservation : ' + ${ouvrage.getTitre()}"></h2>
+                    <hr/>
+
+                    <th:block th:if="${!reservationList.isEmpty()}">
+
+                    <div class="row justify-content-start" style="margin-left: 15%">
+                        <div>
+                            <h4 style="text-align: center" th:text="'Le prochain livre pour cette ouvrage sera disponible dans ' + ${compteurJour}
+                        + ' jour(s), pour le ' + ${dateRetour}"></h4>
+                        </div>
+                        <hr/>
+
+                        <table class="table table-hover table-striped col col-md-9">
+                            <thead class="bg-success">
+                            <tr style="text-align: center">
+                                <th scope="col">Position</th>
+                                <th scope="col">Date resa</th>
+                                <th scope="col">Date de retour estimé</th>
+                                <th scope="col">Décompte des jours</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <th:block th:each="reservation : ${reservationList}">
+                                <tr style="text-align: center">
+                                    <th th:text="${reservation.getNumPositionResa()}" scope="row"></th>
+                                    <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse(reservation.getDateResaDisponible().toString()))}"></td>
+                                    <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse(dateRetour.toString()))}"></td>
+                                    <th:block th:if="${compteurJour > 1}">
+                                        <td style="vertical-align: middle" th:text="${compteurJour}"></td>
+                                    </th:block>
+                                    <th:block th:if="${compteurJour < 1}">
+                                        <td style="vertical-align: middle" th:text="'Décompte des jours suspendus ! En attente du traitement de la première réservation.'"></td>
+                                    </th:block>
+                                </tr>
+                            </th:block>
+                            </tbody>
+                        </table>
+                    </div>
+                    </th:block>
+
+                    <th:block th:if="${reservationList.isEmpty()}">
+                        <div>
+                            <h4 style="text-align: center" th:text="'Le prochain livre pour cette ouvrage sera disponible dans ' + ${compteurJour}
+                        + ' jour(s), pour le ' + ${dateRetour}"></h4>
+                        </div>
+                    </th:block>
+
+                    <hr/>
+
+                    <div class="row justify-content-start" style="margin-left: 15%">
+                        <div class="col col-md-9">
+                            <p style="text-align: center">
+                                <a style="width: 30%" class="btn btn-success" href="#" th:href="@{/addReservation(ouvrageId=${ouvrage.getId()})}">Réservez</a>
+                                <a style="width: 30%" class="btn btn-info" th:href="@{/ouvrages}">Retour à la liste des ouvrages</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </th:block>
+
+            <th:block th:if="${!resaDejaEnCours || !dejaEmprunter}">
+                <div class="col col-md-10 ouvrageList">
+
+                    <h2 class="rouge" th:text="'Réservation : ' + ${ouvrage.getTitre()}"></h2>
+                    <hr/>
+
+                    <div class="row justify-content-start" style="margin-left: 15%">
+
+                        <div class="col col-md-9">
+                            <h4 style="text-align: center">Vous ne pouvez pas réserver cette ouvrage !</h4>
+                        </div>
+
+                        <table class="table col col-md-9">
+                            <tbody>
+                            <tr>
+                                <th:block th:each="photo : ${ouvrage.getPhotos()}">
+                                    <td style="width: 10%">
+                                        <img th:src="@{'/image/' + ${photo.getUrlPhoto()}}" style="width: 150px; height: 200px" class="rounded float-left" alt="...">
+                                    </td>
+                                </th:block>
+
+                                <th:block th:if="${!dejaEmprunter}">
+                                    <td style="vertical-align: middle">
+                                        <p style="text-align: center">Vous avez déjà cet ouvrage en votre possession !</p>
+                                        <p style="text-align: center">
+                                            <a style="width: 40%" class="btn btn-info" th:href="@{/ouvrages}">RETOUR A LA LISTE DES OUVRAGES</a>
+                                        </p>
+                                        <p style="text-align: center">
+                                            <a style="width: 40%" class="btn btn-warning" href="#" th:href="@{/emprunt}">VOIR MES EMPRUNTS</a>
+                                        </p>
+                                    </td>
+                                </th:block>
+
+                                <th:block th:if="${!resaDejaEnCours}">
+                                    <td style="vertical-align: middle">
+                                        <p style="text-align: center">Vous avez déjà une réservation en cours pour cet ouvrage !</p>
+                                        <p style="text-align: center">
+                                            <a style="width: 40%" class="btn btn-info" th:href="@{/ouvrages}">RETOUR A LA LISTE DES OUVRAGES</a>
+                                        </p>
+                                        <p style="text-align: center">
+                                            <a style="width: 40%" class="btn btn-warning" href="#" th:href="@{/mesReservations}">VOIR MES RESERVATIONS</a>
+                                        </p>
+                                    </td>
+                                </th:block>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </th:block>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

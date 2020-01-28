@@ -33,34 +33,17 @@ public class PhotoServiceImpl implements PhotoService {
 
     @Override
     public PhotoEntity addPhoto(PhotoEntity photo) {
-       try {
-           return this.photoRepository.save(photo);
-       } catch (Exception pEX){
-           pEX.printStackTrace();
-           return null;
-       }
+        return this.photoRepository.save(photo);
     }
 
     @Override
-    public boolean updatePhoto(PhotoEntity photo) {
-        try{
-            this.photoRepository.save(photo);
-            return true;
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return false;
-        }
+    public void updatePhoto(PhotoEntity photo) {
+        this.photoRepository.save(photo);
     }
 
     @Override
-    public boolean deletePhoto(Integer id) {
-        try {
-            this.photoRepository.deleteById(id);
-            return true;
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return false;
-        }
+    public void deletePhoto(Integer id) {
+        this.photoRepository.deleteById(id);
     }
 
 }

@@ -1,9 +1,7 @@
 package org.bibliotheque.entity;
 
 import java.util.Date;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -11,6 +9,8 @@ import java.io.Serializable;
 @Table(name = "emprunt")
 @Getter @Setter
 @NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class EmpruntEntity implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,6 +19,9 @@ public class EmpruntEntity implements Serializable {
     private Date dateDebut;
     @Column(name = "date_fin")
     private Date dateFin;
+    @Column(name = "statut")
+    private String statut;
+    @Column(name = "prolongation")
     private Boolean prolongation;
     @Column(name = "livre_id")
     private Integer livreId;

@@ -6,12 +6,15 @@ import org.bibliotheque.entity.PhotoEntity;
 import org.bibliotheque.service.contract.PhotoService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Endpoint
 @NoArgsConstructor
@@ -77,16 +80,19 @@ public class PhotoEndpoint {
         PhotoEntity newPhotoEntity = new PhotoEntity();
 
         BeanUtils.copyProperties(request.getPhotoType(), newPhotoEntity);
-        PhotoEntity savedPhotoEntity = service.addPhoto(newPhotoEntity);
 
-        if (savedPhotoEntity == null){
-            serviceStatus.setStatusCode("CONFLICT");
-            serviceStatus.setMessage("Exception while adding Entity");
-        } else {
-
+        try {
+            PhotoEntity savedPhotoEntity = service.addPhoto(newPhotoEntity);
             BeanUtils.copyProperties(savedPhotoEntity, newPhotoType);
+
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Added Successfully");
+
+        } catch (DataIntegrityViolationException pEX) {
+            serviceStatus.setStatusCode("CONFLICT");
+            serviceStatus.setMessage("Exception while adding Entity");
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setPhotoType(newPhotoType);
@@ -106,29 +112,34 @@ public class PhotoEndpoint {
         UpdatePhotoResponse response = new UpdatePhotoResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        // 1. Trouver si la photo est disponible
-        PhotoEntity upPhoto = service.getPhotoById(request.getPhotoType().getId());
-
-        if (upPhoto == null){
-            serviceStatus.setStatusCode("NOT FOUND");
-            serviceStatus.setMessage("Compte : " + request.getPhotoType().getNomPhoto() + " " + " not found");
-        } else {
+        try {
+            // 1. Trouver si la photo est disponible
+            PhotoEntity upPhoto = service.getPhotoById(request.getPhotoType().getId());
 
             // 2. Obtenir les informations de la photo à mettre à jour à partir de la requête
             BeanUtils.copyProperties(request.getPhotoType(), upPhoto);
 
-            // 3. Mettre à jour la photo dans la base de données
-            boolean flag = service.updatePhoto(upPhoto);
+            try {
+                // 3. Mettre à jour la photo dans la base de données
+                service.updatePhoto(upPhoto);
 
-            if (flag == false){
-
-                serviceStatus.setStatusCode("CONFLICT");
-                serviceStatus.setMessage("Exception while updating Entity : " + request.getPhotoType().getNomPhoto());
-            } else {
                 serviceStatus.setStatusCode("SUCCESS");
                 serviceStatus.setMessage("Content updated Successfully");
+
+            } catch (DataIntegrityViolationException pEX) {
+                serviceStatus.setStatusCode("CONFLICT");
+                serviceStatus.setMessage("Exception while updating Entity : " + request.getPhotoType().getNomPhoto());
+            } catch (Exception pEX) {
+                pEX.printStackTrace();
             }
+
+        } catch (NoSuchElementException pEX) {
+            serviceStatus.setStatusCode("NOT FOUND");
+            serviceStatus.setMessage("Compte : " + request.getPhotoType().getNomPhoto() + " " + " not found");
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
+
         response.setServiceStatus(serviceStatus);
         return response;
     }
@@ -145,14 +156,17 @@ public class PhotoEndpoint {
         DeletePhotoResponse response = new DeletePhotoResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        boolean flag = service.deletePhoto(request.getPhotoId());
+        try {
+            service.deletePhoto(request.getPhotoId());
 
-        if (flag == false){
-            serviceStatus.setStatusCode("FAIL");
-            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getPhotoId());
-        } else {
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Deleted Successfully");
+
+        } catch (EmptyResultDataAccessException pEX) {
+            serviceStatus.setStatusCode("FAIL");
+            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getPhotoId());
+        } catch ( Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setServiceStatus(serviceStatus);

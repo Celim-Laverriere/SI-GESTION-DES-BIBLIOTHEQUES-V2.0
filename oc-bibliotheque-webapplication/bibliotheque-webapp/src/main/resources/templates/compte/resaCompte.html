@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="layout"
+        lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>reservation</title>
+</head>
+<body>
+
+<div layout:fragment = "content">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div th:replace="/fragments/menuCompte :: menuCompte"></div>
+
+            <div class="col col-md-10 ouvrageList">
+
+                <h3 class="styleTitre" style="color: #28a745">MES RESERVATIONS</h3>
+                <hr/>
+
+                <th:block th:if="${reservationTypeList.isEmpty()}">
+                    <div style="text-align: center">
+                        <h4>Vous n'avez actuellement aucune réservation en cours !</h4>
+                    </div>
+                </th:block>
+
+                <th:block th:if="${!reservationTypeList.isEmpty()}">
+                    <div class="row justify-content-start" style="margin-left: 2%">
+                        <table class="table table-hover table-striped col col-md-11">
+
+                            <thead class="bg-success">
+                            <tr style="text-align: center">
+                                <th style="padding-left: 19%; vertical-align: middle" scope="col">Ouvrage</th>
+                                <th scope="col"></th>
+                                <th style="vertical-align: middle" scope="col">Statut de la réservation</th>
+                                <th style="vertical-align: middle" scope="col">Date de retour estimé</th>
+                                <th style="vertical-align: middle" scope="col">Décompte des jours</th>
+                                <th style="vertical-align: middle" scope="col">Position dans la liste</th>
+                                <th scope="col"></th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <th:block th:each="reservation : ${reservationTypeList}">
+                                <tr style="text-align: center">
+                                    <th:block th:each="ouvrage : ${ouvrageTypeList}">
+                                        <th:block th:if="${ouvrage.getId() == reservation.getOuvrageId()}">
+                                            <div th:each="photo : ${ouvrage.getPhotos()}">
+                                                <th:block th:if="${photo.getOuvrageId() == ouvrage.getId()}">
+                                                    <td style="width: 10%">
+                                                        <img th:src="@{'/image/' + ${photo.getUrlPhoto()}}" style="width: 100px; height: 150px" class="rounded float-left" alt="...">
+                                                    </td>
+                                                </th:block>
+                                            </div>
+                                            <td style="width: 30%; vertical-align: middle">
+                                                <p th:text="'Auteur : ' + ${ouvrage.getAuteur()}"></p>
+                                                <p th:text="'Titre : ' + ${ouvrage.getTitre()}"></p>
+                                            </td>
+                                        </th:block>
+                                    </th:block>
+                                    <td style="vertical-align: middle" th:text="${reservation.getStatut()}"></td>
+
+                                    <td style="vertical-align: middle" th:text="${dateFormat.format(dateFormat.parse( dateRetour.get(reservation.getOuvrageId()).getDateFin().toString()))}"></td>
+
+
+                                    <th:block th:if="${jourRestantEmprunt.get(reservation.getOuvrageId()) > 1}">
+                                    <td style="vertical-align: middle" th:text="${jourRestantEmprunt.get(reservation.getOuvrageId())} + ' Jour(s)'"></td>
+                                    </th:block>
+
+                                    <th:block th:if="${jourRestantEmprunt.get(reservation.getOuvrageId()) < 1
+                                    && reservation.getNumPositionResa() == 1
+                                    && dateRetour.get(reservation.getOuvrageId()).getStatut().equals('Rendu')}">
+                                        <td style="vertical-align: middle" th:text="'Vous avez 48 heures pour venir récupérer votre livre !'"></td>
+                                    </th:block>
+
+                                    <th:block th:if="${jourRestantEmprunt.get(reservation.getOuvrageId()) < 1
+                                    && reservation.getNumPositionResa() >= 2
+                                    && dateRetour.get(reservation.getOuvrageId()).getStatut().equals('Rendu')}">
+                                        <td style="vertical-align: middle" th:text="'Décompte des jours suspendus ! En attente du traitement de la première réservation.'"></td>
+                                    </th:block>
+
+                                    <th:block th:if="${jourRestantEmprunt.get(reservation.getOuvrageId()) < 1
+                                    && reservation.getNumPositionResa() >= 2
+                                    && dateRetour.get(reservation.getOuvrageId()).getStatut().equals('En cours')}">
+                                        <td style="vertical-align: middle" th:text="'Décompte des jours suspendus ! En attente du retour de l\'ouvrage !'"></td>
+                                    </th:block>
+
+                                   <th:block th:if="${reservation.getNumPositionResa() > 0}">
+                                    <td style="vertical-align: middle" th:text="${reservation.getNumPositionResa()}"></td>
+                                   </th:block>
+
+                                    <th:block th:if="${reservation.getNumPositionResa() == 0}">
+                                        <td style="vertical-align: middle" th:text="'/'"></td>
+                                    </th:block>
+                                    <td style="vertical-align: middle">
+                                        <a style="text-align: center" class="btn btn-success navMenuCompte" href="#" th:href="@{/deleteReservation(reservationId=${reservation.getId()}, ouvrageId=${reservation.getOuvrageId()})}">SUPPRIMEZ</a>
+                                    </td>
+                                </tr>
+                            </th:block>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </th:block>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

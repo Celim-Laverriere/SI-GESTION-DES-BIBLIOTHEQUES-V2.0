@@ -6,6 +6,8 @@ import org.bibliotheque.entity.LivreEntity;
 import org.bibliotheque.service.contract.LivreService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -13,6 +15,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Endpoint
 @NoArgsConstructor
@@ -79,16 +82,19 @@ public class LivreEndpoint {
         LivreEntity newLivreEntity = new LivreEntity();
 
         BeanUtils.copyProperties(request.getLivreType(), newLivreEntity);
-        LivreEntity savedLivreEntity = service.addLivre(newLivreEntity);
 
-        if (savedLivreEntity == null) {
-            serviceStatus.setStatusCode("CONFLICT");
-            serviceStatus.setMessage("Exception while adding Entity");
-        } else {
-
+        try{
+            LivreEntity savedLivreEntity = service.addLivre(newLivreEntity);
             BeanUtils.copyProperties(savedLivreEntity, newLivreType);
+
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Added Successfully");
+
+        } catch (DataIntegrityViolationException pEX) {
+            serviceStatus.setStatusCode("CONFLICT");
+            serviceStatus.setMessage("Exception while adding Entity");
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setLivreType(newLivreType);
@@ -108,27 +114,32 @@ public class LivreEndpoint {
         UpdateLivreResponse response = new UpdateLivreResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        // 1. Trouver si le livre est disponible
-        LivreEntity upLivre = service.getLivreById(request.getLivreType().getId());
-
-        if(upLivre == null){
-            serviceStatus.setStatusCode("NOT FOUND");
-            serviceStatus.setMessage("Livre : " + request.getLivreType().getRefBibliotheque() + " not found");
-        } else {
+        try {
+            // 1. Trouver si le livre est disponible
+            LivreEntity upLivre = service.getLivreById(request.getLivreType().getId());
 
             // 2. Obtenir les informations du livre à mettre à jour à partir de la requête
             BeanUtils.copyProperties(request.getLivreType(), upLivre);
 
-            // 3. met à jour le livre dans la base de données
-            boolean flag = service.updateLivre(upLivre);
+            try {
+                // 3. met à jour le livre dans la base de données
+               service.updateLivre(upLivre);
 
-            if (flag == false) {
-                serviceStatus.setStatusCode("CONFLICT");
-                serviceStatus.setMessage("Exception while updating Entity : " + request.getLivreType().getRefBibliotheque());
-            } else {
                 serviceStatus.setStatusCode("SUCCESS");
                 serviceStatus.setMessage("Content updated Successfully");
+
+            } catch (DataIntegrityViolationException pEX) {
+                serviceStatus.setStatusCode("CONFLICT");
+                serviceStatus.setMessage("Exception while updating Entity : " + request.getLivreType().getRefBibliotheque());
+            }  catch (Exception pEX) {
+                pEX.printStackTrace();
             }
+
+        } catch (NoSuchElementException pEX) {
+            serviceStatus.setStatusCode("NOT FOUND");
+            serviceStatus.setMessage("Livre : " + request.getLivreType().getRefBibliotheque() + " not found");
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setServiceStatus(serviceStatus);
@@ -147,14 +158,17 @@ public class LivreEndpoint {
         DeleteLivreResponse response = new DeleteLivreResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        boolean flag = service.deleteLivre(request.getLivreId());
+        try {
+            service.deleteLivre(request.getLivreId());
 
-        if(flag == false){
-            serviceStatus.setStatusCode("FAIL");
-            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getLivreId());
-        } else {
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Deleted Successfully");
+
+        } catch (EmptyResultDataAccessException pEX) {
+            serviceStatus.setStatusCode("FAIL");
+            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getLivreId());
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setServiceStatus(serviceStatus);

@@ -33,34 +33,17 @@ public class CompteServiceImpl implements CompteService {
 
     @Override
     public CompteEntity addCompte(CompteEntity compte) {
-        try{
-            return this.repository.save(compte);
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return null;
-        }
+        return this.repository.save(compte);
     }
 
     @Override
-    public boolean updateCompte(CompteEntity compte) {
-        try{
-            this.repository.save(compte);
-            return true;
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return false;
-        }
+    public void updateCompte(CompteEntity compte) {
+        this.repository.save(compte);
     }
 
     @Override
-    public boolean deleteCompte(Integer id) {
-        try{
-            this.repository.deleteById(id);
-            return true;
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return false;
-        }
+    public void deleteCompte(Integer id) {
+        this.repository.deleteById(id);
     }
 
 }

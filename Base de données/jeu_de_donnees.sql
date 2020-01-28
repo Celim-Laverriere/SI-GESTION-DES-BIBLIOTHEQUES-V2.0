@@ -7,7 +7,9 @@ INSERT INTO public.compte
 VALUES 
     ('Carre', 'Evan', '65 Rue Basfroi', 79170, 'Tilly', 0646864294, null, 656310049, 'evancarre@fakeemail.tld', 'Evan'),
     ('Jolivet', 'Gilbert', '82 Cité Hiver', 77184, 'Tilly', 0686081870, null, 821157968, 'gilbertjolivet@fakeemail.tld', 'Gilbert'),
-    ('Le gall', 'Nolan', '18 Rue Esquirol', 36310, 'Tilly', null, 0460941524, 189275124, 'nolanle.gall@fakeemail.tld', 'Nolan')
+    ('Le gall', 'Nolan', '18 Rue Esquirol', 36310, 'Tilly', null, 0460941524, 189275124, 'nolanle.gall@fakeemail.tld', 'Nolan'),
+    ('Julie', 'Dakota', '2 Rue Bastion', 79170, 'Tilly', 646868956, null, 656310449, 'julie_dakota@dakota.tld', 'dakota'),
+    ('Will', 'Paul', '9 Rue des artistes', 36310, 'Tilly', null, 460941524, 189275124, 'paul.gall@will.tld', 'will')
 ;
 
 
@@ -27,20 +29,14 @@ INSERT INTO public.livre
     (ref_bibliotheque, ouvrage_id, statut)
 VALUES
     ('TISFFPHDT1N001', 1, 'indisponible'),
-    ('TISFFPHDT1N002', 1, 'disponible'),
-    ('TISFFPHDT1N003', 1, 'disponible'),
-    
+    ('TISFFPHDT1N002', 1, 'indisponible'),
+   
     ('TISFIAFLCDFT1N001', 2, 'indisponible'),
-    ('TISFIAFLCDFT1N002', 2, 'disponible'),
-    ('TISFIAFLCDFT1N003', 2, 'disponible'),
     
-    ('TIFRHARAAT1N001', 3, 'indisponible'),
-    ('TIFRHARAAT1N002', 3, 'disponible'),
-    ('TIFRHARAAT1N003', 3, 'disponible'),
-    
-    ('TIFPRCDTDRLNVT1N001', 4, 'disponible'),
-    ('TIFPRCDTDRLNVT1N002', 4, 'disponible'),
-    ('TIFPRCDTDRLNVT1N003', 4, 'disponible')
+    ('TIFRHARAAT1N001', 3, 'disponible'),
+  
+    ('TIFPRCDTDRLNVT1N001', 4, 'disponible')
+
 ;
 
 INSERT INTO public.photo
@@ -53,15 +49,23 @@ VALUES
 ;    
     
 INSERT INTO public.emprunt
-    (date_debut, date_fin, prolongation, livre_id, compte_id)
+    (date_debut, date_fin, statut, prolongation, livre_id, compte_id)
 VALUES
-    ('2019-06-20', '2019-07-17', false, 1, 3),
-    ('2019-05-20', '2019-06-16', false, 4, 2),
-    ('2019-06-20', '2019-07-17', false, 7, 1),
-    ('2019-06-20', '2019-07-17', false, 10, 3)
+    ('2019-12-24', '2020-02-24', 'En cours', false, 1, 2),
+    ('2019-12-30', '2020-01-30', 'En cours', false, 2, 1),
+    ('2019-12-05', '2020-01-05', 'En cours', false, 3, 4)
 ;
     
-    
+INSERT INTO public.reservation
+	(date_resa_disponible, num_position_resa, statut, ouvrage_id, compte_id)
+VALUES
+    ('2020-01-24', 1, 'En cours', 1, 3),
+	('2020-01-24', 2, 'En cours', 1, 4),
+	('2020-01-24', 3, 'En cours', 1, 5),
+
+;
+
+
     
     
     

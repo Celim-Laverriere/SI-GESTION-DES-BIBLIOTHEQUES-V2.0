@@ -48,9 +48,9 @@ public class MailItemProcessor implements Tasklet, StepExecutionListener {
 
 
     /**
-     * Cette méthode a pour rôle de contrôler les dates de fin des emprunts en fonction de la date courante, et au cas
-     * échéant de traiter les emprunts non rendus dans le délai légal. Pour ce faire un e-mail de rappel est envoyé via
-     * la classe "sendingmailthroughgmailsmtpserver".
+     * CETTE METHODE A POUR ROLE DE CONTROLER LES DATES DE FIN DES EMPRUNTS EN FONCTION DE LA DATE COURANTE, ET AU CAS
+     * ECHEANT DE TRAITER LES EMPRUNTS NON RENDUS DANS LE DELAI LEGAL. POUR CE FAIRE UN E-MAIL DE RAPPEL EST ENVOYE VIA
+     * LA CLASSE "sendingmailthroughgmailsmtpserver".
      * @return
      * @throws Exception
      */
@@ -77,7 +77,7 @@ public class MailItemProcessor implements Tasklet, StepExecutionListener {
 
               nombreDeJours = (empruntDateFin.getTime() - dateToDay.getTime())/(1000*60*60*24);
 
-          } else if(empruntDateFin.before(dateToDay)){
+          } else if(empruntDateFin.before(dateToDay) && empruntType.getStatut().equals("En cours")){
 
               /**@see CompteService#compteById(Integer)*/
               CompteType compteType = compteService.compteById(empruntType.getCompteId());
@@ -128,6 +128,17 @@ public class MailItemProcessor implements Tasklet, StepExecutionListener {
     public String textMail(CompteType compteType, OuvrageType ouvrageType, LivreType livreType, String nombreDeJoursStr){
 
         return ""
+                + "<html>"
+                + " <body>"
+                + "  <h1>Demande de réstitution</h1>"
+                + "<hr/>"
+                + "<div id=\"conteneur\" style=\" display:flex; width:70%; margin:auto\">"
+                + "     <div style=\"\">"
+                + "         <img style=\"display: inline-block; height: 300px; width: 200px; vertical-align: top\" src=\"cid:image-id\" />"
+                + "     </div>"
+                + "     <div style=\"margin-left: 20px; border-style: solid; border-bottom: white; border-top: "
+                + "white; border-right: white; border-color: #DCDCDC; border-width: 2px;\">"
+                + ""
                 + "<div style=\"padding-left: 20px\">"
                 + "<p>Bonjour, " + compteType.getPrenom() + "</p>"
                 + "<p>Vous devez vous présenter à la bibliothèque pour rendre le livre que vous avez emprunté!</p>"
@@ -135,6 +146,19 @@ public class MailItemProcessor implements Tasklet, StepExecutionListener {
                 + "<p>Titre de l'ouvrage :  " + ouvrageType.getTitre() + "</p>"
                 + "<p>Référence du livre:  " + livreType.getRefBibliotheque() + "</p>"
                 + "<p>Merci pour votre compréhension. À très bientôt dans votre bibliothèque préféré!</p>"
-                + "</div>";
+                + "</div>"
+                + ""
+                + "</div>"
+                + "</div>"
+                + "<hr/>"
+                + "<div style=\"margin:auto; text-align:center; width:70%\">"
+                + "<h4><a href=\"http://localhost:8080/\">Bibliothéque de Tilly</a></h4>"
+                + "<small>Adresse : 124 Rue Frédéric-Magisson, 80770 Tilly</small></br>"
+                + "<small>La bibliothéque est ouverte du lundi au samedi de 9h00 à 18h00</small></br>"
+                + "<small>Téléphone : 06 00 64 59 12</small></br>"
+                + "<small>Email : tilly.bibliothéque@gmail.com</small></br>"
+                + "</div>"
+                + " </body>"
+                + "</html>";
     }
 }

@@ -33,34 +33,17 @@ public class LivreServiceImpl implements LivreService {
 
     @Override
     public LivreEntity addLivre(LivreEntity livre) {
-        try{
-            return this.repository.save(livre);
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return null;
-        }
+        return this.repository.save(livre);
     }
 
     @Override
-    public boolean updateLivre(LivreEntity livre) {
-        try{
-            this.repository.save(livre);
-            return true;
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return false;
-        }
+    public void updateLivre(LivreEntity livre) {
+        this.repository.save(livre);
     }
 
     @Override
-    public boolean deleteLivre(Integer id) {
-        try {
-            this.repository.deleteById(id);
-            return true;
-        } catch (Exception pEX){
-            pEX.printStackTrace();
-            return false;
-        }
+    public void deleteLivre(Integer id) {
+        this.repository.deleteById(id);
     }
 
 }

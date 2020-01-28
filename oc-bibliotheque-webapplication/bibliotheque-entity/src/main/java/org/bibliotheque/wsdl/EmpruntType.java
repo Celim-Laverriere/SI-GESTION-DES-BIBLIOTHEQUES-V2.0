@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.0 
 // Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.06.20 à 12:07:28 PM CEST 
+// Généré le : 2020.01.27 à 02:35:03 PM CET 
 //
 
 
@@ -29,6 +29,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="dateDebut" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *         &lt;element name="dateFin" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+ *         &lt;element name="statut" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="prolongation" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *         &lt;element name="livreId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="compteId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
@@ -45,6 +46,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "id",
     "dateDebut",
     "dateFin",
+    "statut",
     "prolongation",
     "livreId",
     "compteId"
@@ -58,6 +60,8 @@ public class EmpruntType {
     @XmlElement(required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dateFin;
+    @XmlElement(required = true)
+    protected String statut;
     protected boolean prolongation;
     protected int livreId;
     protected int compteId;
@@ -124,6 +128,30 @@ public class EmpruntType {
      */
     public void setDateFin(XMLGregorianCalendar value) {
         this.dateFin = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété statut.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getStatut() {
+        return statut;
+    }
+
+    /**
+     * Définit la valeur de la propriété statut.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setStatut(String value) {
+        this.statut = value;
     }
 
     /**

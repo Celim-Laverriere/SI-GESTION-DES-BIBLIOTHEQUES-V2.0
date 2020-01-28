@@ -21,22 +21,33 @@ public class LauncherBatch{
     @Autowired
     JobLauncher jobLauncher;
 
-    @Autowired
-    Job job;
+   @Autowired
+    Job jobMail;
+
+   @Autowired
+   Job jobReservationTime;
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(LauncherBatch.class, args);
     }
 
-
-    // Le batch est paramétré pour s'exécuter toutes les 24h00
+    // LE BATCH EST PARAMETRE POUR S'EXECUTER TOUTES LES 24H00
     @Scheduled(cron = "0 0 */24 * * ?")
     public void perform() throws Exception {
 
         JobParameters params = new JobParametersBuilder()
                 .addString("", String.valueOf(System.currentTimeMillis()))
                 .toJobParameters();
-        jobLauncher.run(job, params);
+        jobLauncher.run(jobMail, params);
     }
 
+    // LE BATCH EST PARAMETRE POUR S'EXECUTER TOUTES LES 48H00
+    @Scheduled(cron = "0 0 */48 * * ?")
+    public void perform2() throws Exception {
+
+        JobParameters params = new JobParametersBuilder()
+                .addString("", String.valueOf(System.currentTimeMillis()))
+                .toJobParameters();
+        jobLauncher.run(jobReservationTime, params);
+    }
 }

@@ -54,31 +54,7 @@ public class SendingMailThroughGmailSMTPServer {
         MimeBodyPart htmlPart = new MimeBodyPart();
         try {
 
-        htmlPart.setText(""
-                        + "<html>"
-                        + " <body>"
-                        + "  <h1>Demande de réstitution</h1>"
-                        + "<hr/>"
-                        + "<div id=\"conteneur\" style=\" display:flex; width:70%; margin:auto\">"
-                        + "     <div style=\"\">"
-                        + "         <img style=\"display: inline-block; height: 300px; width: 200px; vertical-align: top\" src=\"cid:image-id\" />"
-                        + "     </div>"
-                        + "     <div style=\"margin-left: 20px; border-style: solid; border-bottom: white; border-top: " +
-                                                "white; border-right: white; border-color: #DCDCDC; border-width: 2px;\">"
-                        +                ""+ text + ""
-                        + "     </div>"
-                        + "</div>"
-                        + "<hr/>"
-                        + "<div style=\"margin:auto; text-align:center; width:70%\">"
-                        + "<h4><a href=\"http://localhost:8080/\">Bibliothéque de Tilly</a></h4>"
-                        + "<small>Adresse : 124 Rue Frédéric-Magisson, 80770 Tilly</small></br>"
-                        + "<small>La bibliothéque est ouverte du lundi au samedi de 9h00 à 18h00</small></br>"
-                        + "<small>Téléphone : 06 00 64 59 12</small></br>"
-                        + "<small>Email : tilly.bibliothéque@gmail.com</small></br>"
-                        + "</div>"
-                        + " </body>"
-                        + "</html>"
-                ,"UTF-8", "html");
+        htmlPart.setText(text,"UTF-8", "html");
 
         content.addBodyPart(htmlPart);
 

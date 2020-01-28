@@ -4,7 +4,6 @@ import org.bibliotheque.client.EmpruntClient;
 import org.bibliotheque.wsdl.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 @Repository
@@ -58,4 +57,16 @@ public class EmpruntRepository {
         UpdateEmpruntResponse response = empruntClient.updateEmprunt(empruntType);
         return response.getServiceStatus().getStatusCode();
     }
+
+
+    /**
+     * ==== CETTE METHODE RECUPERE TOUS LES EMPRUNTS LIE A UN OUVRAGE ====
+     * @param ouvrageId
+     * @return
+     */
+    public List<EmpruntType> getAllEmpruntByOuvrageId(Integer ouvrageId) {
+        GetAllEmpruntByOuvrageIdResponse response = empruntClient.getAllEmpruntByOuvrageId(ouvrageId);
+        return response.getEmpruntType();
+    }
+
 }

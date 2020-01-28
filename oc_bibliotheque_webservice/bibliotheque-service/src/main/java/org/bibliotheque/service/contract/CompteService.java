@@ -11,8 +11,8 @@ public interface CompteService {
 
     CompteEntity addCompte(CompteEntity compte);
 
-    boolean updateCompte(CompteEntity compte);
+    void updateCompte(CompteEntity compte);
 
-    boolean deleteCompte(Integer id);
+    void deleteCompte(Integer id);
 
 }

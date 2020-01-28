@@ -5,9 +5,12 @@ import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.LivreEntity;
 import org.bibliotheque.entity.OuvrageEntity;
 import org.bibliotheque.entity.PhotoEntity;
+import org.bibliotheque.entity.ReservationEntity;
 import org.bibliotheque.service.contract.OuvrageService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -15,6 +18,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Endpoint
 @NoArgsConstructor
@@ -58,6 +62,7 @@ public class OuvrageEndpoint {
         return response;
     }
 
+
     /**
      * Cette méthode récupère tous les ouvrages
      * @param request
@@ -88,6 +93,13 @@ public class OuvrageEndpoint {
                 ouvrageType.getPhotos().add(photoType);
             }
 
+            for (ReservationEntity reservationEntity : entity.getReservations()){
+                ReservationType reservationType = new ReservationType();
+
+                BeanUtils.copyProperties(reservationEntity, reservationType);
+                ouvrageType.getReservations().add(reservationType);
+            }
+
             BeanUtils.copyProperties(entity, ouvrageType);
             ouvrageTypeList.add(ouvrageType);
         }
@@ -111,16 +123,19 @@ public class OuvrageEndpoint {
         OuvrageEntity newOuvrageEntity = new OuvrageEntity();
 
         BeanUtils.copyProperties(request.getOuvrageType(), newOuvrageEntity);
-        OuvrageEntity savedOuvrageEntity = service.addOuvrage(newOuvrageEntity);
 
-        if(savedOuvrageEntity == null){
-            serviceStatus.setStatusCode("CONFLICT");
-            serviceStatus.setMessage("Exception while adding Entity");
-        } else {
-
+        try {
+            OuvrageEntity savedOuvrageEntity = service.addOuvrage(newOuvrageEntity);
             BeanUtils.copyProperties(savedOuvrageEntity, newOuvrageType);
+
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Added Successfully");
+
+        } catch (DataIntegrityViolationException pEX) {
+            serviceStatus.setStatusCode("CONFLICT");
+            serviceStatus.setMessage("Exception while adding Entity");
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setOuvrageType(newOuvrageType);
@@ -140,29 +155,34 @@ public class OuvrageEndpoint {
         UpdateOuvrageResponse response = new UpdateOuvrageResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        // 1. Trouver si le ouvrage est disponible
-        OuvrageEntity upOuvrage = service.getOuvrageById(request.getOuvrageType().getId());
-
-        if(upOuvrage == null){
-            serviceStatus.setStatusCode("NOT FOUND");
-            serviceStatus.setMessage("Ouvrage : " + request.getOuvrageType().getTitre() + " " +
-                    request.getOuvrageType().getRef() + " " + " not found");
-        } else {
+        try {
+            // 1. Trouver si le ouvrage est disponible
+            OuvrageEntity upOuvrage = service.getOuvrageById(request.getOuvrageType().getId());
 
             // 2. Obtenir les informations du compte à mettre à jour à partir de la requête
             BeanUtils.copyProperties(request.getOuvrageType(), upOuvrage);
 
-            // 3. Mettre à jour le compte dans la base de données
-            boolean flag = service.updateOuvrage(upOuvrage);
+            try {
+                // 3. Mettre à jour le compte dans la base de données
+                service.updateOuvrage(upOuvrage);
 
-            if(flag == false){
+                serviceStatus.setStatusCode("SUCCESS");
+                serviceStatus.setMessage("Content updated Successfully");
+
+            } catch (DataIntegrityViolationException pEX) {
                 serviceStatus.setStatusCode("CONFLICT");
                 serviceStatus.setMessage("Exception while updating Entity : " + request.getOuvrageType().getTitre() + " " +
                         request.getOuvrageType().getRef());
-            } else {
-                serviceStatus.setStatusCode("SUCCESS");
-                serviceStatus.setMessage("Content updated Successfully");
+            } catch (Exception pEX) {
+                pEX.printStackTrace();
             }
+
+        } catch (NoSuchElementException pEX) {
+            serviceStatus.setStatusCode("NOT FOUND");
+            serviceStatus.setMessage("Ouvrage : " + request.getOuvrageType().getTitre() + " " +
+                    request.getOuvrageType().getRef() + " " + " not found");
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setServiceStatus(serviceStatus);
@@ -181,14 +201,17 @@ public class OuvrageEndpoint {
         DeleteOuvrageResponse response = new DeleteOuvrageResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        boolean flag = service.deleteOuvrage(request.getOuvrageId());
+        try {
+            service.deleteOuvrage(request.getOuvrageId());
 
-        if(flag == false){
-            serviceStatus.setStatusCode("FAIL");
-            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getOuvrageId());
-        } else {
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Deleted Successfully");
+
+        } catch (EmptyResultDataAccessException pEX) {
+            serviceStatus.setStatusCode("FAIL");
+            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getOuvrageId());
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setServiceStatus(serviceStatus);

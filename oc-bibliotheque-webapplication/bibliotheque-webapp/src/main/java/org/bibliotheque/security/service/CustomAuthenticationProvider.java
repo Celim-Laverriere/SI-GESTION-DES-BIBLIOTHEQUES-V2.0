@@ -55,6 +55,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         }
     }
 
+
     @Override
     public boolean supports(Class<?> aClass) {
         return aClass.equals(UsernamePasswordAuthenticationToken.class);

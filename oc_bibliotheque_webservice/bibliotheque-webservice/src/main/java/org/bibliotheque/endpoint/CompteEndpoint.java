@@ -6,12 +6,15 @@ import org.bibliotheque.entity.CompteEntity;
 import org.bibliotheque.service.contract.CompteService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Endpoint
 @NoArgsConstructor
@@ -32,10 +35,23 @@ public class CompteEndpoint {
     @ResponsePayload
     public GetCompteByIdResponse getCompteById(@RequestPayload GetCompteByIdRequest request){
         GetCompteByIdResponse response = new GetCompteByIdResponse();
-        CompteEntity compteEntity = service.getCompteById(request.getCompteId());
         CompteType compteType = new CompteType();
-        BeanUtils.copyProperties(compteEntity, compteType);
+        ServiceStatus serviceStatus = new ServiceStatus();
+
+        try {
+            CompteEntity compteEntity = service.getCompteById(request.getCompteId());
+
+            BeanUtils.copyProperties(compteEntity, compteType);
+
+        }  catch (NoSuchElementException pEX) {
+            serviceStatus.setStatusCode("NOT FOUND");
+            serviceStatus.setMessage("Compte " + request.getCompteId() + " : not found");
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
+        }
+
         response.setCompteType(compteType);
+        response.setServiceStatus(serviceStatus);
         return response;
     }
 
@@ -77,16 +93,19 @@ public class CompteEndpoint {
         CompteEntity newCompteEntity = new CompteEntity();
 
         BeanUtils.copyProperties(request.getCompteType(), newCompteEntity);
-        CompteEntity savedCompteEntity = service.addCompte(newCompteEntity);
 
-        if (savedCompteEntity == null){
-            serviceStatus.setStatusCode("CONFLICT");
-            serviceStatus.setMessage("Exception while adding Entity");
-        } else {
+        try{
+            CompteEntity savedCompteEntity = service.addCompte(newCompteEntity);
 
             BeanUtils.copyProperties(savedCompteEntity, newCompteType);
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Added Successfully");
+
+        } catch (DataIntegrityViolationException pEX){
+            serviceStatus.setStatusCode("CONFLICT");
+            serviceStatus.setMessage("Exception while adding Entity");
+        } catch (Exception pEX){
+            pEX.printStackTrace();
         }
 
         response.setCompteType(newCompteType);
@@ -106,29 +125,35 @@ public class CompteEndpoint {
         UpdateCompteResponse response = new UpdateCompteResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        // 1. Trouver si le compte est disponible
-        CompteEntity upCompte = service.getCompteById(request.getCompteType().getId());
-
-        if(upCompte == null){
-            serviceStatus.setStatusCode("NOT FOUND");
-            serviceStatus.setMessage("Compte : " + request.getCompteType().getNom() + " " +
-                    request.getCompteType().getPrenom() + " " + " not found");
-        } else {
+        try{
+            // 1. Trouver si le compte est disponible
+            CompteEntity  upCompte = service.getCompteById(request.getCompteType().getId());
 
             // 2. Obtenir les informations du compte à mettre à jour à partir de la requête
             BeanUtils.copyProperties(request.getCompteType(), upCompte);
 
-            // 3. Mettre à jour le compte dans la base de données
-            boolean flag = service.updateCompte(upCompte);
+            try {
+                // 3. Mettre à jour le compte dans la base de données
+                service.updateCompte(upCompte);
 
-            if(flag == false){
+                serviceStatus.setStatusCode("SUCCESS");
+                serviceStatus.setMessage("Content updated Successfully");
+
+            } catch (DataIntegrityViolationException pEX) {
+                System.out.println(pEX);
                 serviceStatus.setStatusCode("CONFLICT");
                 serviceStatus.setMessage("Exception while updating Entity : " + request.getCompteType().getNom() + " " +
                         request.getCompteType().getPrenom());
-            } else {
-                serviceStatus.setStatusCode("SUCCESS");
-                serviceStatus.setMessage("Content updated Successfully");
+            } catch (Exception pEX) {
+                pEX.printStackTrace();
             }
+
+        } catch (NoSuchElementException pEX) {
+            serviceStatus.setStatusCode("NOT FOUND");
+            serviceStatus.setMessage("Compte : " + request.getCompteType().getNom() + " " +
+                    request.getCompteType().getPrenom() + " not found");
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setServiceStatus(serviceStatus);
@@ -147,14 +172,17 @@ public class CompteEndpoint {
         DeleteCompteResponse response = new DeleteCompteResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        boolean flag = service.deleteCompte(request.getCompteId());
+        try {
+            service.deleteCompte(request.getCompteId());
 
-        if (flag == false){
-            serviceStatus.setStatusCode("FAIL");
-            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getCompteId());
-        } else {
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Deleted Successfully");
+
+        } catch (EmptyResultDataAccessException pEX) {
+            serviceStatus.setStatusCode("FAIL");
+            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getCompteId());
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
         }
 
         response.setServiceStatus(serviceStatus);

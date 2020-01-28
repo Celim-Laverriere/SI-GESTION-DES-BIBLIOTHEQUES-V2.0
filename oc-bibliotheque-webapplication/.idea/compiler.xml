@@ -8,9 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="bibliotheque-repository" />
         <module name="bibliotheque-batch" />
+        <module name="bibliotheque-entity" />
         <module name="bibliotheque-webapp" />
         <module name="bibliotheque-service" />
-        <module name="bibliotheque-entity" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

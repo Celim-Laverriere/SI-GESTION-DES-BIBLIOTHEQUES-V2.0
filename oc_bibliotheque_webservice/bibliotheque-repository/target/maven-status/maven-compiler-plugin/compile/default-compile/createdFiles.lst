@@ -1,6 +1,0 @@
-org\bibliotheque\repository\OuvrageRepository.class
-org\bibliotheque\repository\EmpruntRepository.class
-org\bibliotheque\repository\CompteRepository.class
-org\bibliotheque\repository\PhotoRepository.class
-org\bibliotheque\repository\ReservationRepository.class
-org\bibliotheque\repository\LivreRepository.class

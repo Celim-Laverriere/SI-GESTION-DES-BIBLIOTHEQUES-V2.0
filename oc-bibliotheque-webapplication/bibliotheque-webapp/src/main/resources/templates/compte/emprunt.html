@@ -87,7 +87,7 @@
                                     </th:block>
                                 </th:block>
 
-                                <th:block th:if="${!emprunt.isProlongation()}">
+                                <th:block th:if="${!emprunt.isProlongation() && emprunt.getStatut().equals('En cours')}">
                                     <th:block th:if="${dateFormat.parse(emprunt.getDateFin().toString()).before(dateToDay)}">
                                         <td style="width: 30%">
                                             <p class="text-danger">Vous avez dépassé la date de fin d'emprunt, vous ne pouvez plus polonger votre emprunt pour 4 semaines suplémentaire !</p>

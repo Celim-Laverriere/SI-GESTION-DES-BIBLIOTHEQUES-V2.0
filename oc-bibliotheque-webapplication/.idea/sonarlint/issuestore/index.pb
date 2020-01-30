@@ -77,3 +77,13 @@ Wbibliotheque-repository/src/main/java/org/bibliotheque/repository/SearchReposit
 Nbibliotheque-service/src/main/java/org/bibliotheque/service/SearchService.java,6\b\6b39ea5777d4195fb9db12cad324fed84d343207
 „
 Tbibliotheque-webapp/src/main/java/org/bibliotheque/controller/AccueilController.java,2\a\2acc4890e4941340ac744061aad6f6f45760724f
+L
+bibliotheque-service/pom.xml,c\1\c1969ec234bec2042cc521e5f15ed229328d33a6
+O
+bibliotheque-repository/pom.xml,9\1\9164a9900bfec938401b0e0350341d73b298d1c2
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+K
+bibliotheque-webapp/pom.xml,8\6\86e64735c80b72dc09bb40b75b500bee357557a6
+K
+bibliotheque-entity/pom.xml,c\6\c6baa09cdefda1666f240cb5e8f1e439065b4890

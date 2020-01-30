@@ -51,17 +51,17 @@ VALUES
 INSERT INTO public.emprunt
     (date_debut, date_fin, statut, prolongation, livre_id, compte_id)
 VALUES
-    ('2019-12-24', '2020-02-24', 'En cours', false, 1, 2),
-    ('2019-12-30', '2020-01-30', 'En cours', false, 2, 1),
-    ('2019-12-05', '2020-01-05', 'En cours', false, 3, 4)
+    ('2020-01-30', '2020-02-29', 'En cours', false, 1, 2),
+    ('2020-01-30', '2020-02-29', 'En cours', false, 2, 1),
+    ('2020-01-30', '2020-02-29', 'En cours', false, 3, 4)
 ;
     
 INSERT INTO public.reservation
 	(date_resa_disponible, num_position_resa, statut, ouvrage_id, compte_id)
 VALUES
-    ('2020-01-24', 1, 'En cours', 1, 3),
-	('2020-01-24', 2, 'En cours', 1, 4),
-	('2020-01-24', 3, 'En cours', 1, 5),
+    ('2020-02-29', 1, 'En cours', 1, 3),
+	('2020-02-29', 2, 'En cours', 1, 4),
+	('2020-02-29', 3, 'En cours', 1, 5),
 
 ;
 

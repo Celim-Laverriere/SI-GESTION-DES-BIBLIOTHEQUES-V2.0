@@ -15,6 +15,10 @@ CREATE TABLE public.ouvrage (
 
 ALTER SEQUENCE public.ouvrage_id_seq OWNED BY public.ouvrage.id;
 
+CREATE UNIQUE INDEX ouvrage_idx
+ ON public.ouvrage
+ ( ref );
+
 CREATE SEQUENCE public.photo_id_seq;
 
 CREATE TABLE public.photo (
@@ -27,6 +31,10 @@ CREATE TABLE public.photo (
 
 
 ALTER SEQUENCE public.photo_id_seq OWNED BY public.photo.id;
+
+CREATE UNIQUE INDEX photo_idx
+ ON public.photo
+ ( url_photo );
 
 CREATE SEQUENCE public.livre_id_seq;
 
@@ -67,11 +75,8 @@ ALTER SEQUENCE public.compte_id_seq OWNED BY public.compte.id;
 
 CREATE UNIQUE INDEX compte_idx
  ON public.compte
- ( num_carte_bibliotheque, mot_de_passe );
+ ( num_carte_bibliotheque, mot_de_passe, mail );
 
-CREATE UNIQUE INDEX compte_idx1
- ON public.compte
- ( mail );
 
 CREATE SEQUENCE public.emprunt_id_seq;
 
